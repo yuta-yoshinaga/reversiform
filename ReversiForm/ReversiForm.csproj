@@ -51,6 +51,11 @@
     <Compile Include="FormMain.Designer.cs">
       <DependentUpon>FormMain.cs</DependentUpon>
     </Compile>
+    <Compile Include="Model\ReversiAnz.cs" />
+    <Compile Include="Model\ReversiConst.cs" />
+    <Compile Include="Model\ReversiHistory.cs" />
+    <Compile Include="Model\ReversiPoint.cs" />
+    <Compile Include="Model\ReversiSetting.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="FormMain.resx">
