@@ -79,6 +79,22 @@ namespace ReversiForm
 		public const int REVERSI_STS_MIN = 0;							//!< ステータス最小値
 		public const int REVERSI_STS_MAX = 2;							//!< ステータス最大値
 		public const int REVERSI_MASU_CNT = 8;							//!< 縦横マス数
+
+		public const int LC_MSG_DRAW = 0;								//!< マス描画
+		public const int LC_MSG_ERASE = 1;								//!< マス消去
+		public const int LC_MSG_DRAW_INFO = 2;							//!< マス情報描画
+		public const int LC_MSG_ERASE_INFO = 3;							//!< マス情報消去
+		public const int LC_MSG_DRAW_ALL = 4;							//!< 全マス描画
+		public const int LC_MSG_ERASE_ALL = 5;							//!< 全マス消去
+		public const int LC_MSG_DRAW_INFO_ALL = 6;						//!< 全マス情報描画
+		public const int LC_MSG_ERASE_INFO_ALL = 7;						//!< 全マス情報消去
+		public const int LC_MSG_DRAW_END = 8;							//!< 描画終わり
+		public const int LC_MSG_CUR_COL = 9;							//!< 現在の色
+		public const int LC_MSG_CUR_COL_ERASE = 10;						//!< 現在の色消去
+		public const int LC_MSG_CUR_STS = 11;							//!< 現在のステータス
+		public const int LC_MSG_CUR_STS_ERASE = 12;						//!< 現在のステータス消去
+		public const int LC_MSG_MSG_DLG = 13;							//!< メッセージダイアログ
+		public const int LC_MSG_DRAW_ALL_RESET = 14;					//!< 全マスビットマップインスタンスクリア
 		#endregion
 	}
 }

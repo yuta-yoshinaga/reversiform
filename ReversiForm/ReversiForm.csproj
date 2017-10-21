@@ -55,6 +55,7 @@
     <Compile Include="Model\ReversiAnz.cs" />
     <Compile Include="Model\ReversiConst.cs" />
     <Compile Include="Model\ReversiHistory.cs" />
+    <Compile Include="Model\ReversiPlay.cs" />
     <Compile Include="Model\ReversiPoint.cs" />
     <Compile Include="Model\ReversiSetting.cs" />
     <Compile Include="Program.cs" />
