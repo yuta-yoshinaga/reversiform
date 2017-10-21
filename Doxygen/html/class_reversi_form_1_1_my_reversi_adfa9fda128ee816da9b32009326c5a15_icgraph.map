@@ -1,0 +1,8 @@
+<map id="ReversiForm.MyReversi.AnalysisReversiBlack" name="ReversiForm.MyReversi.AnalysisReversiBlack">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#afc9513cbba4f973c7d1ee92e0a0f3288" title="解析を行う " alt="" coords="265,64,477,105"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="529,17,728,43"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="1035,101,1268,127"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="525,123,732,164"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#aeb78112f8fb7fd2c75b8e0f088939867" title="コンストラクタ " alt="" coords="798,5,969,47"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="780,123,987,164"/>
+</map>

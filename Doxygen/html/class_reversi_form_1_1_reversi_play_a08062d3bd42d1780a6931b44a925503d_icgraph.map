@@ -1,0 +1,6 @@
+<map id="ReversiForm.ReversiPlay.sendDrawInfoMsg" name="ReversiForm.ReversiPlay.sendDrawInfoMsg">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#af1415f15759ba8475b4b5afca3a35017" title="マス描画更新 " alt="" coords="252,5,449,47"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="1007,13,1240,39"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="497,35,704,76"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="752,35,959,76"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ReversiForm.MyReversi.MyReversi" name="ReversiForm.MyReversi.MyReversi">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#aa8d8e839466c63462954080353cd4a9e" title="リセット " alt="" coords="233,35,424,61"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_anz.html#a2428d6f4fd60b95d28876b1f0f8ce151" title="リセット " alt="" coords="472,5,668,32"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_my_reversi.html#a379ac04ab0e8e9fc819ef3ceeba63e58" title="各コマの置ける場所等のステータス作成 " alt="" coords="473,57,667,98"/>
+</map>

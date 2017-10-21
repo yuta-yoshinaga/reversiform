@@ -1,0 +1,775 @@
+\hypertarget{class_reversi_form_1_1_reversi_play}{}\section{Reversi\+Form.\+Reversi\+Play Class Reference}
+\label{class_reversi_form_1_1_reversi_play}\index{Reversi\+Form.\+Reversi\+Play@{Reversi\+Form.\+Reversi\+Play}}
+
+
+リバーシプレイクラス  
+
+
+
+
+Collaboration diagram for Reversi\+Form.\+Reversi\+Play\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=550pt]{class_reversi_form_1_1_reversi_play__coll__graph}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_ae7c780c06a5a164852c2c5763d43f395}\label{class_reversi_form_1_1_reversi_play_ae7c780c06a5a164852c2c5763d43f395}} 
+delegate void {\bfseries View\+Msg\+Dlg} (string title, string msg)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aa60b9c4be40276b8ec7b63c93944e1f1}\label{class_reversi_form_1_1_reversi_play_aa60b9c4be40276b8ec7b63c93944e1f1}} 
+delegate void {\bfseries Draw\+Single} (int y, int x, int sts, int bk, string text)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a33f3693648ac0fd92df434c2a527f493}\label{class_reversi_form_1_1_reversi_play_a33f3693648ac0fd92df434c2a527f493}} 
+delegate void {\bfseries Cur\+Col\+Msg} (string text)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a524595bd9da1eda93b5707c511be5ff3}\label{class_reversi_form_1_1_reversi_play_a524595bd9da1eda93b5707c511be5ff3}} 
+delegate void {\bfseries Cur\+Sts\+Msg} (string text)
+\item 
+\hyperlink{class_reversi_form_1_1_reversi_play_aeb78112f8fb7fd2c75b8e0f088939867}{Reversi\+Play} ()
+\begin{DoxyCompactList}\small\item\em コンストラクタ \end{DoxyCompactList}\item 
+\hyperlink{class_reversi_form_1_1_reversi_play}{Reversi\+Play} \hyperlink{class_reversi_form_1_1_reversi_play_aae235e59005e054773bcf1bc0177d34a}{Clone} ()
+\begin{DoxyCompactList}\small\item\em コピー \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_a7f3822227e59fac0f998927a6566006e}{reversi\+Play} (int y, int x)
+\begin{DoxyCompactList}\small\item\em リバーシプレイ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_a4fe42268a8d957c555db025f8b35d34e}{reversi\+Play\+Sub} (int cpu\+Ena, int tmp\+Col)
+\begin{DoxyCompactList}\small\item\em リバーシプレイサブ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_abb6d68c910c7d14ff4eaa8db745f0449}{reversi\+Play\+End} ()
+\begin{DoxyCompactList}\small\item\em リバーシプレイ終了 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_adcbe040514044b7cc8498c0764638356}{reversi\+Play\+Pass} (int color)
+\begin{DoxyCompactList}\small\item\em リバーシプレイパス \end{DoxyCompactList}\item 
+int \hyperlink{class_reversi_form_1_1_reversi_play_abec0ea86adfc0d2f960af71235eea016}{reversi\+Play\+Cpu} (int color, int cpu\+Ena)
+\begin{DoxyCompactList}\small\item\em リバーシプレイコンピューター \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_af1415f15759ba8475b4b5afca3a35017}{draw\+Update} (int assist)
+\begin{DoxyCompactList}\small\item\em マス描画更新 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_accc1d553ba6a6c2a5f0c58316b40a183}{draw\+Update\+Forcibly} (int assist)
+\begin{DoxyCompactList}\small\item\em マス描画強制更新 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_a03997d634aa21a84e660e7f98aa27064}{reset} ()
+\begin{DoxyCompactList}\small\item\em リセット処理 \end{DoxyCompactList}\item 
+int \hyperlink{class_reversi_form_1_1_reversi_play_aec95b109a53b3cdab6466a4fca52f967}{game\+End\+Anim\+Exec} ()
+\begin{DoxyCompactList}\small\item\em ゲーム終了アニメーション \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_aaad592cdd92fb4efd6132c7cf1871e1f}{send\+Draw\+Msg} (int y, int x)
+\begin{DoxyCompactList}\small\item\em 描画メッセージ送信 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_a08062d3bd42d1780a6931b44a925503d}{send\+Draw\+Info\+Msg} (int y, int x)
+\begin{DoxyCompactList}\small\item\em 情報描画メッセージ送信 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Properties}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aecc4ca1850ae7eed77cc49625f7096fc}\label{class_reversi_form_1_1_reversi_play_aecc4ca1850ae7eed77cc49625f7096fc}} 
+\hyperlink{class_reversi_form_1_1_my_reversi}{My\+Reversi} {\bfseries m\+Reversi}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a67be9b4ab228e47d2c27c0ee8c5ed56d}\label{class_reversi_form_1_1_reversi_play_a67be9b4ab228e47d2c27c0ee8c5ed56d}} 
+\hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting} {\bfseries m\+Setting}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_ac077542c109ff41f0bdcb1256d8a4b5c}\label{class_reversi_form_1_1_reversi_play_ac077542c109ff41f0bdcb1256d8a4b5c}} 
+int {\bfseries m\+Cur\+Color}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_adfaddd2fbcee1ba5496f00fe475c982c}\label{class_reversi_form_1_1_reversi_play_adfaddd2fbcee1ba5496f00fe475c982c}} 
+\hyperlink{class_reversi_form_1_1_reversi_point}{Reversi\+Point} \mbox{[}$\,$\mbox{]} {\bfseries m\+Cpu}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a5d06458a857318442d2da7ffeabacf32}\label{class_reversi_form_1_1_reversi_play_a5d06458a857318442d2da7ffeabacf32}} 
+\hyperlink{class_reversi_form_1_1_reversi_point}{Reversi\+Point} \mbox{[}$\,$\mbox{]} {\bfseries m\+Edge}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a41b1f6fd34c1804e0302518bdf86a650}\label{class_reversi_form_1_1_reversi_play_a41b1f6fd34c1804e0302518bdf86a650}} 
+int {\bfseries m\+Pass\+EnaB}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a1623168549fe0f42e0c9cb23b625e936}\label{class_reversi_form_1_1_reversi_play_a1623168549fe0f42e0c9cb23b625e936}} 
+int {\bfseries m\+Pass\+EnaW}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a3410173bce66f3916b40c48396140993}\label{class_reversi_form_1_1_reversi_play_a3410173bce66f3916b40c48396140993}} 
+int {\bfseries m\+Game\+End\+Sts}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_add7e0a08404e943de26b5ac89fd29e20}\label{class_reversi_form_1_1_reversi_play_add7e0a08404e943de26b5ac89fd29e20}} 
+int {\bfseries m\+Play\+Lock}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aa152286fa1fb56750474abb77d4838b5}\label{class_reversi_form_1_1_reversi_play_aa152286fa1fb56750474abb77d4838b5}} 
+View\+Msg\+Dlg {\bfseries view\+Msg\+Dlg}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a7834c3b0182c46525b3c0b8fd6acd44f}\label{class_reversi_form_1_1_reversi_play_a7834c3b0182c46525b3c0b8fd6acd44f}} 
+Draw\+Single {\bfseries draw\+Single}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a1bd07f75d970a73e504569ee1f1563d5}\label{class_reversi_form_1_1_reversi_play_a1bd07f75d970a73e504569ee1f1563d5}} 
+Cur\+Col\+Msg {\bfseries cur\+Col\+Msg}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a42d6a55b31252e831d9eb859af5737c2}\label{class_reversi_form_1_1_reversi_play_a42d6a55b31252e831d9eb859af5737c2}} 
+Cur\+Sts\+Msg {\bfseries cur\+Sts\+Msg}\hspace{0.3cm}{\ttfamily  \mbox{[}get, set\mbox{]}}
+\end{DoxyCompactItemize}
+\subsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \hyperlink{class_reversi_form_1_1_reversi_play_aa7cf1089065bff85997d057210312ae8}{exec\+Message} (int what, Object obj)
+\begin{DoxyCompactList}\small\item\em メッセージ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a79fc0ac610dcc1e72314afa0885a7329}\label{class_reversi_form_1_1_reversi_play_a79fc0ac610dcc1e72314afa0885a7329}} 
+\hyperlink{class_reversi_form_1_1_my_reversi}{My\+Reversi} \hyperlink{class_reversi_form_1_1_reversi_play_a79fc0ac610dcc1e72314afa0885a7329}{\+\_\+m\+Reversi}
+\begin{DoxyCompactList}\small\item\em リバーシクラス \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_af953857b30155f52a5e4da1aa5d68a1c}\label{class_reversi_form_1_1_reversi_play_af953857b30155f52a5e4da1aa5d68a1c}} 
+\hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting} \hyperlink{class_reversi_form_1_1_reversi_play_af953857b30155f52a5e4da1aa5d68a1c}{\+\_\+m\+Setting}
+\begin{DoxyCompactList}\small\item\em リバーシ設定クラス \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a0e769bb75c828b1389440e5f2c227617}\label{class_reversi_form_1_1_reversi_play_a0e769bb75c828b1389440e5f2c227617}} 
+int \hyperlink{class_reversi_form_1_1_reversi_play_a0e769bb75c828b1389440e5f2c227617}{\+\_\+m\+Cur\+Color} = 0
+\begin{DoxyCompactList}\small\item\em 現在の色 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_ad525d9072820dfdb02240157eebeeb38}\label{class_reversi_form_1_1_reversi_play_ad525d9072820dfdb02240157eebeeb38}} 
+\hyperlink{class_reversi_form_1_1_reversi_point}{Reversi\+Point} \mbox{[}$\,$\mbox{]} \hyperlink{class_reversi_form_1_1_reversi_play_ad525d9072820dfdb02240157eebeeb38}{\+\_\+m\+Cpu}
+\begin{DoxyCompactList}\small\item\em C\+P\+U用ワーク \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_afb0107974f2c2e41e9a1f33de434fc3a}\label{class_reversi_form_1_1_reversi_play_afb0107974f2c2e41e9a1f33de434fc3a}} 
+\hyperlink{class_reversi_form_1_1_reversi_point}{Reversi\+Point} \mbox{[}$\,$\mbox{]} \hyperlink{class_reversi_form_1_1_reversi_play_afb0107974f2c2e41e9a1f33de434fc3a}{\+\_\+m\+Edge}
+\begin{DoxyCompactList}\small\item\em C\+P\+U用角マスワーク \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a73d5dee70abec1d5c28eeccbc7804591}\label{class_reversi_form_1_1_reversi_play_a73d5dee70abec1d5c28eeccbc7804591}} 
+int \hyperlink{class_reversi_form_1_1_reversi_play_a73d5dee70abec1d5c28eeccbc7804591}{\+\_\+m\+Pass\+EnaB} = 0
+\begin{DoxyCompactList}\small\item\em 黒のパス有効フラグ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a1d84294fff94d0117df2c5c7e809f7f5}\label{class_reversi_form_1_1_reversi_play_a1d84294fff94d0117df2c5c7e809f7f5}} 
+int \hyperlink{class_reversi_form_1_1_reversi_play_a1d84294fff94d0117df2c5c7e809f7f5}{\+\_\+m\+Pass\+EnaW} = 0
+\begin{DoxyCompactList}\small\item\em 白のパス有効フラグ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a78b7aa47a2feb6ae19749dc6d8b906a3}\label{class_reversi_form_1_1_reversi_play_a78b7aa47a2feb6ae19749dc6d8b906a3}} 
+int \hyperlink{class_reversi_form_1_1_reversi_play_a78b7aa47a2feb6ae19749dc6d8b906a3}{\+\_\+m\+Game\+End\+Sts} = 0
+\begin{DoxyCompactList}\small\item\em ゲーム終了ステータス \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a50edf0909b6f265b0aa56918c2a2b72c}\label{class_reversi_form_1_1_reversi_play_a50edf0909b6f265b0aa56918c2a2b72c}} 
+int \hyperlink{class_reversi_form_1_1_reversi_play_a50edf0909b6f265b0aa56918c2a2b72c}{\+\_\+m\+Play\+Lock} = 0
+\begin{DoxyCompactList}\small\item\em プレイロック \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a25e4a5bb65bacf2af7d4f0ae3bfabf3d}\label{class_reversi_form_1_1_reversi_play_a25e4a5bb65bacf2af7d4f0ae3bfabf3d}} 
+View\+Msg\+Dlg \hyperlink{class_reversi_form_1_1_reversi_play_a25e4a5bb65bacf2af7d4f0ae3bfabf3d}{\+\_\+view\+Msg\+Dlg} = null
+\begin{DoxyCompactList}\small\item\em メッセージコールバック \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a8f59694189617e4219f51a755f522d20}\label{class_reversi_form_1_1_reversi_play_a8f59694189617e4219f51a755f522d20}} 
+Draw\+Single \hyperlink{class_reversi_form_1_1_reversi_play_a8f59694189617e4219f51a755f522d20}{\+\_\+draw\+Single} = null
+\begin{DoxyCompactList}\small\item\em 描画コールバック \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aa980069de30bee78de7394279e573a7d}\label{class_reversi_form_1_1_reversi_play_aa980069de30bee78de7394279e573a7d}} 
+Cur\+Col\+Msg \hyperlink{class_reversi_form_1_1_reversi_play_aa980069de30bee78de7394279e573a7d}{\+\_\+cur\+Col\+Msg} = null
+\begin{DoxyCompactList}\small\item\em 現在の色メッセージコールバック \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a4fc70df19334fd36e75a4f492d7914d9}\label{class_reversi_form_1_1_reversi_play_a4fc70df19334fd36e75a4f492d7914d9}} 
+Cur\+Sts\+Msg \hyperlink{class_reversi_form_1_1_reversi_play_a4fc70df19334fd36e75a4f492d7914d9}{\+\_\+cur\+Sts\+Msg} = null
+\begin{DoxyCompactList}\small\item\em 現在のステータスメッセージコールバック \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_ace9bbe255131eb620f372b7c5afb2b8b}\label{class_reversi_form_1_1_reversi_play_ace9bbe255131eb620f372b7c5afb2b8b}} 
+System.\+Random \hyperlink{class_reversi_form_1_1_reversi_play_ace9bbe255131eb620f372b7c5afb2b8b}{r} = new System.\+Random()
+\begin{DoxyCompactList}\small\item\em 乱数 \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+リバーシプレイクラス 
+
+Definition at line 30 of file Reversi\+Play.\+cs.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aeb78112f8fb7fd2c75b8e0f088939867}\label{class_reversi_form_1_1_reversi_play_aeb78112f8fb7fd2c75b8e0f088939867}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!Reversi\+Play@{Reversi\+Play}}
+\index{Reversi\+Play@{Reversi\+Play}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{Reversi\+Play()}{ReversiPlay()}}
+{\footnotesize\ttfamily Reversi\+Form.\+Reversi\+Play.\+Reversi\+Play (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コンストラクタ 
+
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 132 of file Reversi\+Play.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aeb78112f8fb7fd2c75b8e0f088939867_cgraph}
+\end{center}
+\end{figure}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aae235e59005e054773bcf1bc0177d34a}\label{class_reversi_form_1_1_reversi_play_aae235e59005e054773bcf1bc0177d34a}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!Clone@{Clone}}
+\index{Clone@{Clone}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{Clone()}{Clone()}}
+{\footnotesize\ttfamily \hyperlink{class_reversi_form_1_1_reversi_play}{Reversi\+Play} Reversi\+Form.\+Reversi\+Play.\+Clone (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+コピー 
+
+\begin{DoxyReturn}{Returns}
+オブジェクトコピー 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 153 of file Reversi\+Play.\+cs.
+
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_af1415f15759ba8475b4b5afca3a35017}\label{class_reversi_form_1_1_reversi_play_af1415f15759ba8475b4b5afca3a35017}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!draw\+Update@{draw\+Update}}
+\index{draw\+Update@{draw\+Update}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{draw\+Update()}{drawUpdate()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+draw\+Update (\begin{DoxyParamCaption}\item[{int}]{assist }\end{DoxyParamCaption})}
+
+
+
+マス描画更新 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & assist アシスト設定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 621 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reversi\+Play(), and Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Cpu().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_af1415f15759ba8475b4b5afca3a35017_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_af1415f15759ba8475b4b5afca3a35017_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_accc1d553ba6a6c2a5f0c58316b40a183}\label{class_reversi_form_1_1_reversi_play_accc1d553ba6a6c2a5f0c58316b40a183}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!draw\+Update\+Forcibly@{draw\+Update\+Forcibly}}
+\index{draw\+Update\+Forcibly@{draw\+Update\+Forcibly}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{draw\+Update\+Forcibly()}{drawUpdateForcibly()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+draw\+Update\+Forcibly (\begin{DoxyParamCaption}\item[{int}]{assist }\end{DoxyParamCaption})}
+
+
+
+マス描画強制更新 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & assist アシスト設定 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 654 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reset().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_accc1d553ba6a6c2a5f0c58316b40a183_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_accc1d553ba6a6c2a5f0c58316b40a183_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aa7cf1089065bff85997d057210312ae8}\label{class_reversi_form_1_1_reversi_play_aa7cf1089065bff85997d057210312ae8}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!exec\+Message@{exec\+Message}}
+\index{exec\+Message@{exec\+Message}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{exec\+Message()}{execMessage()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+exec\+Message (\begin{DoxyParamCaption}\item[{int}]{what,  }\item[{Object}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+メッセージ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & what \\
+\hline
+\mbox{\tt in}  & {\em var} & obj \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 839 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+draw\+Update(), Reversi\+Form.\+Reversi\+Play.\+draw\+Update\+Forcibly(), Reversi\+Form.\+Reversi\+Play.\+game\+End\+Anim\+Exec(), Reversi\+Form.\+Reversi\+Play.\+reset(), Reversi\+Form.\+Reversi\+Play.\+reversi\+Play(), Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Cpu(), Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+End(), Reversi\+Form.\+Reversi\+Play.\+send\+Draw\+Info\+Msg(), and Reversi\+Form.\+Reversi\+Play.\+send\+Draw\+Msg().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aa7cf1089065bff85997d057210312ae8_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aa7cf1089065bff85997d057210312ae8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aec95b109a53b3cdab6466a4fca52f967}\label{class_reversi_form_1_1_reversi_play_aec95b109a53b3cdab6466a4fca52f967}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!game\+End\+Anim\+Exec@{game\+End\+Anim\+Exec}}
+\index{game\+End\+Anim\+Exec@{game\+End\+Anim\+Exec}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{game\+End\+Anim\+Exec()}{gameEndAnimExec()}}
+{\footnotesize\ttfamily int Reversi\+Form.\+Reversi\+Play.\+game\+End\+Anim\+Exec (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+ゲーム終了アニメーション 
+
+\begin{DoxyReturn}{Returns}
+ウェイト時間 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 729 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+End().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aec95b109a53b3cdab6466a4fca52f967_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aec95b109a53b3cdab6466a4fca52f967_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a03997d634aa21a84e660e7f98aa27064}\label{class_reversi_form_1_1_reversi_play_a03997d634aa21a84e660e7f98aa27064}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!reset@{reset}}
+\index{reset@{reset}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{reset()}{reset()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+reset (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リセット処理 
+
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 679 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+Reversi\+Play().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a03997d634aa21a84e660e7f98aa27064_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a03997d634aa21a84e660e7f98aa27064_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a7f3822227e59fac0f998927a6566006e}\label{class_reversi_form_1_1_reversi_play_a7f3822227e59fac0f998927a6566006e}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!reversi\+Play@{reversi\+Play}}
+\index{reversi\+Play@{reversi\+Play}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{reversi\+Play()}{reversiPlay()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+reversi\+Play (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+リバーシプレイ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & y Y座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & x X座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 168 of file Reversi\+Play.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a7f3822227e59fac0f998927a6566006e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_abec0ea86adfc0d2f960af71235eea016}\label{class_reversi_form_1_1_reversi_play_abec0ea86adfc0d2f960af71235eea016}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!reversi\+Play\+Cpu@{reversi\+Play\+Cpu}}
+\index{reversi\+Play\+Cpu@{reversi\+Play\+Cpu}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{reversi\+Play\+Cpu()}{reversiPlayCpu()}}
+{\footnotesize\ttfamily int Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Cpu (\begin{DoxyParamCaption}\item[{int}]{color,  }\item[{int}]{cpu\+Ena }\end{DoxyParamCaption})}
+
+
+
+リバーシプレイコンピューター 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & color C\+P\+U色 \\
+\hline
+\mbox{\tt in}  & {\em int} & cpu\+Ena C\+P\+U有効フラグ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 362 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Sub().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_abec0ea86adfc0d2f960af71235eea016_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_abec0ea86adfc0d2f960af71235eea016_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_abb6d68c910c7d14ff4eaa8db745f0449}\label{class_reversi_form_1_1_reversi_play_abb6d68c910c7d14ff4eaa8db745f0449}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!reversi\+Play\+End@{reversi\+Play\+End}}
+\index{reversi\+Play\+End@{reversi\+Play\+End}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{reversi\+Play\+End()}{reversiPlayEnd()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+End (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+リバーシプレイ終了 
+
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 292 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reversi\+Play(), and Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Sub().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_abb6d68c910c7d14ff4eaa8db745f0449_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_abb6d68c910c7d14ff4eaa8db745f0449_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_adcbe040514044b7cc8498c0764638356}\label{class_reversi_form_1_1_reversi_play_adcbe040514044b7cc8498c0764638356}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!reversi\+Play\+Pass@{reversi\+Play\+Pass}}
+\index{reversi\+Play\+Pass@{reversi\+Play\+Pass}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{reversi\+Play\+Pass()}{reversiPlayPass()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Pass (\begin{DoxyParamCaption}\item[{int}]{color }\end{DoxyParamCaption})}
+
+
+
+リバーシプレイパス 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & color パス色 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 340 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reversi\+Play(), and Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Sub().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_adcbe040514044b7cc8498c0764638356_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a4fe42268a8d957c555db025f8b35d34e}\label{class_reversi_form_1_1_reversi_play_a4fe42268a8d957c555db025f8b35d34e}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!reversi\+Play\+Sub@{reversi\+Play\+Sub}}
+\index{reversi\+Play\+Sub@{reversi\+Play\+Sub}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{reversi\+Play\+Sub()}{reversiPlaySub()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Sub (\begin{DoxyParamCaption}\item[{int}]{cpu\+Ena,  }\item[{int}]{tmp\+Col }\end{DoxyParamCaption})}
+
+
+
+リバーシプレイサブ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & cpu\+Ena \\
+\hline
+\mbox{\tt in}  & {\em int} & tmp\+Col \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 262 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+reversi\+Play().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a4fe42268a8d957c555db025f8b35d34e_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a4fe42268a8d957c555db025f8b35d34e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_a08062d3bd42d1780a6931b44a925503d}\label{class_reversi_form_1_1_reversi_play_a08062d3bd42d1780a6931b44a925503d}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!send\+Draw\+Info\+Msg@{send\+Draw\+Info\+Msg}}
+\index{send\+Draw\+Info\+Msg@{send\+Draw\+Info\+Msg}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{send\+Draw\+Info\+Msg()}{sendDrawInfoMsg()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+send\+Draw\+Info\+Msg (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+情報描画メッセージ送信 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & y Y座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & x X座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 820 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+draw\+Update().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a08062d3bd42d1780a6931b44a925503d_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_a08062d3bd42d1780a6931b44a925503d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_play_aaad592cdd92fb4efd6132c7cf1871e1f}\label{class_reversi_form_1_1_reversi_play_aaad592cdd92fb4efd6132c7cf1871e1f}} 
+\index{Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}!send\+Draw\+Msg@{send\+Draw\+Msg}}
+\index{send\+Draw\+Msg@{send\+Draw\+Msg}!Reversi\+Form\+::\+Reversi\+Play@{Reversi\+Form\+::\+Reversi\+Play}}
+\subsubsection{\texorpdfstring{send\+Draw\+Msg()}{sendDrawMsg()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi\+Play.\+send\+Draw\+Msg (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x }\end{DoxyParamCaption})}
+
+
+
+描画メッセージ送信 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & y Y座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & x X座標 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 801 of file Reversi\+Play.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi\+Play.\+draw\+Update(), Reversi\+Form.\+Reversi\+Play.\+game\+End\+Anim\+Exec(), Reversi\+Form.\+Reversi\+Play.\+reversi\+Play(), and Reversi\+Form.\+Reversi\+Play.\+reversi\+Play\+Cpu().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aaad592cdd92fb4efd6132c7cf1871e1f_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_play_aaad592cdd92fb4efd6132c7cf1871e1f_icgraph}
+\end{center}
+\end{figure}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/yoshi/\+One\+Drive/\+Documents/\+Visual Studio 2017/\+Projects/\+Reversi\+Form/\+Reversi\+Form/\+Model/\hyperlink{_reversi_play_8cs}{Reversi\+Play.\+cs}\end{DoxyCompactItemize}

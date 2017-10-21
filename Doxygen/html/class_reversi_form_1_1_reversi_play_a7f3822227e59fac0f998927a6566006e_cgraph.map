@@ -1,0 +1,36 @@
+<map id="ReversiForm.ReversiPlay.reversiPlay" name="ReversiForm.ReversiPlay.reversiPlay">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#a960e2691d2d106e5ad6036cfe9cf2503" title="指定色が現在置ける場所があるかチェック " alt="" coords="1339,19,1519,61"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_my_reversi.html#a1f7ba86f6e8d5dd2fa472a8994e4e3c5" title="指定座標にコマを置く " alt="" coords="1072,145,1252,186"/>
+<area shape="rect" id="node8" href="$class_reversi_form_1_1_my_reversi.html#afc9513cbba4f973c7d1ee92e0a0f3288" title="解析を行う " alt="" coords="796,246,1008,287"/>
+<area shape="rect" id="node19" href="$class_reversi_form_1_1_reversi_play.html#aa7cf1089065bff85997d057210312ae8" title="メッセージ " alt="" coords="1330,1255,1529,1297"/>
+<area shape="rect" id="node22" href="$class_reversi_form_1_1_reversi_play.html#aaad592cdd92fb4efd6132c7cf1871e1f" title="描画メッセージ送信 " alt="" coords="1063,1321,1261,1362"/>
+<area shape="rect" id="node23" href="$class_reversi_form_1_1_reversi_play.html#af1415f15759ba8475b4b5afca3a35017" title="マス描画更新 " alt="" coords="803,1154,1001,1195"/>
+<area shape="rect" id="node26" href="$class_reversi_form_1_1_my_reversi.html#aa39c8c111afeb4ea3bf2befbd9f1434b" title="ゲーム終了かチェック " alt="" coords="555,225,735,266"/>
+<area shape="rect" id="node27" href="$class_reversi_form_1_1_reversi_play.html#adcbe040514044b7cc8498c0764638356" title="リバーシプレイパス " alt="" coords="541,1387,748,1429"/>
+<area shape="rect" id="node28" href="$class_reversi_form_1_1_reversi_play.html#abb6d68c910c7d14ff4eaa8db745f0449" title="リバーシプレイ終了 " alt="" coords="541,1322,748,1363"/>
+<area shape="rect" id="node31" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="287,874,493,915"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_my_reversi.html#ae8404068c47751d53c4b430d635a1bb2" title="指定座標に指定色を置けるかチェック " alt="" coords="1591,639,1771,681"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b" title="パラメーター範囲チェック " alt="" coords="1819,904,2043,931"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_my_reversi.html#a990acf71124e50643c0774c38f8f634b" title="コマをひっくり返す " alt="" coords="1340,254,1519,295"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_my_reversi.html#a379ac04ab0e8e9fc819ef3ceeba63e58" title="各コマの置ける場所等のステータス作成 " alt="" coords="1332,137,1527,178"/>
+<area shape="rect" id="node9" href="$class_reversi_form_1_1_reversi_anz.html#a2428d6f4fd60b95d28876b1f0f8ce151" title="リセット " alt="" coords="1064,211,1260,237"/>
+<area shape="rect" id="node10" href="$class_reversi_form_1_1_my_reversi.html#adfa9fda128ee816da9b32009326c5a15" title="解析を行う(黒) " alt="" coords="1056,363,1268,405"/>
+<area shape="rect" id="node18" href="$class_reversi_form_1_1_my_reversi.html#a2fac17b7121d91063e2d759487f1ed18" title="解析を行う(白) " alt="" coords="1056,429,1268,470"/>
+<area shape="rect" id="node11" href="$class_reversi_form_1_1_my_reversi.html#a64216270f06c7c309d39bfcb681dd1b3" title="指定座標が角か取得 " alt="" coords="1339,319,1519,361"/>
+<area shape="rect" id="node12" href="$class_reversi_form_1_1_my_reversi.html#a998eeefb18faecad172a6e1da4c70d7c" title="指定座標が角の一つ手前か取得 " alt="" coords="1339,385,1519,426"/>
+<area shape="rect" id="node13" href="$class_reversi_form_1_1_my_reversi.html#aa626cbf9735559841662c8fc413abb98" title="角の隣に置いても角を取られないマス検索 " alt="" coords="1316,697,1543,724"/>
+<area shape="rect" id="node15" href="$class_reversi_form_1_1_my_reversi.html#a4b5395df3beb684f55b10bab91661c78" title="指定座標が角の二つ手前か取得 " alt="" coords="1339,450,1519,491"/>
+<area shape="rect" id="node16" href="$class_reversi_form_1_1_my_reversi.html#af6fee61bda5532c4c130e5660f7ce66f" title="指定座標が角の三つ以上手前か取得 " alt="" coords="1339,515,1519,557"/>
+<area shape="rect" id="node17" href="$class_reversi_form_1_1_my_reversi.html#a7b5ebbdd9b7ff56d72185e6b89a50af8" title="ポイント座標数取得 " alt="" coords="1339,581,1519,622"/>
+<area shape="rect" id="node14" href="$class_reversi_form_1_1_my_reversi.html#ab6498c154199b58c418af1e0058736f6" title="マスステータスを取得 " alt="" coords="1591,955,1771,997"/>
+<area shape="rect" id="node20" href="$class_reversi_form_1_1_my_reversi.html#a26818336f7915237cf274e1fdff7ec4b" title="指定座標の獲得コマ数取得 " alt="" coords="1591,1086,1771,1127"/>
+<area shape="rect" id="node21" href="$class_reversi_form_1_1_my_reversi.html#aa69640136727deb89addafae8e8e54cb" title="コマ数取得 " alt="" coords="1591,1401,1771,1442"/>
+<area shape="rect" id="node24" href="$class_reversi_form_1_1_reversi_play.html#a08062d3bd42d1780a6931b44a925503d" title="情報描画メッセージ送信 " alt="" coords="1063,1255,1261,1297"/>
+<area shape="rect" id="node25" href="$class_reversi_form_1_1_my_reversi.html#abd6f4b9d6355af3175ac885731338705" title="以前のマスステータスを取得 " alt="" coords="1591,1021,1771,1062"/>
+<area shape="rect" id="node29" href="$class_reversi_form_1_1_reversi_play.html#aec95b109a53b3cdab6466a4fca52f967" title="ゲーム終了アニメーション " alt="" coords="801,1438,1003,1479"/>
+<area shape="rect" id="node30" href="$class_reversi_form_1_1_my_reversi.html#a940c5ec6841ffa050a53276815afcc9d" title="指定座標にコマを強制的に置く " alt="" coords="1072,1489,1252,1530"/>
+<area shape="rect" id="node32" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="541,770,748,811"/>
+<area shape="rect" id="node33" href="$class_reversi_form_1_1_my_reversi.html#a58150a220368d7d7ae8ad01ee0120e71" title="ポイント座標取得 " alt="" coords="1591,838,1771,879"/>
+<area shape="rect" id="node34" href="$class_reversi_form_1_1_my_reversi.html#a13c780ba2b5a346bd6fd295a0cc962f8" title="パス判定 " alt="" coords="812,917,992,958"/>
+<area shape="rect" id="node35" href="$class_reversi_form_1_1_my_reversi.html#af0170bf211a996c2285d0db926f2f0ae" title="ポイント座標解析取得 " alt="" coords="812,799,992,841"/>
+</map>

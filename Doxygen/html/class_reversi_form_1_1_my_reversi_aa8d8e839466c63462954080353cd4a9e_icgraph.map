@@ -1,0 +1,6 @@
+<map id="ReversiForm.MyReversi.reset" name="ReversiForm.MyReversi.reset">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#ab8c7a345a2e1d0978afd640d052f3827" title="コンストラクタ " alt="" coords="244,5,424,47"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="472,101,671,127"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_my_reversi.html#af9573f1da0d89180a4dbbd98d41a05fb" title="マスの数変更 " alt="" coords="244,123,424,164"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#aeb78112f8fb7fd2c75b8e0f088939867" title="コンストラクタ " alt="" coords="719,93,889,135"/>
+</map>

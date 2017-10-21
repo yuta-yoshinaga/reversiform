@@ -1,0 +1,6 @@
+<map id="ReversiForm.MyReversi.setMasuCnt" name="ReversiForm.MyReversi.setMasuCnt">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b" title="パラメーター範囲チェック " alt="" coords="233,5,457,32"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_my_reversi.html#aa8d8e839466c63462954080353cd4a9e" title="リセット " alt="" coords="250,56,441,83"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_anz.html#a2428d6f4fd60b95d28876b1f0f8ce151" title="リセット " alt="" coords="505,27,701,53"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_my_reversi.html#a379ac04ab0e8e9fc819ef3ceeba63e58" title="各コマの置ける場所等のステータス作成 " alt="" coords="506,78,701,119"/>
+</map>

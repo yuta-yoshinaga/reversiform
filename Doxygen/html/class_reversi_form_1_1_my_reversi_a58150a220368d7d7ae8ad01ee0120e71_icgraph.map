@@ -1,0 +1,7 @@
+<map id="ReversiForm.MyReversi.getPoint" name="ReversiForm.MyReversi.getPoint">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="237,15,436,42"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="233,68,440,109"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#aeb78112f8fb7fd2c75b8e0f088939867" title="コンストラクタ " alt="" coords="506,5,677,47"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="488,71,695,112"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="743,78,976,105"/>
+</map>

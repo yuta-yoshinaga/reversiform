@@ -1,0 +1,6 @@
+<map id="ReversiForm.MyReversi.setMasuSts" name="ReversiForm.MyReversi.setMasuSts">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#ae8404068c47751d53c4b430d635a1bb2" title="指定座標に指定色を置けるかチェック " alt="" coords="241,5,421,47"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_my_reversi.html#a990acf71124e50643c0774c38f8f634b" title="コマをひっくり返す " alt="" coords="241,71,420,112"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_my_reversi.html#a379ac04ab0e8e9fc819ef3ceeba63e58" title="各コマの置ける場所等のステータス作成 " alt="" coords="233,136,428,177"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b" title="パラメーター範囲チェック " alt="" coords="476,13,700,39"/>
+</map>

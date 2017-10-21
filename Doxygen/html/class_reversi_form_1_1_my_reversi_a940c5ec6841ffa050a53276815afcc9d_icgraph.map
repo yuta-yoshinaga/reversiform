@@ -1,0 +1,6 @@
+<map id="ReversiForm.MyReversi.setMasuStsForcibly" name="ReversiForm.MyReversi.setMasuStsForcibly">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#aec95b109a53b3cdab6466a4fca52f967" title="ゲーム終了アニメーション " alt="" coords="233,5,436,47"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#abb6d68c910c7d14ff4eaa8db745f0449" title="リバーシプレイ終了 " alt="" coords="484,5,691,47"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="993,13,1227,39"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="739,35,945,76"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="ReversiForm.MyReversi" name="ReversiForm.MyReversi">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_point.html" title="リバーシポイント " alt="" coords="5,5,176,141"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_history.html" title="リバーシ履歴クラス " alt="" coords="152,351,333,472"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_anz.html" title="リバーシ解析クラス " alt="" coords="357,204,520,619"/>
+</map>

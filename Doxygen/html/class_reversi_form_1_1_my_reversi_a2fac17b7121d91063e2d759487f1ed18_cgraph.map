@@ -1,0 +1,14 @@
+<map id="ReversiForm.MyReversi.AnalysisReversiWhite" name="ReversiForm.MyReversi.AnalysisReversiWhite">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#a990acf71124e50643c0774c38f8f634b" title="コマをひっくり返す " alt="" coords="289,5,468,47"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_my_reversi.html#a379ac04ab0e8e9fc819ef3ceeba63e58" title="各コマの置ける場所等のステータス作成 " alt="" coords="281,71,476,112"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_my_reversi.html#a960e2691d2d106e5ad6036cfe9cf2503" title="指定色が現在置ける場所があるかチェック " alt="" coords="289,136,469,177"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_my_reversi.html#ae8404068c47751d53c4b430d635a1bb2" title="指定座標に指定色を置けるかチェック " alt="" coords="540,195,720,236"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_my_reversi.html#a64216270f06c7c309d39bfcb681dd1b3" title="指定座標が角か取得 " alt="" coords="289,253,469,295"/>
+<area shape="rect" id="node8" href="$class_reversi_form_1_1_my_reversi.html#a998eeefb18faecad172a6e1da4c70d7c" title="指定座標が角の一つ手前か取得 " alt="" coords="289,319,469,360"/>
+<area shape="rect" id="node9" href="$class_reversi_form_1_1_my_reversi.html#aa626cbf9735559841662c8fc413abb98" title="角の隣に置いても角を取られないマス検索 " alt="" coords="265,385,492,411"/>
+<area shape="rect" id="node11" href="$class_reversi_form_1_1_my_reversi.html#a4b5395df3beb684f55b10bab91661c78" title="指定座標が角の二つ手前か取得 " alt="" coords="289,436,469,477"/>
+<area shape="rect" id="node12" href="$class_reversi_form_1_1_my_reversi.html#af6fee61bda5532c4c130e5660f7ce66f" title="指定座標が角の三つ以上手前か取得 " alt="" coords="289,501,469,543"/>
+<area shape="rect" id="node13" href="$class_reversi_form_1_1_my_reversi.html#a7b5ebbdd9b7ff56d72185e6b89a50af8" title="ポイント座標数取得 " alt="" coords="289,567,469,608"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b" title="パラメーター範囲チェック " alt="" coords="768,249,992,275"/>
+<area shape="rect" id="node10" href="$class_reversi_form_1_1_my_reversi.html#ab6498c154199b58c418af1e0058736f6" title="マスステータスを取得 " alt="" coords="540,332,720,373"/>
+</map>

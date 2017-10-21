@@ -1,0 +1,7 @@
+<map id="ReversiForm.ReversiPlay.execMessage" name="ReversiForm.ReversiPlay.execMessage">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#ab6498c154199b58c418af1e0058736f6" title="マスステータスを取得 " alt="" coords="252,5,432,47"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_my_reversi.html#ae8404068c47751d53c4b430d635a1bb2" title="指定座標に指定色を置けるかチェック " alt="" coords="252,71,432,112"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_my_reversi.html#a26818336f7915237cf274e1fdff7ec4b" title="指定座標の獲得コマ数取得 " alt="" coords="252,136,432,177"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_my_reversi.html#aa69640136727deb89addafae8e8e54cb" title="コマ数取得 " alt="" coords="252,201,432,243"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b" title="パラメーター範囲チェック " alt="" coords="480,78,704,105"/>
+</map>
