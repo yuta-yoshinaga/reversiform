@@ -16,5 +16,22 @@ namespace ReversiForm
         {
             InitializeComponent();
         }
+
+        private void pictureBox_Click(object sender, EventArgs e)
+        {
+			TableLayoutPanelCellPosition pos = this.tableLayoutPanel1.GetCellPosition((Control)sender);
+
+            Console.WriteLine("click x=" + pos.Column + " y=" + pos.Row);
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
