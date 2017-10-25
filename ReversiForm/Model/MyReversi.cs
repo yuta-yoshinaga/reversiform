@@ -30,19 +30,19 @@ namespace ReversiForm
 	public class MyReversi
 	{
 		#region メンバ変数
-		private int[][] _mMasuSts;										//!< マスの状態
-		private int[][] _mMasuStsOld;									//!< 以前のマスの状態
-		private int[][] _mMasuStsEnaB;									//!< 黒の置ける場所
-		private int[][] _mMasuStsCntB;									//!< 黒の獲得コマ数
-		private int[][] _mMasuStsPassB;									//!< 黒が相手をパスさせる場所
-		private ReversiAnz[][] _mMasuStsAnzB;							//!< 黒がその場所に置いた場合の解析結果
+		private int[,] _mMasuSts;										//!< マスの状態
+		private int[,] _mMasuStsOld;									//!< 以前のマスの状態
+		private int[,] _mMasuStsEnaB;									//!< 黒の置ける場所
+		private int[,] _mMasuStsCntB;									//!< 黒の獲得コマ数
+		private int[,] _mMasuStsPassB;									//!< 黒が相手をパスさせる場所
+		private ReversiAnz[,] _mMasuStsAnzB;							//!< 黒がその場所に置いた場合の解析結果
 		private ReversiPoint[] _mMasuPointB;							//!< 黒の置ける場所座標一覧
 		private int _mMasuPointCntB;									//!< 黒の置ける場所座標一覧数
 		private int _mMasuBetCntB;										//!< 黒コマ数
-		private int[][] _mMasuStsEnaW;									//!< 白の置ける場所
-		private int[][] _mMasuStsCntW;									//!< 白の獲得コマ数
-		private int[][] _mMasuStsPassW;									//!< 白が相手をパスさせる場所
-		private ReversiAnz[][] _mMasuStsAnzW;							//!< 白がその場所に置いた場合の解析結果
+		private int[,] _mMasuStsEnaW;									//!< 白の置ける場所
+		private int[,] _mMasuStsCntW;									//!< 白の獲得コマ数
+		private int[,] _mMasuStsPassW;									//!< 白が相手をパスさせる場所
+		private ReversiAnz[,] _mMasuStsAnzW;							//!< 白がその場所に置いた場合の解析結果
 		private ReversiPoint[] _mMasuPointW;							//!< 白の置ける場所座標一覧
 		private int _mMasuPointCntW;									//!< 白の置ける場所座標一覧数
 		private int _mMasuBetCntW;										//!< 白コマ数
@@ -53,32 +53,32 @@ namespace ReversiForm
 		#endregion
 
 		#region プロパティ
-		public int[][] mMasuSts
+		public int[,] mMasuSts
 		{
 			get { return _mMasuSts; }
 			set { _mMasuSts = value; }
 		}
-		public int[][] mMasuStsOld
+		public int[,] mMasuStsOld
 		{
 			get { return _mMasuStsOld; }
 			set { _mMasuStsOld = value; }
 		}
-		public int[][] mMasuStsEnaB
+		public int[,] mMasuStsEnaB
 		{
 			get { return _mMasuStsEnaB; }
 			set { _mMasuStsEnaB = value; }
 		}
-		public int[][] mMasuStsCntB
+		public int[,] mMasuStsCntB
 		{
 			get { return _mMasuStsCntB; }
 			set { _mMasuStsCntB = value; }
 		}
-		public int[][] mMasuStsPassB
+		public int[,] mMasuStsPassB
 		{
 			get { return _mMasuStsPassB; }
 			set { _mMasuStsPassB = value; }
 		}
-		public ReversiAnz[][] mMasuStsAnzB
+		public ReversiAnz[,] mMasuStsAnzB
 		{
 			get { return _mMasuStsAnzB; }
 			set { _mMasuStsAnzB = value; }
@@ -98,22 +98,22 @@ namespace ReversiForm
 			get { return _mMasuBetCntB; }
 			set { _mMasuBetCntB = value; }
 		}
-		public int[][] mMasuStsEnaW
+		public int[,] mMasuStsEnaW
 		{
 			get { return _mMasuStsEnaW; }
 			set { _mMasuStsEnaW = value; }
 		}
-		public int[][] mMasuStsCntW
+		public int[,] mMasuStsCntW
 		{
 			get { return _mMasuStsCntW; }
 			set { _mMasuStsCntW = value; }
 		}
-		public int[][] mMasuStsPassW
+		public int[,] mMasuStsPassW
 		{
 			get { return _mMasuStsPassW; }
 			set { _mMasuStsPassW = value; }
 		}
-		public ReversiAnz[][] mMasuStsAnzW
+		public ReversiAnz[,] mMasuStsAnzW
 		{
 			get { return _mMasuStsAnzW; }
 			set { _mMasuStsAnzW = value; }
@@ -170,31 +170,32 @@ namespace ReversiForm
 			this.mMasuCnt = masuCnt;
 			this.mMasuCntMax = masuMax;
 
-			this.mMasuSts = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
+			this.mMasuSts = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsOld = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 
-			this.mMasuStsEnaB	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-			this.mMasuStsCntB	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-			this.mMasuStsPassB	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-			this.mMasuStsAnzB	= new ReversiAnz[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
+			this.mMasuStsEnaB	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsCntB	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsPassB	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsAnzB	= new ReversiAnz[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 
-			this.mMasuStsEnaW	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-			this.mMasuStsCntW	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-			this.mMasuStsPassW	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-			this.mMasuStsAnzW	= new ReversiAnz[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
+			this.mMasuStsEnaW	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsCntW	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsPassW	= new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mMasuStsAnzW	= new ReversiAnz[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 
 			for (var i = 0; i < this.mMasuCntMax; i++) {
 				for (var j = 0; j < this.mMasuCntMax; j++) {
-					this.mMasuSts[i][j]			= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuSts[i,j]			= ReversiConst.REVERSI_STS_NONE;
 
-					this.mMasuStsEnaB[i][j]		= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsCntB[i][j]		= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsPassB[i][j]	= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsAnzB[i][j]		= new ReversiAnz();
+					this.mMasuStsEnaB[i,j]		= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsCntB[i,j]		= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsPassB[i,j]	= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsAnzB[i,j]		= new ReversiAnz();
 
-					this.mMasuStsEnaW[i][j]		= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsCntW[i][j]		= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsPassW[i][j]	= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsAnzW[i][j]		= new ReversiAnz();
+					this.mMasuStsEnaW[i,j]		= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsCntW[i,j]		= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsPassW[i,j]	= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsAnzW[i,j]		= new ReversiAnz();
 				}
 			}
 			this.mMasuPointB = new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
@@ -244,17 +245,17 @@ namespace ReversiForm
 		{
 			for (var i = 0; i < this.mMasuCnt; i++) {
 				for (var j = 0; j < this.mMasuCnt; j++) {
-					this.mMasuSts[i][j]			= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsPassB[i][j]	= 0;
-					this.mMasuStsAnzB[i][j].reset();
-					this.mMasuStsPassW[i][j]	= 0;
-					this.mMasuStsAnzW[i][j].reset();
+					this.mMasuSts[i,j]			= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsPassB[i,j]	= 0;
+					this.mMasuStsAnzB[i,j].reset();
+					this.mMasuStsPassW[i,j]	= 0;
+					this.mMasuStsAnzW[i,j].reset();
 				}
 			}
-			this.mMasuSts[(this.mMasuCnt >> 1) - 1][(this.mMasuCnt >> 1) - 1]	= ReversiConst.REVERSI_STS_BLACK;
-			this.mMasuSts[(this.mMasuCnt >> 1) - 1][(this.mMasuCnt >> 1)]		= ReversiConst.REVERSI_STS_WHITE;
-			this.mMasuSts[(this.mMasuCnt >> 1)][(this.mMasuCnt >> 1) - 1]		= ReversiConst.REVERSI_STS_WHITE;
-			this.mMasuSts[(this.mMasuCnt >> 1)][(this.mMasuCnt >> 1)]			= ReversiConst.REVERSI_STS_BLACK;
+			this.mMasuSts[(this.mMasuCnt >> 1) - 1,(this.mMasuCnt >> 1) - 1]	= ReversiConst.REVERSI_STS_BLACK;
+			this.mMasuSts[(this.mMasuCnt >> 1) - 1,(this.mMasuCnt >> 1)]		= ReversiConst.REVERSI_STS_WHITE;
+			this.mMasuSts[(this.mMasuCnt >> 1),(this.mMasuCnt >> 1) - 1]		= ReversiConst.REVERSI_STS_WHITE;
+			this.mMasuSts[(this.mMasuCnt >> 1),(this.mMasuCnt >> 1)]			= ReversiConst.REVERSI_STS_BLACK;
 			this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 			this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
 			this.mMasuHistCur = 0;
@@ -285,11 +286,11 @@ namespace ReversiForm
 			for (var i = 0; i < this.mMasuCnt; i++) {								// 初期化
 				for (var j = 0; j < this.mMasuCnt; j++) {
 					if (color == ReversiConst.REVERSI_STS_BLACK) {
-						this.mMasuStsEnaB[i][j] = 0;
-						this.mMasuStsCntB[i][j] = 0;
+						this.mMasuStsEnaB[i,j] = 0;
+						this.mMasuStsCntB[i,j] = 0;
 					} else {
-						this.mMasuStsEnaW[i][j] = 0;
-						this.mMasuStsCntW[i][j] = 0;
+						this.mMasuStsEnaW[i,j] = 0;
+						this.mMasuStsCntW[i,j] = 0;
 					}
 				}
 			}
@@ -316,52 +317,52 @@ namespace ReversiForm
 				for (var j = 0; j < this.mMasuCnt; j++) {
 					okflg = 0;
 					count2 = 0;
-					if (this.mMasuSts[i][j] == ReversiConst.REVERSI_STS_NONE) {		// 何も置かれていないマスなら
+					if (this.mMasuSts[i,j] == ReversiConst.REVERSI_STS_NONE) {		// 何も置かれていないマスなら
 						cnt1 = i;
 						count1 = flg = 0;
 						// *** 上方向を調べる *** //
-						while ((cnt1 > 0) && (this.mMasuSts[cnt1 - 1][j] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 - 1][j] != color)) {
+						while ((cnt1 > 0) && (this.mMasuSts[cnt1 - 1,j] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 - 1,j] != color)) {
 							flg = 1;
 							cnt1--;
 							count1++;
 						}
-						if ((cnt1 > 0) && (flg == 1) && (this.mMasuSts[cnt1 - 1][j] == color)) {
+						if ((cnt1 > 0) && (flg == 1) && (this.mMasuSts[cnt1 - 1,j] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
 						cnt1 = i;
 						count1 = flg = 0;
 						// *** 下方向を調べる *** //
-						while ((cnt1 < (this.mMasuCnt - 1)) && (this.mMasuSts[cnt1 + 1][j] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 + 1][j] != color)) {
+						while ((cnt1 < (this.mMasuCnt - 1)) && (this.mMasuSts[cnt1 + 1,j] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 + 1,j] != color)) {
 							flg = 1;
 							cnt1++;
 							count1++;
 						}
-						if ((cnt1 < (this.mMasuCnt - 1)) && (flg == 1) && (this.mMasuSts[cnt1 + 1][j] == color)) {
+						if ((cnt1 < (this.mMasuCnt - 1)) && (flg == 1) && (this.mMasuSts[cnt1 + 1,j] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
 						cnt2 = j;
 						count1 = flg = 0;
 						// *** 右方向を調べる *** //
-						while ((cnt2 < (this.mMasuCnt - 1)) && (this.mMasuSts[i][cnt2 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[i][cnt2 + 1] != color)) {
+						while ((cnt2 < (this.mMasuCnt - 1)) && (this.mMasuSts[i,cnt2 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[i,cnt2 + 1] != color)) {
 							flg = 1;
 							cnt2++;
 							count1++;
 						}
-						if ((cnt2 < (this.mMasuCnt - 1)) && (flg == 1) && (this.mMasuSts[i][cnt2 + 1] == color)) {
+						if ((cnt2 < (this.mMasuCnt - 1)) && (flg == 1) && (this.mMasuSts[i,cnt2 + 1] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
 						cnt2 = j;
 						count1 = flg = 0;
 						// *** 左方向を調べる *** //
-						while ((cnt2 > 0) && (this.mMasuSts[i][cnt2 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[i][cnt2 - 1] != color)) {
+						while ((cnt2 > 0) && (this.mMasuSts[i,cnt2 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[i,cnt2 - 1] != color)) {
 							flg = 1;
 							cnt2--;
 							count1++;
 						}
-						if ((cnt2 > 0) && (flg == 1) && (this.mMasuSts[i][cnt2 - 1] == color)) {
+						if ((cnt2 > 0) && (flg == 1) && (this.mMasuSts[i,cnt2 - 1] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
@@ -369,13 +370,13 @@ namespace ReversiForm
 						cnt1 = i;
 						count1 = flg = 0;
 						// *** 右上方向を調べる *** //
-						while (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 > 0)) && (this.mMasuSts[cnt1 - 1][cnt2 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 - 1][cnt2 + 1] != color)) {
+						while (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 > 0)) && (this.mMasuSts[cnt1 - 1,cnt2 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 - 1,cnt2 + 1] != color)) {
 							flg = 1;
 							cnt1--;
 							cnt2++;
 							count1++;
 						}
-						if (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 > 0)) && (flg == 1) && (this.mMasuSts[cnt1 - 1][cnt2 + 1] == color)) {
+						if (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 > 0)) && (flg == 1) && (this.mMasuSts[cnt1 - 1,cnt2 + 1] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
@@ -383,13 +384,13 @@ namespace ReversiForm
 						cnt1 = i;
 						count1 = flg = 0;
 						// *** 左上方向を調べる *** //
-						while (((cnt2 > 0) && (cnt1 > 0)) && (this.mMasuSts[cnt1 - 1][cnt2 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 - 1][cnt2 - 1] != color)) {
+						while (((cnt2 > 0) && (cnt1 > 0)) && (this.mMasuSts[cnt1 - 1,cnt2 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 - 1,cnt2 - 1] != color)) {
 							flg = 1;
 							cnt1--;
 							cnt2--;
 							count1++;
 						}
-						if (((cnt2 > 0) && (cnt1 > 0)) && (flg == 1) && (this.mMasuSts[cnt1 - 1][cnt2 - 1] == color)) {
+						if (((cnt2 > 0) && (cnt1 > 0)) && (flg == 1) && (this.mMasuSts[cnt1 - 1,cnt2 - 1] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
@@ -397,13 +398,13 @@ namespace ReversiForm
 						cnt1 = i;
 						count1 = flg = 0;
 						// *** 右下方向を調べる *** //
-						while (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 < (this.mMasuCnt - 1))) && (this.mMasuSts[cnt1 + 1][cnt2 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 + 1][cnt2 + 1] != color)) {
+						while (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 < (this.mMasuCnt - 1))) && (this.mMasuSts[cnt1 + 1,cnt2 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 + 1,cnt2 + 1] != color)) {
 							flg = 1;
 							cnt1++;
 							cnt2++;
 							count1++;
 						}
-						if (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 < (this.mMasuCnt - 1))) && (flg == 1) && (this.mMasuSts[cnt1 + 1][cnt2 + 1] == color)) {
+						if (((cnt2 < (this.mMasuCnt - 1)) && (cnt1 < (this.mMasuCnt - 1))) && (flg == 1) && (this.mMasuSts[cnt1 + 1,cnt2 + 1] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
@@ -411,27 +412,27 @@ namespace ReversiForm
 						cnt1 = i;
 						count1 = flg = 0;
 						// *** 左下方向を調べる *** //
-						while (((cnt2 > 0) && (cnt1 < (this.mMasuCnt - 1))) && (this.mMasuSts[cnt1 + 1][cnt2 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 + 1][cnt2 - 1] != color)) {
+						while (((cnt2 > 0) && (cnt1 < (this.mMasuCnt - 1))) && (this.mMasuSts[cnt1 + 1,cnt2 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt1 + 1,cnt2 - 1] != color)) {
 							flg = 1;
 							cnt1++;
 							cnt2--;
 							count1++;
 						}
-						if (((cnt2 > 0) && (cnt1 < (this.mMasuCnt - 1))) && (flg == 1) && (this.mMasuSts[cnt1 + 1][cnt2 - 1] == color)) {
+						if (((cnt2 > 0) && (cnt1 < (this.mMasuCnt - 1))) && (flg == 1) && (this.mMasuSts[cnt1 + 1,cnt2 - 1] == color)) {
 							okflg = 1;
 							count2 += count1;
 						}
 						if (okflg == 1) {
 							if (color == ReversiConst.REVERSI_STS_BLACK) {
-								this.mMasuStsEnaB[i][j] = 1;
-								this.mMasuStsCntB[i][j] = count2;
+								this.mMasuStsEnaB[i,j] = 1;
+								this.mMasuStsCntB[i,j] = count2;
 								// *** 置ける場所をリニアに保存、置けるポイント数も保存 *** //
 								this.mMasuPointB[this.mMasuPointCntB].y = i;
 								this.mMasuPointB[this.mMasuPointCntB].x = j;
 								this.mMasuPointCntB++;
 							} else {
-								this.mMasuStsEnaW[i][j] = 1;
-								this.mMasuStsCntW[i][j] = count2;
+								this.mMasuStsEnaW[i,j] = 1;
+								this.mMasuStsCntW[i,j] = count2;
 								// *** 置ける場所をリニアに保存、置けるポイント数も保存 *** //
 								this.mMasuPointW[this.mMasuPointCntW].y = i;
 								this.mMasuPointW[this.mMasuPointCntW].x = j;
@@ -440,9 +441,9 @@ namespace ReversiForm
 							ret = 0;
 							if (countMax < count2) countMax = count2;
 						}
-					} else if (this.mMasuSts[i][j] == ReversiConst.REVERSI_STS_BLACK) {
+					} else if (this.mMasuSts[i,j] == ReversiConst.REVERSI_STS_BLACK) {
 						this.mMasuBetCntB++;
-					} else if (this.mMasuSts[i][j] == ReversiConst.REVERSI_STS_WHITE) {
+					} else if (this.mMasuSts[i,j] == ReversiConst.REVERSI_STS_WHITE) {
 						this.mMasuBetCntW++;
 					}
 				}
@@ -452,12 +453,12 @@ namespace ReversiForm
 			for (var i = 0; i < this.mMasuCnt; i++) {
 				for (var j = 0; j < this.mMasuCnt; j++) {
 					if (color == ReversiConst.REVERSI_STS_BLACK) {
-						if (this.mMasuStsEnaB[i][j] != 0 && this.mMasuStsCntB[i][j] == countMax) {
-							this.mMasuStsEnaB[i][j] = 2;
+						if (this.mMasuStsEnaB[i,j] != 0 && this.mMasuStsCntB[i,j] == countMax) {
+							this.mMasuStsEnaB[i,j] = 2;
 						}
 					} else {
-						if (this.mMasuStsEnaW[i][j] != 0 && this.mMasuStsCntW[i][j] == countMax) {
-							this.mMasuStsEnaW[i][j] = 2;
+						if (this.mMasuStsEnaW[i,j] != 0 && this.mMasuStsCntW[i,j] == countMax) {
+							this.mMasuStsEnaW[i,j] = 2;
 						}
 					}
 				}
@@ -486,157 +487,157 @@ namespace ReversiForm
 
 			// *** 左方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt1 > 0;) {
-				if (this.mMasuSts[cnt2][cnt1 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2][cnt1 - 1] != color) {
+				if (this.mMasuSts[cnt2,cnt1 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2,cnt1 - 1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt1--;
-				} else if (this.mMasuSts[cnt2][cnt1 - 1] == color) {
+				} else if (this.mMasuSts[cnt2,cnt1 - 1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2][cnt1 - 1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2,cnt1 - 1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt1; rcnt1 < x; rcnt1++) {
-					this.mMasuSts[cnt2][rcnt1] = color;
+					this.mMasuSts[cnt2,rcnt1] = color;
 				}
 			}
 
 			// *** 右方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt1 < (this.mMasuCnt - 1);) {
-				if (this.mMasuSts[cnt2][cnt1 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2][cnt1 + 1] != color) {
+				if (this.mMasuSts[cnt2,cnt1 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2,cnt1 + 1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt1++;
-				} else if (this.mMasuSts[cnt2][cnt1 + 1] == color) {
+				} else if (this.mMasuSts[cnt2,cnt1 + 1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2][cnt1 + 1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2,cnt1 + 1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt1; rcnt1 > x; rcnt1--) {
-					this.mMasuSts[cnt2][rcnt1] = color;
+					this.mMasuSts[cnt2,rcnt1] = color;
 				}
 			}
 
 			// *** 上方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt2 > 0;) {
-				if (this.mMasuSts[cnt2 - 1][cnt1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 - 1][cnt1] != color) {
+				if (this.mMasuSts[cnt2 - 1,cnt1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 - 1,cnt1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt2--;
-				} else if (this.mMasuSts[cnt2 - 1][cnt1] == color) {
+				} else if (this.mMasuSts[cnt2 - 1,cnt1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2 - 1][cnt1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2 - 1,cnt1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt2; rcnt1 < y; rcnt1++) {
-					this.mMasuSts[rcnt1][cnt1] = color;
+					this.mMasuSts[rcnt1,cnt1] = color;
 				}
 			}
 
 			// *** 下方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt2 < (this.mMasuCnt - 1);) {
-				if (this.mMasuSts[cnt2 + 1][cnt1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 + 1][cnt1] != color) {
+				if (this.mMasuSts[cnt2 + 1,cnt1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 + 1,cnt1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt2++;
-				} else if (this.mMasuSts[cnt2 + 1][cnt1] == color) {
+				} else if (this.mMasuSts[cnt2 + 1,cnt1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2 + 1][cnt1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2 + 1,cnt1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt2; rcnt1 > y; rcnt1--) {
-					this.mMasuSts[rcnt1][cnt1] = color;
+					this.mMasuSts[rcnt1,cnt1] = color;
 				}
 			}
 
 			// *** 左上方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt2 > 0 && cnt1 > 0;) {
-				if (this.mMasuSts[cnt2 - 1][cnt1 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 - 1][cnt1 - 1] != color) {
+				if (this.mMasuSts[cnt2 - 1,cnt1 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 - 1,cnt1 - 1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt2--;
 					cnt1--;
-				} else if (this.mMasuSts[cnt2 - 1][cnt1 - 1] == color) {
+				} else if (this.mMasuSts[cnt2 - 1,cnt1 - 1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2 - 1][cnt1 - 1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2 - 1,cnt1 - 1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt2, rcnt2 = cnt1; (rcnt1 < y) && (rcnt2 < x); rcnt1++ , rcnt2++) {
-					this.mMasuSts[rcnt1][rcnt2] = color;
+					this.mMasuSts[rcnt1,rcnt2] = color;
 				}
 			}
 
 			// *** 左下方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt2 < (this.mMasuCnt - 1) && cnt1 > 0;) {
-				if (this.mMasuSts[cnt2 + 1][cnt1 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 + 1][cnt1 - 1] != color) {
+				if (this.mMasuSts[cnt2 + 1,cnt1 - 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 + 1,cnt1 - 1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt2++;
 					cnt1--;
-				} else if (this.mMasuSts[cnt2 + 1][cnt1 - 1] == color) {
+				} else if (this.mMasuSts[cnt2 + 1,cnt1 - 1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2 + 1][cnt1 - 1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2 + 1,cnt1 - 1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt2, rcnt2 = cnt1; (rcnt1 > y) && (rcnt2 < x); rcnt1-- , rcnt2++) {
-					this.mMasuSts[rcnt1][rcnt2] = color;
+					this.mMasuSts[rcnt1,rcnt2] = color;
 				}
 			}
 
 			// *** 右上方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt2 > 0 && cnt1 < (this.mMasuCnt - 1);) {
-				if (this.mMasuSts[cnt2 - 1][cnt1 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 - 1][cnt1 + 1] != color) {
+				if (this.mMasuSts[cnt2 - 1,cnt1 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 - 1,cnt1 + 1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt2--;
 					cnt1++;
-				} else if (this.mMasuSts[cnt2 - 1][cnt1 + 1] == color) {
+				} else if (this.mMasuSts[cnt2 - 1,cnt1 + 1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2 - 1][cnt1 + 1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2 - 1,cnt1 + 1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt2, rcnt2 = cnt1; (rcnt1 < y) && (rcnt2 > x); rcnt1++ , rcnt2--) {
-					this.mMasuSts[rcnt1][rcnt2] = color;
+					this.mMasuSts[rcnt1,rcnt2] = color;
 				}
 			}
 
 			// *** 右下方向にある駒を調べる *** //
 			for (flg = 0, cnt1 = x, cnt2 = y; cnt2 < (this.mMasuCnt - 1) && cnt1 < (this.mMasuCnt - 1);) {
-				if (this.mMasuSts[cnt2 + 1][cnt1 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 + 1][cnt1 + 1] != color) {
+				if (this.mMasuSts[cnt2 + 1,cnt1 + 1] != ReversiConst.REVERSI_STS_NONE && this.mMasuSts[cnt2 + 1,cnt1 + 1] != color) {
 					// *** プレイヤー以外の色の駒があるなら *** //
 					cnt2++;
 					cnt1++;
-				} else if (this.mMasuSts[cnt2 + 1][cnt1 + 1] == color) {
+				} else if (this.mMasuSts[cnt2 + 1,cnt1 + 1] == color) {
 					flg = 1;
 					break;
-				} else if (this.mMasuSts[cnt2 + 1][cnt1 + 1] == ReversiConst.REVERSI_STS_NONE) {
+				} else if (this.mMasuSts[cnt2 + 1,cnt1 + 1] == ReversiConst.REVERSI_STS_NONE) {
 					break;
 				}
 			}
 			if (flg == 1) {
 				// *** 駒をひっくり返す *** //
 				for (rcnt1 = cnt2, rcnt2 = cnt1; (rcnt1 > y) && (rcnt2 > x); rcnt1-- , rcnt2--) {
-					this.mMasuSts[rcnt1][rcnt2] = color;
+					this.mMasuSts[rcnt1,rcnt2] = color;
 				}
 			}
 		}
@@ -679,42 +680,42 @@ namespace ReversiForm
 			int tmpD2;
 			for (var cnt = 0; cnt < this.mMasuPointCntB; cnt++) {
 				// *** 現在ステータスを一旦コピー *** //
-				int[][] tmpMasu = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-				int[][] tmpMasuEnaB = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-				int[][] tmpMasuEnaW = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
+				int[,] tmpMasu = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+				int[,] tmpMasuEnaB = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+				int[,] tmpMasuEnaW = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 				this.mMasuSts.CopyTo(tmpMasu, 0);
 				this.mMasuStsEnaB.CopyTo(tmpMasuEnaB, 0);
 				this.mMasuStsEnaW.CopyTo(tmpMasuEnaW, 0);
 
 				tmpY = this.mMasuPointB[cnt].y;
 				tmpX = this.mMasuPointB[cnt].x;
-				this.mMasuSts[tmpY][tmpX] = ReversiConst.REVERSI_STS_BLACK;					// 仮に置く
+				this.mMasuSts[tmpY,tmpX] = ReversiConst.REVERSI_STS_BLACK;					// 仮に置く
 				this.revMasuSts(ReversiConst.REVERSI_STS_BLACK, tmpY, tmpX);				// 仮にひっくり返す
 				this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
 				// *** このマスに置いた場合の解析を行う *** //
 				if (this.getColorEna(ReversiConst.REVERSI_STS_WHITE) != 0) {				// 相手がパス
-					this.mMasuStsPassB[tmpY][tmpX] = 1;
+					this.mMasuStsPassB[tmpY,tmpX] = 1;
 				}
 				if (this.getEdgeSideZero(tmpY, tmpX) == 0) {								// 置いた場所が角
-					this.mMasuStsAnzB[tmpY][tmpX].ownEdgeCnt++;
-					this.mMasuStsAnzB[tmpY][tmpX].goodPoint += 10000 * this.mMasuStsCntB[tmpY][tmpX];
+					this.mMasuStsAnzB[tmpY,tmpX].ownEdgeCnt++;
+					this.mMasuStsAnzB[tmpY,tmpX].goodPoint += 10000 * this.mMasuStsCntB[tmpY,tmpX];
 				} else if (this.getEdgeSideOne(tmpY, tmpX) == 0) {							// 置いた場所が角の一つ手前
-					this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideOneCnt++;
+					this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideOneCnt++;
 					if (this.checkEdge(ReversiConst.REVERSI_STS_BLACK, tmpY, tmpX) != 0) {	// 角を取られない
-						this.mMasuStsAnzB[tmpY][tmpX].goodPoint += 10 * this.mMasuStsCntB[tmpY][tmpX];
+						this.mMasuStsAnzB[tmpY,tmpX].goodPoint += 10 * this.mMasuStsCntB[tmpY,tmpX];
 					} else {																// 角を取られる
-						this.mMasuStsAnzB[tmpY][tmpX].badPoint += 100000;
+						this.mMasuStsAnzB[tmpY,tmpX].badPoint += 100000;
 					}
 				} else if (this.getEdgeSideTwo(tmpY, tmpX) == 0) {							// 置いた場所が角の二つ手前
-					this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideTwoCnt++;
-					this.mMasuStsAnzB[tmpY][tmpX].goodPoint += 1000 * this.mMasuStsCntB[tmpY][tmpX];
+					this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideTwoCnt++;
+					this.mMasuStsAnzB[tmpY,tmpX].goodPoint += 1000 * this.mMasuStsCntB[tmpY,tmpX];
 				} else if (this.getEdgeSideThree(tmpY, tmpX) == 0) {						// 置いた場所が角の三つ手前
-					this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideThreeCnt++;
-					this.mMasuStsAnzB[tmpY][tmpX].goodPoint += 100 * this.mMasuStsCntB[tmpY][tmpX];
+					this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideThreeCnt++;
+					this.mMasuStsAnzB[tmpY,tmpX].goodPoint += 100 * this.mMasuStsCntB[tmpY,tmpX];
 				} else {																	// 置いた場所がその他
-					this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideOtherCnt++;
-					this.mMasuStsAnzB[tmpY][tmpX].goodPoint += 10 * this.mMasuStsCntB[tmpY][tmpX];
+					this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideOtherCnt++;
+					this.mMasuStsAnzB[tmpY,tmpX].goodPoint += 10 * this.mMasuStsCntB[tmpY,tmpX];
 				}
 				sum = 0;
 				sumOwn = 0;
@@ -723,71 +724,71 @@ namespace ReversiForm
 						tmpBadPoint = 0;
 						tmpGoodPoint = 0;
 						if (this.getMasuStsEna(ReversiConst.REVERSI_STS_WHITE, i, j) != 0) {
-							sum += this.mMasuStsCntW[i][j];									// 相手の獲得予定枚数
+							sum += this.mMasuStsCntW[i,j];									// 相手の獲得予定枚数
 							// *** 相手の獲得予定の最大数保持 *** //
-							if (this.mMasuStsAnzB[tmpY][tmpX].max < this.mMasuStsCntW[i][j]) this.mMasuStsAnzB[tmpY][tmpX].max = this.mMasuStsCntW[i][j];
+							if (this.mMasuStsAnzB[tmpY,tmpX].max < this.mMasuStsCntW[i,j]) this.mMasuStsAnzB[tmpY,tmpX].max = this.mMasuStsCntW[i,j];
 							// *** 相手の獲得予定の最小数保持 *** //
-							if (this.mMasuStsCntW[i][j] < this.mMasuStsAnzB[tmpY][tmpX].min) this.mMasuStsAnzB[tmpY][tmpX].min = this.mMasuStsCntW[i][j];
-							this.mMasuStsAnzB[tmpY][tmpX].pointCnt++;						// 相手の置ける場所の数
+							if (this.mMasuStsCntW[i,j] < this.mMasuStsAnzB[tmpY,tmpX].min) this.mMasuStsAnzB[tmpY,tmpX].min = this.mMasuStsCntW[i,j];
+							this.mMasuStsAnzB[tmpY,tmpX].pointCnt++;						// 相手の置ける場所の数
 							if (this.getEdgeSideZero(i, j) == 0) {							// 置く場所が角
-								this.mMasuStsAnzB[tmpY][tmpX].edgeCnt++;
-								tmpBadPoint = 100000 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].edgeCnt++;
+								tmpBadPoint = 100000 * this.mMasuStsCntW[i,j];
 							} else if (this.getEdgeSideOne(i, j) == 0) {					// 置く場所が角の一つ手前
-								this.mMasuStsAnzB[tmpY][tmpX].edgeSideOneCnt++;
+								this.mMasuStsAnzB[tmpY,tmpX].edgeSideOneCnt++;
 								tmpBadPoint = 0;
 							} else if (this.getEdgeSideTwo(i, j) == 0) {					// 置く場所が角の二つ手前
-								this.mMasuStsAnzB[tmpY][tmpX].edgeSideTwoCnt++;
-								tmpBadPoint = 1 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].edgeSideTwoCnt++;
+								tmpBadPoint = 1 * this.mMasuStsCntW[i,j];
 							} else if (this.getEdgeSideThree(i, j) == 0) {					// 置く場所が角の三つ手前
-								this.mMasuStsAnzB[tmpY][tmpX].edgeSideThreeCnt++;
-								tmpBadPoint = 1 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].edgeSideThreeCnt++;
+								tmpBadPoint = 1 * this.mMasuStsCntW[i,j];
 							} else {														// 置く場所がその他
-								this.mMasuStsAnzB[tmpY][tmpX].edgeSideOtherCnt++;
-								tmpBadPoint = 1 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].edgeSideOtherCnt++;
+								tmpBadPoint = 1 * this.mMasuStsCntW[i,j];
 							}
-							if (tmpMasuEnaW[i][j] != 0) tmpBadPoint = 0;					// ステータス変化していないなら
+							if (tmpMasuEnaW[i,j] != 0) tmpBadPoint = 0;					// ステータス変化していないなら
 						}
 						if (this.getMasuStsEna(ReversiConst.REVERSI_STS_BLACK, i, j) != 0) {
-							sumOwn += this.mMasuStsCntB[i][j];								// 自分の獲得予定枚数
+							sumOwn += this.mMasuStsCntB[i,j];								// 自分の獲得予定枚数
 							// *** 自分の獲得予定の最大数保持 *** //
-							if (this.mMasuStsAnzB[tmpY][tmpX].ownMax < this.mMasuStsCntB[i][j]) this.mMasuStsAnzB[tmpY][tmpX].ownMax = this.mMasuStsCntB[i][j];
+							if (this.mMasuStsAnzB[tmpY,tmpX].ownMax < this.mMasuStsCntB[i,j]) this.mMasuStsAnzB[tmpY,tmpX].ownMax = this.mMasuStsCntB[i,j];
 							// *** 自分の獲得予定の最小数保持 *** //
-							if (this.mMasuStsCntB[i][j] < this.mMasuStsAnzB[tmpY][tmpX].ownMin) this.mMasuStsAnzB[tmpY][tmpX].ownMin = this.mMasuStsCntB[i][j];
-							this.mMasuStsAnzB[tmpY][tmpX].ownPointCnt++;					// 自分の置ける場所の数
+							if (this.mMasuStsCntB[i,j] < this.mMasuStsAnzB[tmpY,tmpX].ownMin) this.mMasuStsAnzB[tmpY,tmpX].ownMin = this.mMasuStsCntB[i,j];
+							this.mMasuStsAnzB[tmpY,tmpX].ownPointCnt++;					// 自分の置ける場所の数
 							if (this.getEdgeSideZero(i, j) == 0) {							// 置く場所が角
-								this.mMasuStsAnzB[tmpY][tmpX].ownEdgeCnt++;
-								tmpGoodPoint = 100 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].ownEdgeCnt++;
+								tmpGoodPoint = 100 * this.mMasuStsCntB[i,j];
 							} else if (this.getEdgeSideOne(i, j) == 0) {					// 置く場所が角の一つ手前
-								this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideOneCnt++;
+								this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideOneCnt++;
 								tmpGoodPoint = 0;
 							} else if (this.getEdgeSideTwo(i, j) == 0) {					// 置く場所が角の二つ手前
-								this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideTwoCnt++;
-								tmpGoodPoint = 3 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideTwoCnt++;
+								tmpGoodPoint = 3 * this.mMasuStsCntB[i,j];
 							} else if (this.getEdgeSideThree(i, j) == 0) {					// 置く場所が角の三つ手前
-								this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideThreeCnt++;
-								tmpGoodPoint = 2 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideThreeCnt++;
+								tmpGoodPoint = 2 * this.mMasuStsCntB[i,j];
 							} else {														// 置く場所がその他
-								this.mMasuStsAnzB[tmpY][tmpX].ownEdgeSideOtherCnt++;
-								tmpGoodPoint = 1 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzB[tmpY,tmpX].ownEdgeSideOtherCnt++;
+								tmpGoodPoint = 1 * this.mMasuStsCntB[i,j];
 							}
-							if (tmpMasuEnaB[i][j] != 0) tmpGoodPoint = 0;					// ステータス変化していないなら
+							if (tmpMasuEnaB[i,j] != 0) tmpGoodPoint = 0;					// ステータス変化していないなら
 						}
-						if (tmpBadPoint != 0) this.mMasuStsAnzB[tmpY][tmpX].badPoint += tmpBadPoint;
-						if (tmpGoodPoint != 0) this.mMasuStsAnzB[tmpY][tmpX].goodPoint += tmpGoodPoint;
+						if (tmpBadPoint != 0) this.mMasuStsAnzB[tmpY,tmpX].badPoint += tmpBadPoint;
+						if (tmpGoodPoint != 0) this.mMasuStsAnzB[tmpY,tmpX].goodPoint += tmpGoodPoint;
 					}
 				}
 				// *** 相手に取られる平均コマ数 *** //
 				if (this.getPointCnt(ReversiConst.REVERSI_STS_WHITE) != 0) {
 					tmpD1 = sum;
 					tmpD2 = this.getPointCnt(ReversiConst.REVERSI_STS_WHITE);
-					this.mMasuStsAnzB[tmpY][tmpX].avg = tmpD1 / tmpD2;
+					this.mMasuStsAnzB[tmpY,tmpX].avg = tmpD1 / tmpD2;
 				}
 
 				// *** 自分が取れる平均コマ数 *** //
 				if (this.getPointCnt(ReversiConst.REVERSI_STS_BLACK) != 0) {
 					tmpD1 = sumOwn;
 					tmpD2 = this.getPointCnt(ReversiConst.REVERSI_STS_BLACK);
-					this.mMasuStsAnzB[tmpY][tmpX].ownAvg = tmpD1 / tmpD2;
+					this.mMasuStsAnzB[tmpY,tmpX].ownAvg = tmpD1 / tmpD2;
 				}
 
 				// *** 元に戻す *** //
@@ -817,42 +818,42 @@ namespace ReversiForm
 			int tmpD2;
 			for (var cnt = 0; cnt < this.mMasuPointCntW; cnt++) {
 				// *** 現在ステータスを一旦コピー *** //
-				int[][] tmpMasu = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-				int[][] tmpMasuEnaB = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
-				int[][] tmpMasuEnaW = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL][];
+				int[,] tmpMasu = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+				int[,] tmpMasuEnaB = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
+				int[,] tmpMasuEnaW = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 				this.mMasuSts.CopyTo(tmpMasu, 0);
 				this.mMasuStsEnaB.CopyTo(tmpMasuEnaB, 0);
 				this.mMasuStsEnaW.CopyTo(tmpMasuEnaW, 0);
 
 				tmpY = this.mMasuPointW[cnt].y;
 				tmpX = this.mMasuPointW[cnt].x;
-				this.mMasuSts[tmpY][tmpX] = ReversiConst.REVERSI_STS_WHITE;					// 仮に置く
+				this.mMasuSts[tmpY,tmpX] = ReversiConst.REVERSI_STS_WHITE;					// 仮に置く
 				this.revMasuSts(ReversiConst.REVERSI_STS_WHITE, tmpY, tmpX);				// 仮にひっくり返す
 				this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
 				// *** このマスに置いた場合の解析を行う *** //
 				if (this.getColorEna(ReversiConst.REVERSI_STS_BLACK) != 0) {				// 相手がパス
-					this.mMasuStsPassW[tmpY][tmpX] = 1;
+					this.mMasuStsPassW[tmpY,tmpX] = 1;
 				}
 				if (this.getEdgeSideZero(tmpY, tmpX) == 0) {								// 置いた場所が角
-					this.mMasuStsAnzW[tmpY][tmpX].ownEdgeCnt++;
-					this.mMasuStsAnzW[tmpY][tmpX].goodPoint += 10000 * this.mMasuStsCntW[tmpY][tmpX];
+					this.mMasuStsAnzW[tmpY,tmpX].ownEdgeCnt++;
+					this.mMasuStsAnzW[tmpY,tmpX].goodPoint += 10000 * this.mMasuStsCntW[tmpY,tmpX];
 				} else if (this.getEdgeSideOne(tmpY, tmpX) == 0) {							// 置いた場所が角の一つ手前
-					this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideOneCnt++;
+					this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideOneCnt++;
 					if (this.checkEdge(ReversiConst.REVERSI_STS_WHITE, tmpY, tmpX) != 0) {	// 角を取られない
-						this.mMasuStsAnzW[tmpY][tmpX].goodPoint += 10 * this.mMasuStsCntW[tmpY][tmpX];
+						this.mMasuStsAnzW[tmpY,tmpX].goodPoint += 10 * this.mMasuStsCntW[tmpY,tmpX];
 					} else {																// 角を取られる
-						this.mMasuStsAnzW[tmpY][tmpX].badPoint += 100000;
+						this.mMasuStsAnzW[tmpY,tmpX].badPoint += 100000;
 					}
 				} else if (this.getEdgeSideTwo(tmpY, tmpX) == 0) {							// 置いた場所が角の二つ手前
-					this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideTwoCnt++;
-					this.mMasuStsAnzW[tmpY][tmpX].goodPoint += 1000 * this.mMasuStsCntW[tmpY][tmpX];
+					this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideTwoCnt++;
+					this.mMasuStsAnzW[tmpY,tmpX].goodPoint += 1000 * this.mMasuStsCntW[tmpY,tmpX];
 				} else if (this.getEdgeSideThree(tmpY, tmpX) == 0) {						// 置いた場所が角の三つ手前
-					this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideThreeCnt++;
-					this.mMasuStsAnzW[tmpY][tmpX].goodPoint += 100 * this.mMasuStsCntW[tmpY][tmpX];
+					this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideThreeCnt++;
+					this.mMasuStsAnzW[tmpY,tmpX].goodPoint += 100 * this.mMasuStsCntW[tmpY,tmpX];
 				} else {																	// 置いた場所がその他
-					this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideOtherCnt++;
-					this.mMasuStsAnzW[tmpY][tmpX].goodPoint += 10 * this.mMasuStsCntW[tmpY][tmpX];
+					this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideOtherCnt++;
+					this.mMasuStsAnzW[tmpY,tmpX].goodPoint += 10 * this.mMasuStsCntW[tmpY,tmpX];
 				}
 				sum = 0;
 				sumOwn = 0;
@@ -861,71 +862,71 @@ namespace ReversiForm
 						tmpBadPoint = 0;
 						tmpGoodPoint = 0;
 						if (this.getMasuStsEna(ReversiConst.REVERSI_STS_BLACK, i, j) != 0) {
-							sum += this.mMasuStsCntB[i][j];									// 相手の獲得予定枚数
+							sum += this.mMasuStsCntB[i,j];									// 相手の獲得予定枚数
 							// *** 相手の獲得予定の最大数保持 *** //
-							if (this.mMasuStsAnzW[tmpY][tmpX].max < this.mMasuStsCntB[i][j]) this.mMasuStsAnzW[tmpY][tmpX].max = this.mMasuStsCntB[i][j];
+							if (this.mMasuStsAnzW[tmpY,tmpX].max < this.mMasuStsCntB[i,j]) this.mMasuStsAnzW[tmpY,tmpX].max = this.mMasuStsCntB[i,j];
 							// *** 相手の獲得予定の最小数保持 *** //
-							if (this.mMasuStsCntB[i][j] < this.mMasuStsAnzW[tmpY][tmpX].min) this.mMasuStsAnzW[tmpY][tmpX].min = this.mMasuStsCntB[i][j];
-							this.mMasuStsAnzW[tmpY][tmpX].pointCnt++;						// 相手の置ける場所の数
+							if (this.mMasuStsCntB[i,j] < this.mMasuStsAnzW[tmpY,tmpX].min) this.mMasuStsAnzW[tmpY,tmpX].min = this.mMasuStsCntB[i,j];
+							this.mMasuStsAnzW[tmpY,tmpX].pointCnt++;						// 相手の置ける場所の数
 							if (this.getEdgeSideZero(i, j) == 0) {							// 置く場所が角
-								this.mMasuStsAnzW[tmpY][tmpX].edgeCnt++;
-								tmpBadPoint = 100000 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].edgeCnt++;
+								tmpBadPoint = 100000 * this.mMasuStsCntB[i,j];
 							} else if (this.getEdgeSideOne(i, j) == 0) {					// 置く場所が角の一つ手前
-								this.mMasuStsAnzW[tmpY][tmpX].edgeSideOneCnt++;
+								this.mMasuStsAnzW[tmpY,tmpX].edgeSideOneCnt++;
 								tmpBadPoint = 0;
 							} else if (this.getEdgeSideTwo(i, j) == 0) {					// 置く場所が角の二つ手前
-								this.mMasuStsAnzW[tmpY][tmpX].edgeSideTwoCnt++;
-								tmpBadPoint = 1 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].edgeSideTwoCnt++;
+								tmpBadPoint = 1 * this.mMasuStsCntB[i,j];
 							} else if (this.getEdgeSideThree(i, j) == 0) {					// 置く場所が角の三つ手前
-								this.mMasuStsAnzW[tmpY][tmpX].edgeSideThreeCnt++;
-								tmpBadPoint = 1 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].edgeSideThreeCnt++;
+								tmpBadPoint = 1 * this.mMasuStsCntB[i,j];
 							} else {														// 置く場所がその他
-								this.mMasuStsAnzW[tmpY][tmpX].edgeSideOtherCnt++;
-								tmpBadPoint = 1 * this.mMasuStsCntB[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].edgeSideOtherCnt++;
+								tmpBadPoint = 1 * this.mMasuStsCntB[i,j];
 							}
-							if (tmpMasuEnaB[i][j] != 0) tmpBadPoint = 0;					// ステータス変化していないなら
+							if (tmpMasuEnaB[i,j] != 0) tmpBadPoint = 0;					// ステータス変化していないなら
 						}
 						if (this.getMasuStsEna(ReversiConst.REVERSI_STS_WHITE, i, j) != 0) {
-							sumOwn += this.mMasuStsCntW[i][j];								// 自分の獲得予定枚数
+							sumOwn += this.mMasuStsCntW[i,j];								// 自分の獲得予定枚数
 							// *** 自分の獲得予定の最大数保持 *** //
-							if (this.mMasuStsAnzW[tmpY][tmpX].ownMax < this.mMasuStsCntW[i][j]) this.mMasuStsAnzW[tmpY][tmpX].ownMax = this.mMasuStsCntW[i][j];
+							if (this.mMasuStsAnzW[tmpY,tmpX].ownMax < this.mMasuStsCntW[i,j]) this.mMasuStsAnzW[tmpY,tmpX].ownMax = this.mMasuStsCntW[i,j];
 							// *** 自分の獲得予定の最小数保持 *** //
-							if (this.mMasuStsCntW[i][j] < this.mMasuStsAnzW[tmpY][tmpX].ownMin) this.mMasuStsAnzW[tmpY][tmpX].ownMin = this.mMasuStsCntW[i][j];
-							this.mMasuStsAnzW[tmpY][tmpX].ownPointCnt++;					// 自分の置ける場所の数
+							if (this.mMasuStsCntW[i,j] < this.mMasuStsAnzW[tmpY,tmpX].ownMin) this.mMasuStsAnzW[tmpY,tmpX].ownMin = this.mMasuStsCntW[i,j];
+							this.mMasuStsAnzW[tmpY,tmpX].ownPointCnt++;					// 自分の置ける場所の数
 							if (this.getEdgeSideZero(i, j) == 0) {							// 置く場所が角
-								this.mMasuStsAnzW[tmpY][tmpX].ownEdgeCnt++;
-								tmpGoodPoint = 100 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].ownEdgeCnt++;
+								tmpGoodPoint = 100 * this.mMasuStsCntW[i,j];
 							} else if (this.getEdgeSideOne(i, j) == 0) {					// 置く場所が角の一つ手前
-								this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideOneCnt++;
+								this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideOneCnt++;
 								tmpGoodPoint = 0;
 							} else if (this.getEdgeSideTwo(i, j) == 0) {					// 置く場所が角の二つ手前
-								this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideTwoCnt++;
-								tmpGoodPoint = 3 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideTwoCnt++;
+								tmpGoodPoint = 3 * this.mMasuStsCntW[i,j];
 							} else if (this.getEdgeSideThree(i, j) == 0) {					// 置く場所が角の三つ手前
-								this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideThreeCnt++;
-								tmpGoodPoint = 2 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideThreeCnt++;
+								tmpGoodPoint = 2 * this.mMasuStsCntW[i,j];
 							} else {														// 置く場所がその他
-								this.mMasuStsAnzW[tmpY][tmpX].ownEdgeSideOtherCnt++;
-								tmpGoodPoint = 1 * this.mMasuStsCntW[i][j];
+								this.mMasuStsAnzW[tmpY,tmpX].ownEdgeSideOtherCnt++;
+								tmpGoodPoint = 1 * this.mMasuStsCntW[i,j];
 							}
-							if (tmpMasuEnaW[i][j] != 0) tmpGoodPoint = 0;					// ステータス変化していないなら
+							if (tmpMasuEnaW[i,j] != 0) tmpGoodPoint = 0;					// ステータス変化していないなら
 						}
-						if (tmpBadPoint != 0) this.mMasuStsAnzW[tmpY][tmpX].badPoint += tmpBadPoint;
-						if (tmpGoodPoint != 0) this.mMasuStsAnzW[tmpY][tmpX].goodPoint += tmpGoodPoint;
+						if (tmpBadPoint != 0) this.mMasuStsAnzW[tmpY,tmpX].badPoint += tmpBadPoint;
+						if (tmpGoodPoint != 0) this.mMasuStsAnzW[tmpY,tmpX].goodPoint += tmpGoodPoint;
 					}
 				}
 				// *** 相手に取られる平均コマ数 *** //
 				if (this.getPointCnt(ReversiConst.REVERSI_STS_BLACK) != 0) {
 					tmpD1 = sum;
 					tmpD2 = this.getPointCnt(ReversiConst.REVERSI_STS_BLACK);
-					this.mMasuStsAnzW[tmpY][tmpX].avg = tmpD1 / tmpD2;
+					this.mMasuStsAnzW[tmpY,tmpX].avg = tmpD1 / tmpD2;
 				}
 
 				// *** 自分が取れる平均コマ数 *** //
 				if (this.getPointCnt(ReversiConst.REVERSI_STS_WHITE) != 0) {
 					tmpD1 = sumOwn;
 					tmpD2 = this.getPointCnt(ReversiConst.REVERSI_STS_WHITE);
-					this.mMasuStsAnzW[tmpY][tmpX].ownAvg = tmpD1 / tmpD2;
+					this.mMasuStsAnzW[tmpY,tmpX].ownAvg = tmpD1 / tmpD2;
 				}
 
 				// *** 元に戻す *** //
@@ -950,10 +951,10 @@ namespace ReversiForm
 			// *** 相手をパスさせることができるマス検索 *** //
 			for (var i = 0; i < this.mMasuCnt; i++) {					// 初期化
 				for (var j = 0; j < this.mMasuCnt; j++) {
-					this.mMasuStsPassB[i][j] = 0;
-					this.mMasuStsAnzB[i][j].reset();
-					this.mMasuStsPassW[i][j] = 0;
-					this.mMasuStsAnzW[i][j].reset();
+					this.mMasuStsPassB[i,j] = 0;
+					this.mMasuStsAnzB[i,j].reset();
+					this.mMasuStsPassW[i,j] = 0;
+					this.mMasuStsAnzW[i,j].reset();
 				}
 			}
 			this.AnalysisReversiBlack();								// 黒解析
@@ -965,11 +966,11 @@ namespace ReversiForm
 			// *** パスマスを取得 *** //
 			for (var i = 0; i < this.mMasuCnt; i++) {
 				for (var j = 0; j < this.mMasuCnt; j++) {
-					if (this.mMasuStsPassB[i][j] != 0) {
-						if (bPassEna != 0) this.mMasuStsEnaB[i][j] = 3;
+					if (this.mMasuStsPassB[i,j] != 0) {
+						if (bPassEna != 0) this.mMasuStsEnaB[i,j] = 3;
 					}
-					if (this.mMasuStsPassW[i][j] != 0) {
-						if (wPassEna != 0) this.mMasuStsEnaW[i][j] = 3;
+					if (this.mMasuStsPassW[i,j] != 0) {
+						if (wPassEna != 0) this.mMasuStsEnaW[i,j] = 3;
 					}
 				}
 			}
@@ -988,7 +989,7 @@ namespace ReversiForm
 		public int getMasuSts(int y, int x)
 		{
 			int ret = -1;
-			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) ret = this.mMasuSts[y][x];
+			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) ret = this.mMasuSts[y,x];
 			return ret;
 		}
 
@@ -1005,7 +1006,7 @@ namespace ReversiForm
 		public int getMasuStsOld(int y, int x)
 		{
 			int ret = -1;
-			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) ret = this.mMasuStsOld[y][x];
+			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) ret = this.mMasuStsOld[y,x];
 			return ret;
 		}
 
@@ -1024,8 +1025,8 @@ namespace ReversiForm
 		{
 			int ret = 0;
 			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) {
-				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsEnaB[y][x];
-				else ret = this.mMasuStsEnaW[y][x];
+				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsEnaB[y,x];
+				else ret = this.mMasuStsEnaW[y,x];
 			}
 			return ret;
 		}
@@ -1045,8 +1046,8 @@ namespace ReversiForm
 		{
 			int ret = -1;
 			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) {
-				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsCntB[y][x];
-				else ret = this.mMasuStsCntW[y][x];
+				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsCntB[y,x];
+				else ret = this.mMasuStsCntW[y,x];
 			}
 			return ret;
 		}
@@ -1107,7 +1108,7 @@ namespace ReversiForm
 			if (this.getMasuStsEna(color, y, x) != 0) {
 				ret = 0;
 				this.mMasuSts.CopyTo(this.mMasuStsOld, 0);
-				this.mMasuSts[y][x] = color;
+				this.mMasuSts[y,x] = color;
 				this.revMasuSts(color, y, x);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
@@ -1138,7 +1139,7 @@ namespace ReversiForm
 			int ret = -1;
 			ret = 0;
 			this.mMasuSts.CopyTo(this.mMasuStsOld, 0);
-			this.mMasuSts[y][x] = color;
+			this.mMasuSts[y,x] = color;
 			return ret;
 		}
 
@@ -1238,8 +1239,8 @@ namespace ReversiForm
 		{
 			int ret = 0;
 			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) {
-				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsPassB[y][x];
-				else ret = this.mMasuStsPassW[y][x];
+				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsPassB[y,x];
+				else ret = this.mMasuStsPassW[y,x];
 			}
 			return ret;
 		}
@@ -1292,8 +1293,8 @@ namespace ReversiForm
 		{
 			ReversiAnz ret = null;
 			if (this.checkPara(y, 0, this.mMasuCnt) == 0 && this.checkPara(x, 0, this.mMasuCnt) == 0) {
-				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsAnzB[y][x];
-				else ret = this.mMasuStsAnzW[y][x];
+				if (color == ReversiConst.REVERSI_STS_BLACK) ret = this.mMasuStsAnzB[y,x];
+				else ret = this.mMasuStsAnzW[y,x];
 			}
 			return ret;
 		}

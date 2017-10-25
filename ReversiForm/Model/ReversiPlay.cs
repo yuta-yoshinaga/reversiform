@@ -131,15 +131,32 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public ReversiPlay()
 		{
-			this.mReversi	= new MyReversi(ReversiConst.DEF_MASU_CNT_MAX_VAL, ReversiConst.DEF_MASU_CNT_MAX_VAL);
-			this.mSetting	= new ReversiSetting();
-			this.mCpu		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
-			this.mEdge		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
-			for (var i = 0; i < (ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL); i++) {
-				this.mCpu[i]	= new ReversiPoint();
-				this.mEdge[i]	= new ReversiPoint();
-			}
-			this.reset();
+            //			this.mReversi	= new MyReversi(ReversiConst.DEF_MASU_CNT_MAX_VAL, ReversiConst.DEF_MASU_CNT_MAX_VAL);
+            //			this.mSetting	= new ReversiSetting();
+            //			this.mCpu		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
+            //			this.mEdge		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
+            //			for (var i = 0; i < (ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL); i++) {
+            //				this.mCpu[i]	= new ReversiPoint();
+            //				this.mEdge[i]	= new ReversiPoint();
+            //			}
+            try
+            {
+                this._mReversi = new MyReversi(ReversiConst.DEF_MASU_CNT_MAX_VAL, ReversiConst.DEF_MASU_CNT_MAX_VAL);
+                this._mSetting = new ReversiSetting();
+                this._mCpu = new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
+                this._mEdge = new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
+                for (var i = 0; i < (ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL); i++)
+                {
+                    this._mCpu[i] = new ReversiPoint();
+                    this._mEdge[i] = new ReversiPoint();
+                }
+                this.reset();
+            }
+            catch (Exception ex)
+            {
+                System.Console.WriteLine("ReversiPlay(1) : " + ex.Message);
+                System.Console.WriteLine("ReversiPlay(1) : " + ex.StackTrace);
+            }
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
