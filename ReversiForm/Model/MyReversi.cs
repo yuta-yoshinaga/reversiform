@@ -189,12 +189,12 @@ namespace ReversiForm
 
 					this.mMasuStsEnaB[i,j]		= ReversiConst.REVERSI_STS_NONE;
 					this.mMasuStsCntB[i,j]		= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsPassB[i,j]	= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsPassB[i,j]		= ReversiConst.REVERSI_STS_NONE;
 					this.mMasuStsAnzB[i,j]		= new ReversiAnz();
 
 					this.mMasuStsEnaW[i,j]		= ReversiConst.REVERSI_STS_NONE;
 					this.mMasuStsCntW[i,j]		= ReversiConst.REVERSI_STS_NONE;
-					this.mMasuStsPassW[i,j]	= ReversiConst.REVERSI_STS_NONE;
+					this.mMasuStsPassW[i,j]		= ReversiConst.REVERSI_STS_NONE;
 					this.mMasuStsAnzW[i,j]		= new ReversiAnz();
 				}
 			}
@@ -215,8 +215,7 @@ namespace ReversiForm
 				this.mMasuHist[i] = new ReversiHistory();
 			}
 			this.mMasuHistCur = 0;
-			this.mMasuSts.CopyTo(this.mMasuStsOld, 0);
-
+			Array.Copy(this.mMasuSts, this.mMasuStsOld, this.mMasuSts.Length);
 			this.reset();
 		}
 
@@ -259,7 +258,7 @@ namespace ReversiForm
 			this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 			this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
 			this.mMasuHistCur = 0;
-			this.mMasuSts.CopyTo(this.mMasuStsOld, 0);
+			Array.Copy(this.mMasuSts, this.mMasuStsOld, this.mMasuSts.Length);
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -683,9 +682,9 @@ namespace ReversiForm
 				int[,] tmpMasu = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 				int[,] tmpMasuEnaB = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 				int[,] tmpMasuEnaW = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
-				this.mMasuSts.CopyTo(tmpMasu, 0);
-				this.mMasuStsEnaB.CopyTo(tmpMasuEnaB, 0);
-				this.mMasuStsEnaW.CopyTo(tmpMasuEnaW, 0);
+				Array.Copy(this.mMasuSts, tmpMasu, this.mMasuSts.Length);
+				Array.Copy(this.mMasuStsEnaB, tmpMasuEnaB, this.mMasuStsEnaB.Length);
+				Array.Copy(this.mMasuStsEnaW, tmpMasuEnaW, this.mMasuStsEnaW.Length);
 
 				tmpY = this.mMasuPointB[cnt].y;
 				tmpX = this.mMasuPointB[cnt].x;
@@ -792,7 +791,7 @@ namespace ReversiForm
 				}
 
 				// *** 元に戻す *** //
-				tmpMasu.CopyTo(this.mMasuSts, 0);
+				Array.Copy(tmpMasu, this.mMasuSts, tmpMasu.Length);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
 			}
@@ -821,9 +820,9 @@ namespace ReversiForm
 				int[,] tmpMasu = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 				int[,] tmpMasuEnaB = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
 				int[,] tmpMasuEnaW = new int[ReversiConst.DEF_MASU_CNT_MAX_VAL,ReversiConst.DEF_MASU_CNT_MAX_VAL];
-				this.mMasuSts.CopyTo(tmpMasu, 0);
-				this.mMasuStsEnaB.CopyTo(tmpMasuEnaB, 0);
-				this.mMasuStsEnaW.CopyTo(tmpMasuEnaW, 0);
+				Array.Copy(this.mMasuSts, tmpMasu, this.mMasuSts.Length);
+				Array.Copy(this.mMasuStsEnaB, tmpMasuEnaB, this.mMasuStsEnaB.Length);
+				Array.Copy(this.mMasuStsEnaW, tmpMasuEnaW, this.mMasuStsEnaW.Length);
 
 				tmpY = this.mMasuPointW[cnt].y;
 				tmpX = this.mMasuPointW[cnt].x;
@@ -930,7 +929,7 @@ namespace ReversiForm
 				}
 
 				// *** 元に戻す *** //
-				tmpMasu.CopyTo(this.mMasuSts, 0);
+				Array.Copy(tmpMasu, this.mMasuSts, tmpMasu.Length);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_WHITE);
 			}
@@ -1107,7 +1106,7 @@ namespace ReversiForm
 			int ret = -1;
 			if (this.getMasuStsEna(color, y, x) != 0) {
 				ret = 0;
-				this.mMasuSts.CopyTo(this.mMasuStsOld, 0);
+				Array.Copy(this.mMasuSts, this.mMasuStsOld, this.mMasuSts.Length);
 				this.mMasuSts[y,x] = color;
 				this.revMasuSts(color, y, x);
 				this.makeMasuSts(ReversiConst.REVERSI_STS_BLACK);
@@ -1138,7 +1137,7 @@ namespace ReversiForm
 		{
 			int ret = -1;
 			ret = 0;
-			this.mMasuSts.CopyTo(this.mMasuStsOld, 0);
+			Array.Copy(this.mMasuSts, this.mMasuStsOld, this.mMasuSts.Length);
 			this.mMasuSts[y,x] = color;
 			return ret;
 		}

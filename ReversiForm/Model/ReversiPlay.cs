@@ -131,32 +131,14 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public ReversiPlay()
 		{
-            //			this.mReversi	= new MyReversi(ReversiConst.DEF_MASU_CNT_MAX_VAL, ReversiConst.DEF_MASU_CNT_MAX_VAL);
-            //			this.mSetting	= new ReversiSetting();
-            //			this.mCpu		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
-            //			this.mEdge		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
-            //			for (var i = 0; i < (ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL); i++) {
-            //				this.mCpu[i]	= new ReversiPoint();
-            //				this.mEdge[i]	= new ReversiPoint();
-            //			}
-            try
-            {
-                this._mReversi = new MyReversi(ReversiConst.DEF_MASU_CNT_MAX_VAL, ReversiConst.DEF_MASU_CNT_MAX_VAL);
-                this._mSetting = new ReversiSetting();
-                this._mCpu = new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
-                this._mEdge = new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
-                for (var i = 0; i < (ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL); i++)
-                {
-                    this._mCpu[i] = new ReversiPoint();
-                    this._mEdge[i] = new ReversiPoint();
-                }
-                this.reset();
-            }
-            catch (Exception ex)
-            {
-                System.Console.WriteLine("ReversiPlay(1) : " + ex.Message);
-                System.Console.WriteLine("ReversiPlay(1) : " + ex.StackTrace);
-            }
+			this.mReversi	= new MyReversi(ReversiConst.DEF_MASU_CNT_MAX_VAL, ReversiConst.DEF_MASU_CNT_MAX_VAL);
+			this.mSetting	= new ReversiSetting();
+			this.mCpu		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			this.mEdge		= new ReversiPoint[ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL];
+			for (var i = 0; i < (ReversiConst.DEF_MASU_CNT_MAX_VAL * ReversiConst.DEF_MASU_CNT_MAX_VAL); i++) {
+				this.mCpu[i]	= new ReversiPoint();
+				this.mEdge[i]	= new ReversiPoint();
+			}
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -222,7 +204,7 @@ namespace ReversiForm
 					update = 1;
 				} else {
 					// *** エラーメッセージ *** //
-					this.viewMsgDlg("エラー", "そのマスには置けません。");
+					this.ViewMsgDlgLocal("エラー", "そのマスには置けません。");
 				}
 			} else {
 				if (this.mReversi.getGameEndSts() == 0) {
@@ -334,7 +316,7 @@ namespace ReversiForm
 					else tmpMsg2 = "プレイヤー2の勝ちです。";
 				}
 				msgStr = tmpMsg1 + tmpMsg2;
-				this.viewMsgDlg("ゲーム終了", msgStr);
+				this.ViewMsgDlgLocal("ゲーム終了", msgStr);
 
 				if (this.mSetting.mEndAnim == ReversiConst.DEF_END_ANIM_ON) {
 					// *** メッセージ送信 *** //
@@ -358,11 +340,11 @@ namespace ReversiForm
 		{
 			// *** パスメッセージ *** //
 			if (this.mSetting.mMode == ReversiConst.DEF_MODE_ONE) {
-				if (color == this.mCurColor) this.viewMsgDlg("", "あなたはパスです。");
-				else this.viewMsgDlg("", "CPUはパスです。");
+				if (color == this.mCurColor) this.ViewMsgDlgLocal("", "あなたはパスです。");
+				else this.ViewMsgDlgLocal("", "CPUはパスです。");
 			} else {
-				if (color == ReversiConst.REVERSI_STS_BLACK) this.viewMsgDlg("", "プレイヤー1はパスです。");
-				else this.viewMsgDlg("", "プレイヤー2はパスです。");
+				if (color == ReversiConst.REVERSI_STS_BLACK) this.ViewMsgDlgLocal("", "プレイヤー1はパスです。");
+				else this.ViewMsgDlgLocal("", "プレイヤー2はパスです。");
 			}
 		}
 
@@ -774,12 +756,11 @@ namespace ReversiForm
 				wCnt2 = 0;
 				bEnd = 0;
 				wEnd = 0;
-				var waitTime = this.mSetting.mEndDrawInterVal;
 				for (var i = 0; i < this.mSetting.mMasuCnt; i++) {
 					for (var j = 0; j < this.mSetting.mMasuCnt; j++) {
 						if (bCnt2 < bCnt) {
 							bCnt2++;
-							System.Threading.Thread.Sleep(waitTime);
+							System.Threading.Thread.Sleep(this.mSetting.mEndDrawInterVal);
 							this.mReversi.setMasuStsForcibly(ReversiConst.REVERSI_STS_BLACK, i, j);
 							this.sendDrawMsg(i, j);
 						} else {
@@ -787,7 +768,7 @@ namespace ReversiForm
 						}
 						if (wCnt2 < wCnt) {
 							wCnt2++;
-							System.Threading.Thread.Sleep(waitTime);
+							System.Threading.Thread.Sleep(this.mSetting.mEndDrawInterVal);
 							this.mReversi.setMasuStsForcibly(ReversiConst.REVERSI_STS_WHITE, (this.mSetting.mMasuCnt - 1) - i, (this.mSetting.mMasuCnt - 1) - j);
 							this.sendDrawMsg((this.mSetting.mMasuCnt - 1) - i, (this.mSetting.mMasuCnt - 1) - j);
 						} else {
@@ -795,8 +776,6 @@ namespace ReversiForm
 						}
 						if (bEnd == 1 && wEnd == 1) {
 							break;
-						} else {
-							waitTime += this.mSetting.mEndDrawInterVal;
 						}
 					}
 				}
@@ -862,23 +841,23 @@ namespace ReversiForm
 				dMode = this.mReversi.getMasuSts(msgPoint.y, msgPoint.x);
 				dBack = this.mReversi.getMasuStsEna(this.mCurColor, msgPoint.y, msgPoint.x);
 				dCnt = this.mReversi.getMasuStsCnt(this.mCurColor, msgPoint.y, msgPoint.x);
-				this.drawSingle(msgPoint.y, msgPoint.x, dMode, dBack, dCnt.ToString());
+				this.DrawSingleLocal(msgPoint.y, msgPoint.x, dMode, dBack, dCnt.ToString());
 			} else if (what == ReversiConst.LC_MSG_ERASE) {
 				// *** マス消去 *** //
 				ReversiPoint msgPoint = (ReversiPoint)obj;
-				this.drawSingle(msgPoint.y, msgPoint.x, 0, 0, "0");
+				this.DrawSingleLocal(msgPoint.y, msgPoint.x, 0, 0, "0");
 			} else if (what == ReversiConst.LC_MSG_DRAW_INFO) {
 				// *** マス情報描画 *** //
 				ReversiPoint msgPoint = (ReversiPoint)obj;
 				dMode = this.mReversi.getMasuSts(msgPoint.y, msgPoint.x);
 				dBack = this.mReversi.getMasuStsEna(this.mCurColor, msgPoint.y, msgPoint.x);
 				dCnt = this.mReversi.getMasuStsCnt(this.mCurColor, msgPoint.y, msgPoint.x);
-				this.drawSingle(msgPoint.y, msgPoint.x, dMode, dBack, dCnt.ToString());
+				this.DrawSingleLocal(msgPoint.y, msgPoint.x, dMode, dBack, dCnt.ToString());
 			} else if (what == ReversiConst.LC_MSG_ERASE_INFO) {
 				// *** マス情報消去 *** //
 				ReversiPoint msgPoint = (ReversiPoint)obj;
 				dMode = this.mReversi.getMasuSts(msgPoint.y, msgPoint.x);
-				this.drawSingle(msgPoint.y, msgPoint.x, dMode, 0, "0");
+				this.DrawSingleLocal(msgPoint.y, msgPoint.x, dMode, 0, "0");
 			} else if (what == ReversiConst.LC_MSG_DRAW_ALL) {
 				// *** 全マス描画 *** //
 				for (var i = 0; i < this.mSetting.mMasuCnt; i++) {
@@ -886,14 +865,14 @@ namespace ReversiForm
 						dMode = this.mReversi.getMasuSts(i, j);
 						dBack = this.mReversi.getMasuStsEna(this.mCurColor, i, j);
 						dCnt = this.mReversi.getMasuStsCnt(this.mCurColor, i, j);
-						this.drawSingle(i, j, dMode, dBack, dCnt.ToString());
+						this.DrawSingleLocal(i, j, dMode, dBack, dCnt.ToString());
 					}
 				}
 			} else if (what == ReversiConst.LC_MSG_ERASE_ALL) {
 				// *** 全マス消去 *** //
 				for (var i = 0; i < this.mSetting.mMasuCnt; i++) {
 					for (var j = 0; j < this.mSetting.mMasuCnt; j++) {
-						this.drawSingle(i, j, 0, 0, "0");
+						this.DrawSingleLocal(i, j, 0, 0, "0");
 					}
 				}
 			} else if (what == ReversiConst.LC_MSG_DRAW_INFO_ALL) {
@@ -903,7 +882,7 @@ namespace ReversiForm
 						dMode = this.mReversi.getMasuSts(i, j);
 						dBack = this.mReversi.getMasuStsEna(this.mCurColor, i, j);
 						dCnt = this.mReversi.getMasuStsCnt(this.mCurColor, i, j);
-						this.drawSingle(i, j, dMode, dBack, dCnt.ToString());
+						this.DrawSingleLocal(i, j, dMode, dBack, dCnt.ToString());
 					}
 				}
 			} else if (what == ReversiConst.LC_MSG_ERASE_INFO_ALL) {
@@ -911,7 +890,7 @@ namespace ReversiForm
 				for (var i = 0; i < this.mSetting.mMasuCnt; i++) {
 					for (var j = 0; j < this.mSetting.mMasuCnt; j++) {
 						dMode = this.mReversi.getMasuSts(i, j);
-						this.drawSingle(i, j, dMode, 0, "0");
+						this.DrawSingleLocal(i, j, dMode, 0, "0");
 					}
 				}
 			} else if (what == ReversiConst.LC_MSG_DRAW_END) {
@@ -925,18 +904,78 @@ namespace ReversiForm
 					if (this.mCurColor == ReversiConst.REVERSI_STS_BLACK) tmpStr = "プレイヤー1の番です ";
 					else tmpStr = "プレイヤー2の番です ";
 				}
-				this.curColMsg(tmpStr);
+				this.CurColMsgLocal(tmpStr);
 			} else if (what == ReversiConst.LC_MSG_CUR_COL_ERASE) {
-				this.curColMsg("");
+				this.CurColMsgLocal("");
 			} else if (what == ReversiConst.LC_MSG_CUR_STS) {
 				string tmpStr = "プレイヤー1 = " + this.mReversi.getBetCnt(ReversiConst.REVERSI_STS_BLACK) + " プレイヤー2 = " + this.mReversi.getBetCnt(ReversiConst.REVERSI_STS_WHITE);
-				this.curStsMsg(tmpStr);
+				this.CurStsMsgLocal(tmpStr);
 			} else if (what == ReversiConst.LC_MSG_CUR_STS_ERASE) {
-				this.curStsMsg("");
+				this.CurStsMsgLocal("");
 			} else if (what == ReversiConst.LC_MSG_MSG_DLG) {
 			} else if (what == ReversiConst.LC_MSG_DRAW_ALL_RESET) {
 			}
 		}
 
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			メッセージダイアログ
+		///	@fn				void ViewMsgDlgLocal(string title , string msg)
+		///	@param[in]		string title	タイトル
+		///	@param[in]		string msg		メッセージ
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void ViewMsgDlgLocal(string title , string msg)
+		{
+			if(this.viewMsgDlg != null) this.viewMsgDlg(title, msg);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			1マス描画
+		///	@fn				void DrawSingleLocal(int y, int x, int sts, int bk, string text)
+		///	@param[in]		int y		Y座標
+		///	@param[in]		int x		X座標
+		///	@param[in]		int sts		ステータス
+		///	@param[in]		int bk		背景
+		///	@param[in]		string text	テキスト
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void DrawSingleLocal(int y, int x, int sts, int bk, string text)
+		{
+			if(this.drawSingle != null) this.drawSingle(y, x, sts, bk, text);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			現在の色メッセージ
+		///	@fn				void CurColMsgLocal(string text)
+		///	@param[in]		string text	テキスト
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void CurColMsgLocal(string text)
+		{
+			if(this.curColMsg != null) this.curColMsg(text);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			現在のステータスメッセージ
+		///	@fn				void CurStsMsgLocal(string text)
+		///	@param[in]		string text	テキスト
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void CurStsMsgLocal(string text)
+		{
+			if(this.curStsMsg != null) this.curStsMsg(text);
+		}
 	}
 }
