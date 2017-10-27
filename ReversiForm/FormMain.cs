@@ -37,6 +37,11 @@ namespace ReversiForm
 	////////////////////////////////////////////////////////////////////////////////
 	public partial class Reversi : Form
 	{
+		delegate void ViewMsgDlgDelegate(string title , string msg);
+		delegate void DrawSingleDelegate(int y, int x, int sts, int bk, string text);
+		delegate void CurColMsgDelegate(string text);
+		delegate void CurStsMsgDelegate(string text);
+
 		public ReversiSetting m_AppSettings;								//!< アプリ設定
 		public ReversiPlay m_ReversiPlay;									//!< リバーシ本体
 
@@ -68,7 +73,8 @@ namespace ReversiForm
 				this.m_ReversiPlay.drawSingle = this.DrawSingle;
 				this.m_ReversiPlay.curColMsg = this.CurColMsg;
 				this.m_ReversiPlay.curStsMsg = this.CurStsMsg;
-				this.m_ReversiPlay.reset();
+				Task newTask = new Task( () => { this.m_ReversiPlay.reset(); } );
+				newTask.Start();
 			}
 			catch (Exception ex)
 			{
@@ -156,6 +162,21 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public void ViewMsgDlg(string title , string msg)
 		{
+			Invoke(new ViewMsgDlgDelegate(ViewMsgDlgLocal), title, msg);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			メッセージダイアログ
+		///	@fn				void ViewMsgDlgLocal(string title , string msg)
+		///	@param[in]		string title	タイトル
+		///	@param[in]		string msg		メッセージ
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		public void ViewMsgDlgLocal(string title , string msg)
+		{
 			MessageBox.Show(msg, title, MessageBoxButtons.OK, MessageBoxIcon.Information);
 		}
 
@@ -174,18 +195,36 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public void DrawSingle(int y, int x, int sts, int bk, string text)
 		{
+			Invoke(new DrawSingleDelegate(DrawSingleLocal), y, x, sts, bk, text);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			1マス描画
+		///	@fn				void DrawSingleLocal(int y, int x, int sts, int bk, string text)
+		///	@param[in]		int y		Y座標
+		///	@param[in]		int x		X座標
+		///	@param[in]		int sts		ステータス
+		///	@param[in]		int bk		背景
+		///	@param[in]		string text	テキスト
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		public void DrawSingleLocal(int y, int x, int sts, int bk, string text)
+		{
 			PictureBox curPict = (PictureBox) this.tableLayoutPanel1.GetControlFromPosition(x,y);
 			if(curPict != null)
 			{
 
-				//描画先とするImageオブジェクトを作成する
+				// 描画先とするImageオブジェクトを作成する
 				Bitmap canvas = new Bitmap(curPict.Width, curPict.Height);
-				//ImageオブジェクトのGraphicsオブジェクトを作成する
+				// ImageオブジェクトのGraphicsオブジェクトを作成する
 				Graphics g = Graphics.FromImage(canvas);
-				Pen curPen1 = new Pen(Color.Green,4);
-                //Brushオブジェクトの作成
-                SolidBrush curBru1 = null;
-                SolidBrush curBru2 = null;
+				Pen curPen1 = new Pen(Color.Black,2);
+				// Brushオブジェクトの作成
+				SolidBrush curBru1 = null;
+				SolidBrush curBru2 = null;
 
 			    if (bk == 1) {
 					// *** cell_back_blue *** //
@@ -213,16 +252,17 @@ namespace ReversiForm
 					curBru2 = new SolidBrush(Color.FromArgb(255, 255, 255, 255));
 				}
 
-				//位置(x, y)にWidth x Heightの四角を描く
+				// 位置(x, y)にWidth x Heightの四角を描く
 				g.FillRectangle(curBru1, 0, 0, curPict.Width, curPict.Height);
-				//位置(x, y)にWidth x Heightの四角を描く
+				// 位置(x, y)にWidth x Heightの四角を描く
 				g.DrawRectangle(curPen1, 0, 0, curPict.Width, curPict.Height);
-				//先に描いた四角に内接する楕円を黒で描く
-				if(curBru2 != null) g.FillEllipse(curBru2, 0, 0, curPict.Width, curPict.Height);
-				//リソースを解放する
+				// 先に描いた四角に内接する楕円を黒で描く
+				if(curBru2 != null) g.FillEllipse(curBru2, 2, 2, curPict.Width - 4, curPict.Height - 4);
+				// リソースを解放する
 				g.Dispose();
-				//curPictに表示する
+				// curPictに表示する
 				curPict.Image = canvas;
+				curPict.Text = text;
 			}
 		}
 
@@ -237,6 +277,20 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public void CurColMsg(string text)
 		{
+			Invoke(new CurColMsgDelegate(CurColMsgLocal), text);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			現在の色メッセージ
+		///	@fn				void CurColMsgLocal(string text)
+		///	@param[in]		string text	テキスト
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		public void CurColMsgLocal(string text)
+		{
 			this.label1.Text = text;
 		}
 
@@ -250,6 +304,20 @@ namespace ReversiForm
 		///
 		////////////////////////////////////////////////////////////////////////////////
 		public void CurStsMsg(string text)
+		{
+			Invoke(new CurStsMsgDelegate(CurStsMsgLocal), text);
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			現在のステータスメッセージ
+		///	@fn				void CurStsMsgLocal(string text)
+		///	@param[in]		string text	テキスト
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		public void CurStsMsgLocal(string text)
 		{
 			this.label2.Text = text;
 		}
@@ -270,7 +338,8 @@ namespace ReversiForm
 
 			Console.WriteLine("click y=" + pos.Row + " x=" + pos.Column);
 
-			this.m_ReversiPlay.reversiPlay(pos.Row,pos.Column);
+			Task newTask = new Task( () => { this.m_ReversiPlay.reversiPlay(pos.Row, pos.Column); } );
+			newTask.Start();
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
@@ -285,7 +354,8 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		private void button1_Click(object sender, EventArgs e)
 		{
-			this.m_ReversiPlay.reset();
+			Task newTask = new Task( () => { this.m_ReversiPlay.reset(); } );
+			newTask.Start();
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
