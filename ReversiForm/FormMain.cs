@@ -20,6 +20,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.IO;
 using System.Linq;
 using System.Reflection;
@@ -274,20 +275,22 @@ namespace ReversiForm
 			PictureBox curPict = (PictureBox) this.tableLayoutPanel1.GetControlFromPosition(x,y);
 			if(curPict != null)
 			{
-
 				// 描画先とするImageオブジェクトを作成する
 				Bitmap canvas = new Bitmap(curPict.Width, curPict.Height);
 				// ImageオブジェクトのGraphicsオブジェクトを作成する
 				Graphics g = Graphics.FromImage(canvas);
+				g.SmoothingMode = SmoothingMode.HighQuality;
 				Pen curPen1 = new Pen(m_AppSettings.mBorderColor,2);
 				// Brushオブジェクトの作成
 				SolidBrush curBru1 = null;
 				SolidBrush curBru2 = null;
+				SolidBrush curBru3 = null;
 				Color curBkColor = m_AppSettings.mBackGroundColor;
 				byte tmpA = curBkColor.A;
 				byte tmpR = curBkColor.R;
 				byte tmpG = curBkColor.G;
 				byte tmpB = curBkColor.B;
+				Color curBkColorRev;
 
 				if (bk == 1) {
 					// *** cell_back_blue *** //
@@ -318,6 +321,11 @@ namespace ReversiForm
 					curBkColor = Color.FromArgb(tmpA, tmpR, tmpG, tmpB);
 			    }
 				curBru1 = new SolidBrush(curBkColor);
+				HslColor workCol = HslColor.FromRgb(curBkColor);
+				float h = workCol.H + 180F;
+				if (360F < h) h -= 360F;
+				curBkColorRev = HslColor.ToRgb(new HslColor(h, workCol.S, workCol.L));
+				curBru3 = new SolidBrush(curBkColorRev);
 
 				if (sts == ReversiConst.REVERSI_STS_NONE)
 				{
@@ -337,11 +345,28 @@ namespace ReversiForm
 				g.DrawRectangle(curPen1, 0, 0, curPict.Width, curPict.Height);
 				// 先に描いた四角に内接する楕円を黒で描く
 				if(curBru2 != null) g.FillEllipse(curBru2, 2, 2, curPict.Width - 4, curPict.Height - 4);
+
+				if (text != null && text.Length != 0 && text != "0")
+				{
+					// フォントオブジェクトの作成
+					int fntSize = curPict.Width;
+					if(curPict.Height < fntSize) fntSize = curPict.Height;
+					fntSize = (int)((double)fntSize * 0.75);
+					fntSize /= text.Length;
+					if (fntSize < 8) fntSize = 8;
+					Font fnt = new Font("MS UI Gothic", fntSize);
+					Rectangle rect1 = new Rectangle(0, 0, curPict.Width, curPict.Height);
+					StringFormat stringFormat = new StringFormat();
+					stringFormat.Alignment = StringAlignment.Center;
+					stringFormat.LineAlignment = StringAlignment.Center;
+					g.DrawString(text, fnt, curBru3, rect1, stringFormat);
+					//リソースを解放する
+					fnt.Dispose();
+				}
 				// リソースを解放する
 				g.Dispose();
 				// curPictに表示する
 				curPict.Image = canvas;
-				curPict.Text = text;
 			}
 		}
 
