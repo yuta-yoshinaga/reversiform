@@ -64,6 +64,8 @@ namespace ReversiForm
 		public const int DEF_MASU_CNT_12 = 3;							//!< マス縦横12
 		public const int DEF_MASU_CNT_14 = 4;							//!< マス縦横14
 		public const int DEF_MASU_CNT_16 = 5;							//!< マス縦横16
+		public const int DEF_MASU_CNT_18 = 6;							//!< マス縦横18
+		public const int DEF_MASU_CNT_20 = 7;							//!< マス縦横20
 
 		public const int DEF_MASU_CNT_6_VAL = 6;						//!< マス縦横6
 		public const int DEF_MASU_CNT_8_VAL = 8;						//!< マス縦横8
@@ -71,7 +73,9 @@ namespace ReversiForm
 		public const int DEF_MASU_CNT_12_VAL = 12;						//!< マス縦横12
 		public const int DEF_MASU_CNT_14_VAL = 14;						//!< マス縦横14
 		public const int DEF_MASU_CNT_16_VAL = 16;						//!< マス縦横16
-		public const int DEF_MASU_CNT_MAX_VAL = DEF_MASU_CNT_16_VAL;	//!< マス縦横最大
+		public const int DEF_MASU_CNT_18_VAL = 18;						//!< マス縦横18
+		public const int DEF_MASU_CNT_20_VAL = 20;						//!< マス縦横20
+		public const int DEF_MASU_CNT_MAX_VAL = DEF_MASU_CNT_20_VAL;	//!< マス縦横最大
 
 		public const int REVERSI_STS_NONE = 0;							//!< コマ無し
 		public const int REVERSI_STS_BLACK = 1;							//!< 黒

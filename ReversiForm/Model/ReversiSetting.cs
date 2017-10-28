@@ -17,6 +17,7 @@
 
 using System;
 using System.Collections.Generic;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 
@@ -42,11 +43,10 @@ namespace ReversiForm
 		private int _mPlayDrawInterVal = ReversiConst.DEF_GAME_SPD_MID_VAL;			//!< 描画のインターバル(msec)
 		private int _mEndDrawInterVal = 100;										//!< 終了アニメーション描画のインターバル(msec)
 		private int _mEndInterVal = 500;											//!< 終了アニメーションのインターバル(msec)
-		private string _mTheme = "Cerulean";										//!< テーマ名
-		private string _mPlayerColor1 = "#000000";									//!< プレイヤー1の色
-		private string _mPlayerColor2 = "#FFFFFF";									//!< プレイヤー2の色
-		private string _mBackGroundColor = "#00FF00";								//!< 背景の色
-		private string _mBorderColor = "#000000";									//!< 枠線の色
+		private Color _mPlayerColor1 = Color.FromArgb(255,0,0,0);					//!< プレイヤー1の色
+		private Color _mPlayerColor2 = Color.FromArgb(255,255,255,255);				//!< プレイヤー2の色
+		private Color _mBackGroundColor = Color.FromArgb(255,0,255,0);				//!< 背景の色
+		private Color _mBorderColor = Color.FromArgb(255,0,0,0);					//!< 枠線の色
 		#endregion
 
 		#region プロパティ
@@ -110,27 +110,46 @@ namespace ReversiForm
 			get { return _mEndInterVal; }
 			set { _mEndInterVal = value; }
 		}
-		public string mTheme
+		public int mInt32PlayerColor1
 		{
-			get { return _mTheme; }
-			set { _mTheme = value; }
+			get { return _mPlayerColor1.ToArgb(); }
+			set { _mPlayerColor1 = Color.FromArgb(value); }
 		}
-		public string mPlayerColor1
+		public int mInt32PlayerColor2
+		{
+			get { return _mPlayerColor2.ToArgb(); }
+			set { _mPlayerColor2 = Color.FromArgb(value); }
+		}
+		public int mInt32BackGroundColor
+		{
+			get { return _mBackGroundColor.ToArgb(); }
+			set { _mBackGroundColor = Color.FromArgb(value); }
+		}
+		public int mInt32BorderColor
+		{
+			get { return _mBorderColor.ToArgb(); }
+			set { _mBorderColor = Color.FromArgb(value); }
+		}
+		[System.Xml.Serialization.XmlIgnoreAttribute]
+		public Color mPlayerColor1
 		{
 			get { return _mPlayerColor1; }
 			set { _mPlayerColor1 = value; }
 		}
-		public string mPlayerColor2
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public Color mPlayerColor2
 		{
 			get { return _mPlayerColor2; }
 			set { _mPlayerColor2 = value; }
 		}
-		public string mBackGroundColor
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public Color mBackGroundColor
 		{
 			get { return _mBackGroundColor; }
 			set { _mBackGroundColor = value; }
 		}
-		public string mBorderColor
+        [System.Xml.Serialization.XmlIgnoreAttribute]
+        public Color mBorderColor
 		{
 			get { return _mBorderColor; }
 			set { _mBorderColor = value; }
@@ -147,6 +166,35 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public ReversiSetting()
 		{
+			this.reset();
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			リセット
+		///	@fn				void reset()
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		public void reset()
+		{
+			mMode = ReversiConst.DEF_MODE_ONE;								// 現在のモード
+			mType = ReversiConst.DEF_TYPE_HARD;								// 現在のタイプ
+			mPlayer = ReversiConst.REVERSI_STS_BLACK;						// プレイヤーの色
+			mAssist = ReversiConst.DEF_ASSIST_ON;							// アシスト
+			mGameSpd = ReversiConst.DEF_GAME_SPD_MID;						// ゲームスピード
+			mEndAnim = ReversiConst.DEF_END_ANIM_ON;						// ゲーム終了アニメーション
+			mMasuCntMenu = ReversiConst.DEF_MASU_CNT_8;						// マスの数
+			mMasuCnt = ReversiConst.DEF_MASU_CNT_8_VAL;						// マスの数
+			mPlayCpuInterVal = ReversiConst.DEF_GAME_SPD_MID_VAL2;			// CPU対戦時のインターバル(msec)
+			mPlayDrawInterVal = ReversiConst.DEF_GAME_SPD_MID_VAL;			// 描画のインターバル(msec)
+			mEndDrawInterVal = 100;											// 終了アニメーション描画のインターバル(msec)
+			mEndInterVal = 500;												// 終了アニメーションのインターバル(msec)
+			mPlayerColor1 = Color.FromArgb(255,0,0,0);						// プレイヤー1の色
+			mPlayerColor2 = Color.FromArgb(255,255,255,255);				// プレイヤー2の色
+			mBackGroundColor = Color.FromArgb(255,0,255,0);					// 背景の色
+			mBorderColor = Color.FromArgb(255,0,0,0);						// 枠線の色
 		}
 
 		////////////////////////////////////////////////////////////////////////////////

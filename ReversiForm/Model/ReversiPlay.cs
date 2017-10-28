@@ -760,7 +760,6 @@ namespace ReversiForm
 					for (var j = 0; j < this.mSetting.mMasuCnt; j++) {
 						if (bCnt2 < bCnt) {
 							bCnt2++;
-							System.Threading.Thread.Sleep(this.mSetting.mEndDrawInterVal);
 							this.mReversi.setMasuStsForcibly(ReversiConst.REVERSI_STS_BLACK, i, j);
 							this.sendDrawMsg(i, j);
 						} else {
@@ -768,7 +767,6 @@ namespace ReversiForm
 						}
 						if (wCnt2 < wCnt) {
 							wCnt2++;
-							System.Threading.Thread.Sleep(this.mSetting.mEndDrawInterVal);
 							this.mReversi.setMasuStsForcibly(ReversiConst.REVERSI_STS_WHITE, (this.mSetting.mMasuCnt - 1) - i, (this.mSetting.mMasuCnt - 1) - j);
 							this.sendDrawMsg((this.mSetting.mMasuCnt - 1) - i, (this.mSetting.mMasuCnt - 1) - j);
 						} else {
@@ -776,10 +774,12 @@ namespace ReversiForm
 						}
 						if (bEnd == 1 && wEnd == 1) {
 							break;
+						}else{
+							System.Threading.Thread.Sleep(this.mSetting.mEndDrawInterVal);
 						}
 					}
 				}
-				ret = this.mSetting.mEndInterVal + this.mSetting.mEndDrawInterVal * (this.mSetting.mMasuCnt * this.mSetting.mMasuCnt);
+				ret = 0;
 			}
 			return ret;
 		}

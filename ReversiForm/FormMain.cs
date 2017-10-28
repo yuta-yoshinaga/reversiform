@@ -73,6 +73,7 @@ namespace ReversiForm
 				this.m_ReversiPlay.drawSingle = this.DrawSingle;
 				this.m_ReversiPlay.curColMsg = this.CurColMsg;
 				this.m_ReversiPlay.curStsMsg = this.CurStsMsg;
+				this.appInit();
 				Task newTask = new Task( () => { this.m_ReversiPlay.reset(); } );
 				newTask.Start();
 			}
@@ -151,6 +152,63 @@ namespace ReversiForm
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			アプリ初期化
+		///	@fn				void appInit()
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		public void appInit()
+		{
+			Size curSize = this.tableLayoutPanel1.Size;
+			int cellSizeAll = curSize.Height;
+			if (cellSizeAll < curSize.Width) cellSizeAll = curSize.Width;
+			int cellSize = cellSizeAll / this.m_AppSettings.mMasuCnt;
+			float per = (float)cellSize / cellSizeAll * 100;
+			this.tableLayoutPanel1.Visible = false;
+			for (int i = 0; i < ReversiConst.DEF_MASU_CNT_MAX_VAL;i++)
+			{
+				for (int j = 0; j < ReversiConst.DEF_MASU_CNT_MAX_VAL;j++)
+				{
+					int curIdx = (i * ReversiConst.DEF_MASU_CNT_MAX_VAL) + j + 1;
+					string curIdxStr = "pictureBox" + curIdx.ToString();
+					Control c = this.tableLayoutPanel1.Controls[curIdxStr];
+					if (c != null)
+					{
+						if( i < this.m_AppSettings.mMasuCnt && j < this.m_AppSettings.mMasuCnt)
+						{
+							c.Visible = true;
+						}
+						else
+						{
+							c.Visible = false;
+						}
+					}
+					// *** テーブルの列サイズを調整 *** //
+					if(j < this.m_AppSettings.mMasuCnt)
+					{
+						this.tableLayoutPanel1.ColumnStyles[j] = new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, per);
+					}
+					else
+					{
+						this.tableLayoutPanel1.ColumnStyles[j] = new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0F);
+					}
+				}
+				// *** テーブルの行サイズを調整 *** //
+				if(i < this.m_AppSettings.mMasuCnt)
+				{
+					this.tableLayoutPanel1.RowStyles[i] = new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, per);
+				}
+				else
+				{
+					this.tableLayoutPanel1.RowStyles[i] = new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F);
+				}
+			}
+			this.tableLayoutPanel1.Visible = true;
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
 		///	@brief			メッセージダイアログ
 		///	@fn				void ViewMsgDlg(string title , string msg)
 		///	@param[in]		string title	タイトル
@@ -221,35 +279,56 @@ namespace ReversiForm
 				Bitmap canvas = new Bitmap(curPict.Width, curPict.Height);
 				// ImageオブジェクトのGraphicsオブジェクトを作成する
 				Graphics g = Graphics.FromImage(canvas);
-				Pen curPen1 = new Pen(Color.Black,2);
+				Pen curPen1 = new Pen(m_AppSettings.mBorderColor,2);
 				// Brushオブジェクトの作成
 				SolidBrush curBru1 = null;
 				SolidBrush curBru2 = null;
+				Color curBkColor = m_AppSettings.mBackGroundColor;
+				byte tmpA = curBkColor.A;
+				byte tmpR = curBkColor.R;
+				byte tmpG = curBkColor.G;
+				byte tmpB = curBkColor.B;
 
-			    if (bk == 1) {
+				if (bk == 1) {
 					// *** cell_back_blue *** //
-					curBru1 = new SolidBrush(Color.FromArgb(100, 0, 128, 255));
-			    } else if (bk == 2) {
+					tmpG -= 127;
+					if (tmpG < 0) tmpG += 255;
+					tmpB += 255;
+					if (255 < tmpB) tmpB -= 255;
+					curBkColor = Color.FromArgb(tmpA, tmpR, tmpG, tmpB);
+				}
+				else if (bk == 2) {
 					// *** cell_back_red *** //
-					curBru1 = new SolidBrush(Color.FromArgb(100, 255, 128, 128));
+					tmpR += 255;
+					if(255 < tmpR) tmpR -= 255;
+					tmpG -= 127;
+					if(tmpG < 0) tmpG += 255;
+					tmpB -= 127;
+					if(tmpB < 0) tmpB += 255;
+					curBkColor = Color.FromArgb(tmpA, tmpR, tmpG, tmpB);
 			    } else if (bk == 3) {
 					// *** cell_back_magenta *** //
-					curBru1 = new SolidBrush(Color.FromArgb(100, 255, 0, 255));
+					tmpR += 255;
+					if(255 < tmpR) tmpR -= 255;
+					tmpB += 255;
+					if(255 < tmpB) tmpB -= 255;
+					curBkColor = Color.FromArgb(tmpA, tmpR, tmpG, tmpB);
 			    } else {
 					// *** cell_back_green *** //
-					curBru1 = new SolidBrush(Color.FromArgb(100, 0, 255, 0));
+					curBkColor = Color.FromArgb(tmpA, tmpR, tmpG, tmpB);
 			    }
+				curBru1 = new SolidBrush(curBkColor);
 
 				if (sts == ReversiConst.REVERSI_STS_NONE)
 				{
 				}
 				else if (sts == ReversiConst.REVERSI_STS_BLACK)
 				{
-					curBru2 = new SolidBrush(Color.FromArgb(255, 0, 0, 0));
+					curBru2 = new SolidBrush(m_AppSettings.mPlayerColor1);
 				}
 				else if (sts == ReversiConst.REVERSI_STS_WHITE)
 				{
-					curBru2 = new SolidBrush(Color.FromArgb(255, 255, 255, 255));
+					curBru2 = new SolidBrush(m_AppSettings.mPlayerColor2);
 				}
 
 				// 位置(x, y)にWidth x Heightの四角を描く
@@ -354,6 +433,7 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		private void button1_Click(object sender, EventArgs e)
 		{
+			this.appInit();
 			Task newTask = new Task( () => { this.m_ReversiPlay.reset(); } );
 			newTask.Start();
 		}
@@ -370,7 +450,22 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		private void button2_Click(object sender, EventArgs e)
 		{
+			Assembly myAssembly = Assembly.GetEntryAssembly();
+			string setPath = System.IO.Path.GetDirectoryName(myAssembly.Location) + "\\" + "AppSetting.xml";
 
+			SettingForm form = new SettingForm(this.m_AppSettings);
+			// *** オーナーウィンドウにthisを指定する *** //
+			form.ShowDialog(this);
+
+			this.m_AppSettings = form.mSetting;
+			SaveSettingXml(setPath,ref this.m_AppSettings);
+
+			// *** フォームが必要なくなったところで、Disposeを呼び出す *** //
+			form.Dispose();
+			this.m_ReversiPlay.mSetting = this.m_AppSettings;
+			this.appInit();
+			Task newTask = new Task( () => { this.m_ReversiPlay.reset(); } );
+			newTask.Start();
 		}
 	}
 }
