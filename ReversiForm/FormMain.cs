@@ -26,6 +26,7 @@ using System.Linq;
 using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
+using System.Timers;
 using System.Windows.Forms;
 using System.Xml.Serialization;
 
@@ -42,9 +43,11 @@ namespace ReversiForm
 		delegate void DrawSingleDelegate(int y, int x, int sts, int bk, string text);
 		delegate void CurColMsgDelegate(string text);
 		delegate void CurStsMsgDelegate(string text);
+		delegate void Reversi_ResizeEndDelegate(object sender, EventArgs e);
 
 		public ReversiSetting m_AppSettings;								//!< アプリ設定
 		public ReversiPlay m_ReversiPlay;									//!< リバーシ本体
+		private static System.Timers.Timer aTimer;							//!< タイマー
 
 		////////////////////////////////////////////////////////////////////////////////
 		///	@brief			コンストラクタ
@@ -164,7 +167,9 @@ namespace ReversiForm
 		{
 			Size curSize = this.tableLayoutPanel1.Size;
 			int cellSizeAll = curSize.Height;
-			if (cellSizeAll < curSize.Width) cellSizeAll = curSize.Width;
+			if (curSize.Width < cellSizeAll) cellSizeAll = curSize.Width;
+			curSize.Height = cellSizeAll;
+			curSize.Width = cellSizeAll;
 			int cellSize = cellSizeAll / this.m_AppSettings.mMasuCnt;
 			float per = (float)cellSize / cellSizeAll * 100;
 			this.tableLayoutPanel1.Visible = false;
@@ -323,7 +328,7 @@ namespace ReversiForm
 				curBru1 = new SolidBrush(curBkColor);
 				HslColor workCol = HslColor.FromRgb(curBkColor);
 				float h = workCol.H + 180F;
-				if (360F < h) h -= 360F;
+				if (359F < h) h -= 360F;
 				curBkColorRev = HslColor.ToRgb(new HslColor(h, workCol.S, workCol.L));
 				curBru3 = new SolidBrush(curBkColorRev);
 
@@ -491,6 +496,71 @@ namespace ReversiForm
 			this.appInit();
 			Task newTask = new Task( () => { this.m_ReversiPlay.reset(); } );
 			newTask.Start();
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			リサイズイベント
+		///	@fn				void Reversi_Resize(object sender, EventArgs e)
+		///	@param[in]		object sender
+		///	@param[in]		EventArgs e
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void Reversi_Resize(object sender, EventArgs e)
+		{
+			System.Console.WriteLine("Reversi_Resize() : ");
+
+			// Create a timer with a 1.5 second interval.
+			double interval = 1000.0;
+            if(aTimer != null)
+            {
+                // *** タイマーキャンセル *** //
+                aTimer.Enabled = false;
+            }
+			aTimer = new System.Timers.Timer(interval);
+			// Hook up the event handler for the Elapsed event.
+			aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
+			// Only raise the event the first time Interval elapses.
+			aTimer.AutoReset = false;
+			aTimer.Enabled = true;
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			リサイズ終了イベント
+		///	@fn				void Reversi_Resize(object sender, EventArgs e)
+		///	@param[in]		object sender
+		///	@param[in]		EventArgs e
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void Reversi_ResizeEnd(object sender, EventArgs e)
+		{
+			// *** リサイズ終了後、再描画とレイアウトロジックを実行する *** //
+			System.Console.WriteLine("Reversi_ResizeEnd() : ");
+			this.Invalidate();
+			this.PerformLayout();
+			this.appInit();
+			Task newTask = new Task( () => { this.m_ReversiPlay.drawUpdateForcibly(this.m_AppSettings.mAssist); } );
+			newTask.Start();
+		}
+
+		////////////////////////////////////////////////////////////////////////////////
+		///	@brief			タイマーイベント
+		///	@fn				void OnTimedEvent(object source, ElapsedEventArgs e)
+		///	@param[in]		object source
+		///	@param[in]		ElapsedEventArgs e
+		///	@return			ありません
+		///	@author			Yuta Yoshinaga
+		///	@date			2017.10.20
+		///
+		////////////////////////////////////////////////////////////////////////////////
+		private void OnTimedEvent(object source, ElapsedEventArgs e)
+		{
+			Invoke(new Reversi_ResizeEndDelegate(this.Reversi_ResizeEnd), source, e);
 		}
 	}
 }
