@@ -48,6 +48,7 @@ namespace ReversiForm
 		public ReversiSetting m_AppSettings;								//!< アプリ設定
 		public ReversiPlay m_ReversiPlay;									//!< リバーシ本体
 		private static System.Timers.Timer aTimer;							//!< タイマー
+		private Size oldSize;												//!< リサイズ前のサイズ
 
 		////////////////////////////////////////////////////////////////////////////////
 		///	@brief			コンストラクタ
@@ -60,6 +61,8 @@ namespace ReversiForm
 		public Reversi()
 		{
 			InitializeComponent();
+			oldSize.Width = 0;
+			oldSize.Height = 0;
 
 			Assembly myAssembly = Assembly.GetEntryAssembly();
 			string setPath = System.IO.Path.GetDirectoryName(myAssembly.Location) + "\\" + "AppSetting.xml";
@@ -165,7 +168,24 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		public void appInit()
 		{
-			Size curSize = this.tableLayoutPanel1.Size;
+			// *** tableLayoutPanelの最適化 *** //
+			Size formSize = this.Size;
+			Size tblSize = this.tableLayoutPanel1.Size;
+			int startX = 45;
+			int startY = 45;
+			// *** 各種オフセットを設定 *** //
+			formSize.Height  = this.label1.Top;
+			formSize.Height -= startX << 1;
+			formSize.Width  -= startY << 1;
+			int refSize = formSize.Height;
+			if (formSize.Width < refSize) refSize = formSize.Width;
+			this.tableLayoutPanel1.Top = startX;
+			this.tableLayoutPanel1.Left = ( ( formSize.Width + ( startY << 1 ) ) - refSize ) >> 1;
+			tblSize.Height = refSize;
+			tblSize.Width = refSize;
+			this.tableLayoutPanel1.Size = tblSize;
+
+			Size curSize = tblSize;
 			int cellSizeAll = curSize.Height;
 			if (curSize.Width < cellSizeAll) cellSizeAll = curSize.Width;
 			curSize.Height = cellSizeAll;
@@ -512,13 +532,13 @@ namespace ReversiForm
 		{
 			System.Console.WriteLine("Reversi_Resize() : ");
 
-			// Create a timer with a 1.5 second interval.
-			double interval = 1000.0;
-            if(aTimer != null)
-            {
-                // *** タイマーキャンセル *** //
-                aTimer.Enabled = false;
-            }
+			// Create a timer with a 0.1 second interval.
+			double interval = 100.0;
+			if(aTimer != null)
+			{
+				// *** タイマーキャンセル *** //
+				aTimer.Enabled = false;
+			}
 			aTimer = new System.Timers.Timer(interval);
 			// Hook up the event handler for the Elapsed event.
 			aTimer.Elapsed += new ElapsedEventHandler(OnTimedEvent);
@@ -543,9 +563,17 @@ namespace ReversiForm
 			System.Console.WriteLine("Reversi_ResizeEnd() : ");
 			this.Invalidate();
 			this.PerformLayout();
-			this.appInit();
-			Task newTask = new Task( () => { this.m_ReversiPlay.drawUpdateForcibly(this.m_AppSettings.mAssist); } );
-			newTask.Start();
+
+			Size curSize = this.Size;
+			if(oldSize.Width != curSize.Width || oldSize.Height != curSize.Height)
+			{
+				// *** ちらつき防止のためウィンドウサイズ変更されたときのみ再描画 *** //
+				oldSize.Width = curSize.Width;
+				oldSize.Height = curSize.Height;
+				this.appInit();
+				Task newTask = new Task( () => { this.m_ReversiPlay.drawUpdateForcibly(this.m_AppSettings.mAssist); } );
+				newTask.Start();
+			}
 		}
 
 		////////////////////////////////////////////////////////////////////////////////
