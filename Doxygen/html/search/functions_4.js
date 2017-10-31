@@ -1,21 +1,4 @@
 var searchData=
 [
-  ['gameendanimexec',['gameEndAnimExec',['../class_reversi_form_1_1_reversi_play.html#aec95b109a53b3cdab6466a4fca52f967',1,'ReversiForm::ReversiPlay']]],
-  ['getbetcnt',['getBetCnt',['../class_reversi_form_1_1_my_reversi.html#aa69640136727deb89addafae8e8e54cb',1,'ReversiForm::MyReversi']]],
-  ['getcolorena',['getColorEna',['../class_reversi_form_1_1_my_reversi.html#a960e2691d2d106e5ad6036cfe9cf2503',1,'ReversiForm::MyReversi']]],
-  ['getedgesideone',['getEdgeSideOne',['../class_reversi_form_1_1_my_reversi.html#a998eeefb18faecad172a6e1da4c70d7c',1,'ReversiForm::MyReversi']]],
-  ['getedgesidethree',['getEdgeSideThree',['../class_reversi_form_1_1_my_reversi.html#af6fee61bda5532c4c130e5660f7ce66f',1,'ReversiForm::MyReversi']]],
-  ['getedgesidetwo',['getEdgeSideTwo',['../class_reversi_form_1_1_my_reversi.html#a4b5395df3beb684f55b10bab91661c78',1,'ReversiForm::MyReversi']]],
-  ['getedgesidezero',['getEdgeSideZero',['../class_reversi_form_1_1_my_reversi.html#a64216270f06c7c309d39bfcb681dd1b3',1,'ReversiForm::MyReversi']]],
-  ['getgameendsts',['getGameEndSts',['../class_reversi_form_1_1_my_reversi.html#aa39c8c111afeb4ea3bf2befbd9f1434b',1,'ReversiForm::MyReversi']]],
-  ['gethistory',['getHistory',['../class_reversi_form_1_1_my_reversi.html#a249dba624bda1144c23cc53f68c35c67',1,'ReversiForm::MyReversi']]],
-  ['gethistorycnt',['getHistoryCnt',['../class_reversi_form_1_1_my_reversi.html#a400dc82a921060bfdcf97a5fee721be1',1,'ReversiForm::MyReversi']]],
-  ['getmasusts',['getMasuSts',['../class_reversi_form_1_1_my_reversi.html#ab6498c154199b58c418af1e0058736f6',1,'ReversiForm::MyReversi']]],
-  ['getmasustscnt',['getMasuStsCnt',['../class_reversi_form_1_1_my_reversi.html#a26818336f7915237cf274e1fdff7ec4b',1,'ReversiForm::MyReversi']]],
-  ['getmasustsena',['getMasuStsEna',['../class_reversi_form_1_1_my_reversi.html#ae8404068c47751d53c4b430d635a1bb2',1,'ReversiForm::MyReversi']]],
-  ['getmasustsold',['getMasuStsOld',['../class_reversi_form_1_1_my_reversi.html#abd6f4b9d6355af3175ac885731338705',1,'ReversiForm::MyReversi']]],
-  ['getpassena',['getPassEna',['../class_reversi_form_1_1_my_reversi.html#a13c780ba2b5a346bd6fd295a0cc962f8',1,'ReversiForm::MyReversi']]],
-  ['getpoint',['getPoint',['../class_reversi_form_1_1_my_reversi.html#a58150a220368d7d7ae8ad01ee0120e71',1,'ReversiForm::MyReversi']]],
-  ['getpointanz',['getPointAnz',['../class_reversi_form_1_1_my_reversi.html#af0170bf211a996c2285d0db926f2f0ae',1,'ReversiForm::MyReversi']]],
-  ['getpointcnt',['getPointCnt',['../class_reversi_form_1_1_my_reversi.html#a7b5ebbdd9b7ff56d72185e6b89a50af8',1,'ReversiForm::MyReversi']]]
+  ['execmessage',['execMessage',['../class_reversi_form_1_1_reversi_play.html#aa7cf1089065bff85997d057210312ae8',1,'ReversiForm::ReversiPlay']]]
 ];

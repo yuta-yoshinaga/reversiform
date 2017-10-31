@@ -1,7 +1,10 @@
 <map id="ReversiForm.MyReversi.AnalysisReversi" name="ReversiForm.MyReversi.AnalysisReversi">
-<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="269,17,468,43"/>
-<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="775,101,1008,127"/>
-<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="265,123,472,164"/>
-<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#aeb78112f8fb7fd2c75b8e0f088939867" title="コンストラクタ " alt="" coords="538,5,709,47"/>
-<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="520,123,727,164"/>
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="792,57,991,83"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="775,143,1008,170"/>
+<area shape="rect" id="node8" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="265,159,472,200"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi.html#a832e3ee4b606141b3feefb47742b3849" title="リセットクリック " alt="" coords="1056,5,1243,47"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi.html#aa908556d4f216f8b407c1458e392dfc5" title="セッティングクリック " alt="" coords="1056,71,1243,112"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi.html#abec0816dd006d05b512d86b45a20af68" title="デザイナー サポートに必要なメソッドです。このメソッドの内容を コード エディターで変更しないでください..." alt="" coords="1291,71,1481,112"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_reversi.html#afaa2a98428f4d9eab723fb71f8cb3e29" title="マスクリック " alt="" coords="1058,136,1241,177"/>
+<area shape="rect" id="node9" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="520,159,727,200"/>
 </map>

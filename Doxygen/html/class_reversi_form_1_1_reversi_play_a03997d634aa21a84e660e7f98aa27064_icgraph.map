@@ -1,3 +1,5 @@
 <map id="ReversiForm.ReversiPlay.reset" name="ReversiForm.ReversiPlay.reset">
-<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#aeb78112f8fb7fd2c75b8e0f088939867" title="コンストラクタ " alt="" coords="252,5,423,47"/>
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi.html#a832e3ee4b606141b3feefb47742b3849" title="リセットクリック " alt="" coords="252,5,439,47"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi.html#aa908556d4f216f8b407c1458e392dfc5" title="セッティングクリック " alt="" coords="252,71,439,112"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi.html#abec0816dd006d05b512d86b45a20af68" title="デザイナー サポートに必要なメソッドです。このメソッドの内容を コード エディターで変更しないでください..." alt="" coords="487,39,677,80"/>
 </map>

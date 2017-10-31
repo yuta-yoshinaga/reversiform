@@ -1,0 +1,14 @@
+<map id="ReversiForm.Reversi.Reversi_Resize" name="ReversiForm.Reversi.Reversi_Resize">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi.html#a7c9ef5ff17c4b888f5c891e3ed5dafc2" title="タイマーイベント " alt="" coords="241,84,437,125"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi.html#aab2e35051cbff2f184ee7e76ae60846d" title="アプリ初期化 " alt="" coords="247,150,430,177"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#accc1d553ba6a6c2a5f0c58316b40a183" title="マス描画強制更新 " alt="" coords="240,201,437,243"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#aa7cf1089065bff85997d057210312ae8" title="メッセージ " alt="" coords="485,201,684,243"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_my_reversi.html#ab6498c154199b58c418af1e0058736f6" title="マスステータスを取得 " alt="" coords="732,5,912,47"/>
+<area shape="rect" id="node8" href="$class_reversi_form_1_1_my_reversi.html#ae8404068c47751d53c4b430d635a1bb2" title="指定座標に指定色を置けるかチェック " alt="" coords="732,71,912,112"/>
+<area shape="rect" id="node9" href="$class_reversi_form_1_1_my_reversi.html#a26818336f7915237cf274e1fdff7ec4b" title="指定座標の獲得コマ数取得 " alt="" coords="732,136,912,177"/>
+<area shape="rect" id="node10" href="$class_reversi_form_1_1_reversi_play.html#aa5bd95af33165d887efeed260b23ccb2" title="1マス描画 " alt="" coords="737,201,907,243"/>
+<area shape="rect" id="node11" href="$class_reversi_form_1_1_reversi_play.html#a9b4d5bd01207c648cc80f018fbba9519" title="現在の色メッセージ " alt="" coords="737,267,907,308"/>
+<area shape="rect" id="node12" href="$class_reversi_form_1_1_my_reversi.html#aa69640136727deb89addafae8e8e54cb" title="コマ数取得 " alt="" coords="732,332,912,373"/>
+<area shape="rect" id="node13" href="$class_reversi_form_1_1_reversi_play.html#af2e634847166a90c717aa19ae8aee6b7" title="現在のステータスメッセージ " alt="" coords="737,397,907,439"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b" title="パラメーター範囲チェック " alt="" coords="960,78,1184,105"/>
+</map>

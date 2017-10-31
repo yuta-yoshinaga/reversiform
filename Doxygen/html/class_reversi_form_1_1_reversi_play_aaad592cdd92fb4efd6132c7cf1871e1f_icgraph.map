@@ -1,8 +1,10 @@
 <map id="ReversiForm.ReversiPlay.sendDrawMsg" name="ReversiForm.ReversiPlay.sendDrawMsg">
 <area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi_play.html#af1415f15759ba8475b4b5afca3a35017" title="マス描画更新 " alt="" coords="255,41,452,83"/>
 <area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="1012,71,1245,98"/>
-<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="503,93,709,135"/>
-<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#aec95b109a53b3cdab6466a4fca52f967" title="ゲーム終了アニメーション " alt="" coords="252,159,455,200"/>
-<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="757,93,964,135"/>
-<area shape="rect" id="node7" href="$class_reversi_form_1_1_reversi_play.html#abb6d68c910c7d14ff4eaa8db745f0449" title="リバーシプレイ終了 " alt="" coords="503,159,709,200"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="503,93,709,135"/>
+<area shape="rect" id="node8" href="$class_reversi_form_1_1_reversi_play.html#aec95b109a53b3cdab6466a4fca52f967" title="ゲーム終了アニメーション " alt="" coords="252,159,455,200"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi.html#afaa2a98428f4d9eab723fb71f8cb3e29" title="マスクリック " alt="" coords="1293,64,1476,105"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi.html#abec0816dd006d05b512d86b45a20af68" title="デザイナー サポートに必要なメソッドです。このメソッドの内容を コード エディターで変更しないでください..." alt="" coords="1524,64,1715,105"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="757,93,964,135"/>
+<area shape="rect" id="node9" href="$class_reversi_form_1_1_reversi_play.html#abb6d68c910c7d14ff4eaa8db745f0449" title="リバーシプレイ終了 " alt="" coords="503,159,709,200"/>
 </map>

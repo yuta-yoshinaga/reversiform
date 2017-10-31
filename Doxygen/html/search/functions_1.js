@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['checkedge',['checkEdge',['../class_reversi_form_1_1_my_reversi.html#aa626cbf9735559841662c8fc413abb98',1,'ReversiForm::MyReversi']]],
-  ['checkpara',['checkPara',['../class_reversi_form_1_1_my_reversi.html#a7d861112d0ddeb404cd3e8d8f5c2756b',1,'ReversiForm::MyReversi']]],
-  ['clone',['Clone',['../class_reversi_form_1_1_my_reversi.html#aa340f79c0f7bb78750c410ce73ca7b99',1,'ReversiForm.MyReversi.Clone()'],['../class_reversi_form_1_1_reversi_anz.html#a2d167a05fd48451f019ca95e603e0bcc',1,'ReversiForm.ReversiAnz.Clone()'],['../class_reversi_form_1_1_reversi_history.html#abfbbd1ca8654256ba743c3f07b573484',1,'ReversiForm.ReversiHistory.Clone()'],['../class_reversi_form_1_1_reversi_play.html#aae235e59005e054773bcf1bc0177d34a',1,'ReversiForm.ReversiPlay.Clone()'],['../class_reversi_form_1_1_reversi_point.html#a0a237cffa3c12ec78bdf19c3baecfa69',1,'ReversiForm.ReversiPoint.Clone()'],['../class_reversi_form_1_1_reversi_setting.html#a5ba1f3b862a9938fb89045c3b22dec51',1,'ReversiForm.ReversiSetting.Clone()']]]
+  ['button1_5fclick',['button1_Click',['../class_reversi_form_1_1_reversi.html#a832e3ee4b606141b3feefb47742b3849',1,'ReversiForm::Reversi']]],
+  ['button2_5fclick',['button2_Click',['../class_reversi_form_1_1_reversi.html#aa908556d4f216f8b407c1458e392dfc5',1,'ReversiForm::Reversi']]],
+  ['buttoncancel_5fclick',['buttonCancel_Click',['../class_reversi_form_1_1_setting_form.html#a1f030516cd37c000ba931af26be38903',1,'ReversiForm::SettingForm']]],
+  ['buttonsave_5fclick',['buttonSave_Click',['../class_reversi_form_1_1_setting_form.html#aba7b2ad370dba451133448e702cf0944',1,'ReversiForm::SettingForm']]]
 ];

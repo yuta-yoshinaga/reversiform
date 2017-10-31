@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['main',['Main',['../class_reversi_form_1_1_program.html#a0d307c8bc3af65198f8bc1cef61e050f',1,'ReversiForm::Program']]],
-  ['makemasusts',['makeMasuSts',['../class_reversi_form_1_1_my_reversi.html#a379ac04ab0e8e9fc819ef3ceeba63e58',1,'ReversiForm::MyReversi']]],
-  ['myreversi',['MyReversi',['../class_reversi_form_1_1_my_reversi.html',1,'ReversiForm.MyReversi'],['../class_reversi_form_1_1_my_reversi.html#ab8c7a345a2e1d0978afd640d052f3827',1,'ReversiForm.MyReversi.MyReversi()']]],
-  ['myreversi_2ecs',['MyReversi.cs',['../_my_reversi_8cs.html',1,'']]]
+  ['h',['H',['../class_reversi_form_1_1_hsl_color.html#ac1a2beeeae8bc7b8484ae7f3558fea53',1,'ReversiForm::HslColor']]],
+  ['hslcolor',['HslColor',['../class_reversi_form_1_1_hsl_color.html',1,'ReversiForm']]],
+  ['hslcolor_2ecs',['HslColor.cs',['../_hsl_color_8cs.html',1,'']]]
 ];

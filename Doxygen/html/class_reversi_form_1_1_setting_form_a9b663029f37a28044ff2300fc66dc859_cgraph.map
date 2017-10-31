@@ -1,0 +1,7 @@
+<map id="ReversiForm.SettingForm.InitializeComponent" name="ReversiForm.SettingForm.InitializeComponent">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_setting_form.html#a71422ab30aabb52bdc6f25b5e84aefea" title="プレイヤー1の色クリック " alt="" coords="227,27,439,69"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_setting_form.html#aba7b2ad370dba451133448e702cf0944" title="保存ボタンクリック " alt="" coords="228,93,437,134"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_setting_form.html#a1f030516cd37c000ba931af26be38903" title="プレイヤー2の色クリック " alt="" coords="228,158,437,199"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_setting.html#a2334691b0fa7c13674742c97a50a2e04" title="リセット " alt="" coords="487,5,701,32"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_setting_form.html#a7ede223d806bde4aeb790ade207ad677" title="フォームに設定を反映 " alt="" coords="490,57,698,98"/>
+</map>

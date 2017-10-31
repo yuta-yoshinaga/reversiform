@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['components',['components',['../class_reversi_form_1_1_reversi.html#a2edc9ab9401997c20553b26aadef1ea0',1,'ReversiForm::Reversi']]]
+  ['atimer',['aTimer',['../class_reversi_form_1_1_reversi.html#ad0c066a95e298cbe146aed56e2ca8545',1,'ReversiForm::Reversi']]]
 ];

@@ -1,0 +1,6 @@
+<map id="ReversiForm.Reversi.appInit" name="ReversiForm.Reversi.appInit">
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_reversi.html#a832e3ee4b606141b3feefb47742b3849" title="リセットクリック " alt="" coords="236,5,423,47"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi.html#aa908556d4f216f8b407c1458e392dfc5" title="セッティングクリック " alt="" coords="236,71,423,112"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi.html#ac4868f12e6f15387f8f39f5f1934e610" title="リサイズイベント " alt="" coords="236,136,423,177"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi.html#abec0816dd006d05b512d86b45a20af68" title="デザイナー サポートに必要なメソッドです。このメソッドの内容を コード エディターで変更しないでください..." alt="" coords="471,71,661,112"/>
+</map>

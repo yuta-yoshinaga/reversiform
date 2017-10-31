@@ -7,7 +7,7 @@ Inheritance diagram for Reversi\+Form.\+Reversi\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=193pt]{class_reversi_form_1_1_reversi__inherit__graph}
+\includegraphics[height=550pt]{class_reversi_form_1_1_reversi__inherit__graph}
 \end{center}
 \end{figure}
 
@@ -17,9 +17,43 @@ Collaboration diagram for Reversi\+Form.\+Reversi\+:
 \begin{figure}[H]
 \begin{center}
 \leavevmode
-\includegraphics[width=216pt]{class_reversi_form_1_1_reversi__coll__graph}
+\includegraphics[height=550pt]{class_reversi_form_1_1_reversi__coll__graph}
 \end{center}
 \end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting} \hyperlink{class_reversi_form_1_1_reversi_afbe64672e4a4c9e6f6404a3bbf2b5e1d}{Load\+Setting\+Xml} (string path)
+\begin{DoxyCompactList}\small\item\em 設定\+X\+M\+Lファイルロード \end{DoxyCompactList}\item 
+int \hyperlink{class_reversi_form_1_1_reversi_ac2c2df740914f062761a66f0bbde3f41}{Save\+Setting\+Xml} (string path, ref \hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting} app\+Set)
+\begin{DoxyCompactList}\small\item\em 設定\+X\+M\+Lファイルセーブ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_aab2e35051cbff2f184ee7e76ae60846d}{app\+Init} ()
+\begin{DoxyCompactList}\small\item\em アプリ初期化 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_af4efb5992bb28d48c4f585a7f6c7906f}{View\+Msg\+Dlg} (string title, string msg)
+\begin{DoxyCompactList}\small\item\em メッセージダイアログ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_a5b1fd8f327358b4d0551af981b2a7f0c}{View\+Msg\+Dlg\+Local} (string title, string msg)
+\begin{DoxyCompactList}\small\item\em メッセージダイアログ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_a21483fbe8309e9f6fa5d828fac98a96e}{Draw\+Single} (int y, int x, int sts, int bk, string text)
+\begin{DoxyCompactList}\small\item\em 1マス描画 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_aaa7228857f9476b7950b0af1524abf44}{Draw\+Single\+Local} (int y, int x, int sts, int bk, string text)
+\begin{DoxyCompactList}\small\item\em 1マス描画 \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_ad09577aef8bf515ee495c82a981dfd7d}{Cur\+Col\+Msg} (string text)
+\begin{DoxyCompactList}\small\item\em 現在の色メッセージ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_a0d919be21fe5961a177e26b5752320b9}{Cur\+Col\+Msg\+Local} (string text)
+\begin{DoxyCompactList}\small\item\em 現在の色メッセージ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_af5009aa7b1b255b9dec7028d8a7c53f7}{Cur\+Sts\+Msg} (string text)
+\begin{DoxyCompactList}\small\item\em 現在のステータスメッセージ \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_a934897d68f7709c32b6fd126351c5f05}{Cur\+Sts\+Msg\+Local} (string text)
+\begin{DoxyCompactList}\small\item\em 現在のステータスメッセージ \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae249a833eae1b8b11e3951d3b27fcba0}\label{class_reversi_form_1_1_reversi_ae249a833eae1b8b11e3951d3b27fcba0}} 
+\hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting} \hyperlink{class_reversi_form_1_1_reversi_ae249a833eae1b8b11e3951d3b27fcba0}{m\+\_\+\+App\+Settings}
+\begin{DoxyCompactList}\small\item\em アプリ設定 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a95773c9b8c364a754ca27a4ce8a9bb16}\label{class_reversi_form_1_1_reversi_a95773c9b8c364a754ca27a4ce8a9bb16}} 
+\hyperlink{class_reversi_form_1_1_reversi_play}{Reversi\+Play} \hyperlink{class_reversi_form_1_1_reversi_a95773c9b8c364a754ca27a4ce8a9bb16}{m\+\_\+\+Reversi\+Play}
+\begin{DoxyCompactList}\small\item\em リバーシ本体 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Protected Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -28,23 +62,1565 @@ override void \hyperlink{class_reversi_form_1_1_reversi_ac021c14c28e588c11445e46
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_adddf0cf721d71873165e82f67f5d09d8}\label{class_reversi_form_1_1_reversi_adddf0cf721d71873165e82f67f5d09d8}} 
+delegate void {\bfseries View\+Msg\+Dlg\+Delegate} (string title, string msg)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a065c6275be5c52e90bdad6fbe8d68362}\label{class_reversi_form_1_1_reversi_a065c6275be5c52e90bdad6fbe8d68362}} 
+delegate void {\bfseries Draw\+Single\+Delegate} (int y, int x, int sts, int bk, string text)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_abc5c0d998390dc9e9052e514c3824ef6}\label{class_reversi_form_1_1_reversi_abc5c0d998390dc9e9052e514c3824ef6}} 
+delegate void {\bfseries Cur\+Col\+Msg\+Delegate} (string text)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2ed28729afe13d992636e461964e5cd7}\label{class_reversi_form_1_1_reversi_a2ed28729afe13d992636e461964e5cd7}} 
+delegate void {\bfseries Cur\+Sts\+Msg\+Delegate} (string text)
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7a4458a4ad3aded3ae17bfe930a122c3}\label{class_reversi_form_1_1_reversi_a7a4458a4ad3aded3ae17bfe930a122c3}} 
+delegate void {\bfseries Reversi\+\_\+\+Resize\+End\+Delegate} (object sender, Event\+Args e)
+\item 
+void \hyperlink{class_reversi_form_1_1_reversi_afaa2a98428f4d9eab723fb71f8cb3e29}{picture\+Box\+\_\+\+Click} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em マスクリック \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_a832e3ee4b606141b3feefb47742b3849}{button1\+\_\+\+Click} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em リセットクリック \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_aa908556d4f216f8b407c1458e392dfc5}{button2\+\_\+\+Click} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em セッティングクリック \end{DoxyCompactList}\item 
+void \hyperlink{class_reversi_form_1_1_reversi_ac4868f12e6f15387f8f39f5f1934e610}{Reversi\+\_\+\+Resize} (object sender, Event\+Args e)
+\begin{DoxyCompactList}\small\item\em リサイズイベント \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5b88dc4de7186ee1b04a0619221284a9}\label{class_reversi_form_1_1_reversi_a5b88dc4de7186ee1b04a0619221284a9}} 
+void {\bfseries Reversi\+\_\+\+Resize\+End} (object sender, Event\+Args e)
+\item 
+void \hyperlink{class_reversi_form_1_1_reversi_a7c9ef5ff17c4b888f5c891e3ed5dafc2}{On\+Timed\+Event} (object source, Elapsed\+Event\+Args e)
+\begin{DoxyCompactList}\small\item\em タイマーイベント \end{DoxyCompactList}\item 
 void \hyperlink{class_reversi_form_1_1_reversi_abec0816dd006d05b512d86b45a20af68}{Initialize\+Component} ()
 \begin{DoxyCompactList}\small\item\em デザイナー サポートに必要なメソッドです。このメソッドの内容を コード エディターで変更しないでください。 \end{DoxyCompactList}\end{DoxyCompactItemize}
 \subsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4cbca5b82cf5dd63835920c9bc9088b5}\label{class_reversi_form_1_1_reversi_a4cbca5b82cf5dd63835920c9bc9088b5}} 
+Size \hyperlink{class_reversi_form_1_1_reversi_a4cbca5b82cf5dd63835920c9bc9088b5}{old\+Size}
+\begin{DoxyCompactList}\small\item\em リサイズ前のサイズ \end{DoxyCompactList}\item 
 System.\+Component\+Model.\+I\+Container \hyperlink{class_reversi_form_1_1_reversi_a2edc9ab9401997c20553b26aadef1ea0}{components} = null
-\begin{DoxyCompactList}\small\item\em 必要なデザイナー変数です。 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em 必要なデザイナー変数です。 \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9c1a91f97ee65445615b038aca1e72ad}\label{class_reversi_form_1_1_reversi_a9c1a91f97ee65445615b038aca1e72ad}} 
+System.\+Windows.\+Forms.\+Table\+Layout\+Panel {\bfseries table\+Layout\+Panel1}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a245193a3e7d97b444dff75302e121d1f}\label{class_reversi_form_1_1_reversi_a245193a3e7d97b444dff75302e121d1f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box381}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a83ea383942c37ff1e4c8511778944bfb}\label{class_reversi_form_1_1_reversi_a83ea383942c37ff1e4c8511778944bfb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box382}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae002f4e7698ce16ade2b501bfdd94186}\label{class_reversi_form_1_1_reversi_ae002f4e7698ce16ade2b501bfdd94186}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box383}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a526f751740d210075b88b4e05e457c73}\label{class_reversi_form_1_1_reversi_a526f751740d210075b88b4e05e457c73}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box384}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab4812a4de582baba528104b8c5bcc7cf}\label{class_reversi_form_1_1_reversi_ab4812a4de582baba528104b8c5bcc7cf}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box385}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a448c65f41bd162c3365a47a0e0d4a5a1}\label{class_reversi_form_1_1_reversi_a448c65f41bd162c3365a47a0e0d4a5a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box386}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a11a439f1b4173f2d256ceb25a44db534}\label{class_reversi_form_1_1_reversi_a11a439f1b4173f2d256ceb25a44db534}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box387}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8f84dc060240762e9e5b6d346e0a7237}\label{class_reversi_form_1_1_reversi_a8f84dc060240762e9e5b6d346e0a7237}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box388}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5bdbbd938c48704b9e0aa8f3991a12ac}\label{class_reversi_form_1_1_reversi_a5bdbbd938c48704b9e0aa8f3991a12ac}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box389}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3f743f1b6070e0589d8315df3ef697ad}\label{class_reversi_form_1_1_reversi_a3f743f1b6070e0589d8315df3ef697ad}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box390}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4ff9a4c9183b3aa2aae688de04464e07}\label{class_reversi_form_1_1_reversi_a4ff9a4c9183b3aa2aae688de04464e07}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box391}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a593a4e1b0ba2b2dfdf7d3ecb2a70f066}\label{class_reversi_form_1_1_reversi_a593a4e1b0ba2b2dfdf7d3ecb2a70f066}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box392}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1c6940075e0e83e54e38fe26f1fae9b0}\label{class_reversi_form_1_1_reversi_a1c6940075e0e83e54e38fe26f1fae9b0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box393}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a63fc4863756d674a6a61c175ff39c732}\label{class_reversi_form_1_1_reversi_a63fc4863756d674a6a61c175ff39c732}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box394}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa09b880a81de2db3cb4df67098c12271}\label{class_reversi_form_1_1_reversi_aa09b880a81de2db3cb4df67098c12271}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box395}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a816952246abeecb60f720f844c86798f}\label{class_reversi_form_1_1_reversi_a816952246abeecb60f720f844c86798f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box396}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1e5db69fde0f6b5bafefa928c4ca6930}\label{class_reversi_form_1_1_reversi_a1e5db69fde0f6b5bafefa928c4ca6930}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box397}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab5fb1c4484de51870b477b14f2fb5f9b}\label{class_reversi_form_1_1_reversi_ab5fb1c4484de51870b477b14f2fb5f9b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box398}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a31cd1dca7ce73e2794cd8bbf585a3170}\label{class_reversi_form_1_1_reversi_a31cd1dca7ce73e2794cd8bbf585a3170}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box399}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4ed0fb9c58c066810ee7bc28683e9b9a}\label{class_reversi_form_1_1_reversi_a4ed0fb9c58c066810ee7bc28683e9b9a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box400}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa2e544281ce7ad438ed0ff47af873e6e}\label{class_reversi_form_1_1_reversi_aa2e544281ce7ad438ed0ff47af873e6e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box361}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a44a0312eaa4b00567750302ebae102f2}\label{class_reversi_form_1_1_reversi_a44a0312eaa4b00567750302ebae102f2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box362}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa9a447ddfc05d93c99512935cd20ccf4}\label{class_reversi_form_1_1_reversi_aa9a447ddfc05d93c99512935cd20ccf4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box363}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac89c4fb128cbddb938ac7d4d4d3b23e7}\label{class_reversi_form_1_1_reversi_ac89c4fb128cbddb938ac7d4d4d3b23e7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box364}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6bf6234f4e2fe58d657c671272b49f7e}\label{class_reversi_form_1_1_reversi_a6bf6234f4e2fe58d657c671272b49f7e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box365}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a03732708485bb0bc05173165514b2525}\label{class_reversi_form_1_1_reversi_a03732708485bb0bc05173165514b2525}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box366}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a564cb4bce6398b1e4da8019725b70ecc}\label{class_reversi_form_1_1_reversi_a564cb4bce6398b1e4da8019725b70ecc}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box367}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad07dab1d5586a7f8a212b9934efd07e1}\label{class_reversi_form_1_1_reversi_ad07dab1d5586a7f8a212b9934efd07e1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box368}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad1c85204d3a172743e499a8949c1eec9}\label{class_reversi_form_1_1_reversi_ad1c85204d3a172743e499a8949c1eec9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box369}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a275e503b52c1781c161b63f296bf9fca}\label{class_reversi_form_1_1_reversi_a275e503b52c1781c161b63f296bf9fca}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box370}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad1e7de51898a4b830492861eccae1e31}\label{class_reversi_form_1_1_reversi_ad1e7de51898a4b830492861eccae1e31}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box371}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac40745edc0d3942486eb3b69d6474ab5}\label{class_reversi_form_1_1_reversi_ac40745edc0d3942486eb3b69d6474ab5}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box372}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad67df851a496b4992d3e7663f1716c2f}\label{class_reversi_form_1_1_reversi_ad67df851a496b4992d3e7663f1716c2f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box373}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a339b27382c564c405d1a70b6c926fca7}\label{class_reversi_form_1_1_reversi_a339b27382c564c405d1a70b6c926fca7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box374}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a196688ce6db5655628db4ede1cc2fe23}\label{class_reversi_form_1_1_reversi_a196688ce6db5655628db4ede1cc2fe23}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box375}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a00dd5db9cb7f7619b1ff1d866a431b85}\label{class_reversi_form_1_1_reversi_a00dd5db9cb7f7619b1ff1d866a431b85}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box376}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3e7f5933ccf296bbc4a5081eed277ee5}\label{class_reversi_form_1_1_reversi_a3e7f5933ccf296bbc4a5081eed277ee5}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box377}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa3c3a913e0a789d9f15ade5ad3d25f9b}\label{class_reversi_form_1_1_reversi_aa3c3a913e0a789d9f15ade5ad3d25f9b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box378}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af552507643a66288b3c73f56517ad9b9}\label{class_reversi_form_1_1_reversi_af552507643a66288b3c73f56517ad9b9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box379}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a10de901b585398372895a9e6dad169ae}\label{class_reversi_form_1_1_reversi_a10de901b585398372895a9e6dad169ae}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box380}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a578d70e7659b49189fb4fdf0153b948a}\label{class_reversi_form_1_1_reversi_a578d70e7659b49189fb4fdf0153b948a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box341}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aec9daa9abb370c7f891e166347aa0b24}\label{class_reversi_form_1_1_reversi_aec9daa9abb370c7f891e166347aa0b24}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box342}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a923188d173a71f0359a22447520ae235}\label{class_reversi_form_1_1_reversi_a923188d173a71f0359a22447520ae235}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box343}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0ee8620198bcecdb2242557ad0d8167c}\label{class_reversi_form_1_1_reversi_a0ee8620198bcecdb2242557ad0d8167c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box344}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a99c02398b836e01b7bebe7a390b52fb2}\label{class_reversi_form_1_1_reversi_a99c02398b836e01b7bebe7a390b52fb2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box345}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae63fccf78ce858c2617475fbef754072}\label{class_reversi_form_1_1_reversi_ae63fccf78ce858c2617475fbef754072}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box346}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a957792ca1d0808f83ca9a7f417bdad00}\label{class_reversi_form_1_1_reversi_a957792ca1d0808f83ca9a7f417bdad00}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box347}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8e54e407f78b3c9a79e33b094492be2e}\label{class_reversi_form_1_1_reversi_a8e54e407f78b3c9a79e33b094492be2e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box348}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aecd5c3382d0c3b7ddf1abf3c34b0553c}\label{class_reversi_form_1_1_reversi_aecd5c3382d0c3b7ddf1abf3c34b0553c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box349}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a63f17bcc9584f62ee1a1ffca3365e808}\label{class_reversi_form_1_1_reversi_a63f17bcc9584f62ee1a1ffca3365e808}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box350}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a65c6093716b888636e9a97f6c779b420}\label{class_reversi_form_1_1_reversi_a65c6093716b888636e9a97f6c779b420}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box351}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a33e817c72db19c9355717ce5cfa10623}\label{class_reversi_form_1_1_reversi_a33e817c72db19c9355717ce5cfa10623}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box352}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaf509a925a44d92e5e93f9224f818157}\label{class_reversi_form_1_1_reversi_aaf509a925a44d92e5e93f9224f818157}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box353}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac2a95597ead8c77092658f0d98f3e0bc}\label{class_reversi_form_1_1_reversi_ac2a95597ead8c77092658f0d98f3e0bc}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box354}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af9cb362053e97ac3201d452b9e6e3e24}\label{class_reversi_form_1_1_reversi_af9cb362053e97ac3201d452b9e6e3e24}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box355}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af34d5cc89c9b861df0949ce370df20ab}\label{class_reversi_form_1_1_reversi_af34d5cc89c9b861df0949ce370df20ab}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box356}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac23cbc926c88e13a970519efbc7de75c}\label{class_reversi_form_1_1_reversi_ac23cbc926c88e13a970519efbc7de75c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box357}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a30addbb35760e76979aa0d251a782313}\label{class_reversi_form_1_1_reversi_a30addbb35760e76979aa0d251a782313}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box358}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_afb35bc7a27fe4f41da041ca39ed94c04}\label{class_reversi_form_1_1_reversi_afb35bc7a27fe4f41da041ca39ed94c04}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box359}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad7b4c8f3c4aa7aa67f2d81d804a5fc9a}\label{class_reversi_form_1_1_reversi_ad7b4c8f3c4aa7aa67f2d81d804a5fc9a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box360}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a67abeeffca08c0897399bc95d373732f}\label{class_reversi_form_1_1_reversi_a67abeeffca08c0897399bc95d373732f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box321}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8a1a09809422bc4b0b1b8fc42b6d5b0a}\label{class_reversi_form_1_1_reversi_a8a1a09809422bc4b0b1b8fc42b6d5b0a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box322}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2be16f32e873c08f603c0d7a17bb1e93}\label{class_reversi_form_1_1_reversi_a2be16f32e873c08f603c0d7a17bb1e93}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box323}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a57e5cd2d833faf315f38d56ba6706ec0}\label{class_reversi_form_1_1_reversi_a57e5cd2d833faf315f38d56ba6706ec0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box324}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a59da237a9ff6e757855439f1ba20260b}\label{class_reversi_form_1_1_reversi_a59da237a9ff6e757855439f1ba20260b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box325}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa488a676f3079b7b7b81e12ad75c8057}\label{class_reversi_form_1_1_reversi_aa488a676f3079b7b7b81e12ad75c8057}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box326}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaaa72d48cecc5132b2eae956b675de63}\label{class_reversi_form_1_1_reversi_aaaa72d48cecc5132b2eae956b675de63}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box327}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab4bc48e71ab518c31643046da106aa39}\label{class_reversi_form_1_1_reversi_ab4bc48e71ab518c31643046da106aa39}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box328}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a841d83d77486c9ad086400d277e8d4ad}\label{class_reversi_form_1_1_reversi_a841d83d77486c9ad086400d277e8d4ad}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box329}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4fd063fb31960cde998b47be4d17d793}\label{class_reversi_form_1_1_reversi_a4fd063fb31960cde998b47be4d17d793}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box330}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_adc3296857dac7e9d46618df201107906}\label{class_reversi_form_1_1_reversi_adc3296857dac7e9d46618df201107906}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box331}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a108893bc3c675b0437921cfdd4dac7c7}\label{class_reversi_form_1_1_reversi_a108893bc3c675b0437921cfdd4dac7c7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box332}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af30b7b18ec3f3048e210bfe981897d77}\label{class_reversi_form_1_1_reversi_af30b7b18ec3f3048e210bfe981897d77}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box333}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a48f3ed9b7bc3c972761d914b3cf93c52}\label{class_reversi_form_1_1_reversi_a48f3ed9b7bc3c972761d914b3cf93c52}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box334}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6f89a77d0acbdc9a31a11feda5c607df}\label{class_reversi_form_1_1_reversi_a6f89a77d0acbdc9a31a11feda5c607df}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box335}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7859c6e89c448fbe0e89f222049608a0}\label{class_reversi_form_1_1_reversi_a7859c6e89c448fbe0e89f222049608a0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box336}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2a096174503f5f1df105da9b0959fda2}\label{class_reversi_form_1_1_reversi_a2a096174503f5f1df105da9b0959fda2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box337}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad6c05b746370ab3505409ef7f8072afd}\label{class_reversi_form_1_1_reversi_ad6c05b746370ab3505409ef7f8072afd}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box338}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af60aa0a600492db838105c04e5949911}\label{class_reversi_form_1_1_reversi_af60aa0a600492db838105c04e5949911}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box339}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2e922a2d7fc5269a73103ae64834266c}\label{class_reversi_form_1_1_reversi_a2e922a2d7fc5269a73103ae64834266c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box340}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a30f563f5c04502beb3d93535fc17ae32}\label{class_reversi_form_1_1_reversi_a30f563f5c04502beb3d93535fc17ae32}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box301}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac95b75a3c2b0064b287edd93924d3cef}\label{class_reversi_form_1_1_reversi_ac95b75a3c2b0064b287edd93924d3cef}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box302}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a75eb83d40fefbfc13a5012535fd1bffe}\label{class_reversi_form_1_1_reversi_a75eb83d40fefbfc13a5012535fd1bffe}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box303}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab329757fbe09ca5ac10b1e0c527ce6dc}\label{class_reversi_form_1_1_reversi_ab329757fbe09ca5ac10b1e0c527ce6dc}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box304}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7c68afbdc7ac0d4d1a2aa9dea4b81c66}\label{class_reversi_form_1_1_reversi_a7c68afbdc7ac0d4d1a2aa9dea4b81c66}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box305}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ace31163ed6e4ee4baff20b2e3252c4a3}\label{class_reversi_form_1_1_reversi_ace31163ed6e4ee4baff20b2e3252c4a3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box306}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_acff75778dc8e71856fc46e29d3c5c6f3}\label{class_reversi_form_1_1_reversi_acff75778dc8e71856fc46e29d3c5c6f3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box307}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_add4aa1d43afab596720a5b163a909e7d}\label{class_reversi_form_1_1_reversi_add4aa1d43afab596720a5b163a909e7d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box308}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a57384c67de7f6c5402747b21216aacea}\label{class_reversi_form_1_1_reversi_a57384c67de7f6c5402747b21216aacea}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box309}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aca109e4cfb03e75521ba7fb05aa490eb}\label{class_reversi_form_1_1_reversi_aca109e4cfb03e75521ba7fb05aa490eb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box310}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a82d1e8e581cd413a43b1b50bb1f8bfe0}\label{class_reversi_form_1_1_reversi_a82d1e8e581cd413a43b1b50bb1f8bfe0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box311}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af6d35eb27e98b5029a1a153f99961f09}\label{class_reversi_form_1_1_reversi_af6d35eb27e98b5029a1a153f99961f09}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box312}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ace2e9da7a5ab52911524271c680c8dd4}\label{class_reversi_form_1_1_reversi_ace2e9da7a5ab52911524271c680c8dd4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box313}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9fb3214a6c48868c43d9447b7804733d}\label{class_reversi_form_1_1_reversi_a9fb3214a6c48868c43d9447b7804733d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box314}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1d072e81561aa5eb609f108af6f320c5}\label{class_reversi_form_1_1_reversi_a1d072e81561aa5eb609f108af6f320c5}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box315}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4480af038b6431446c2a3c6b6c4a68a1}\label{class_reversi_form_1_1_reversi_a4480af038b6431446c2a3c6b6c4a68a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box316}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a23adc8e49e28dcef35be06bd3bc81d11}\label{class_reversi_form_1_1_reversi_a23adc8e49e28dcef35be06bd3bc81d11}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box317}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ace37ca088cc0c266b7a80faba81eb9d4}\label{class_reversi_form_1_1_reversi_ace37ca088cc0c266b7a80faba81eb9d4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box318}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3833d3c665906310078b1708727a3c63}\label{class_reversi_form_1_1_reversi_a3833d3c665906310078b1708727a3c63}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box319}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a16dcebac8ac18640b4e7cb557032cc65}\label{class_reversi_form_1_1_reversi_a16dcebac8ac18640b4e7cb557032cc65}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box320}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8a83c9b9879c855f934dc473de383c8f}\label{class_reversi_form_1_1_reversi_a8a83c9b9879c855f934dc473de383c8f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box281}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a59cfa525157acd51b61bc7a1a1e77853}\label{class_reversi_form_1_1_reversi_a59cfa525157acd51b61bc7a1a1e77853}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box282}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3576a78dec2fce91578dc2b881ce0d34}\label{class_reversi_form_1_1_reversi_a3576a78dec2fce91578dc2b881ce0d34}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box283}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5402a2050897d23a62018ee0d7fef0ee}\label{class_reversi_form_1_1_reversi_a5402a2050897d23a62018ee0d7fef0ee}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box284}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6308c8bf2ffc8b1fb4c2bcfba5b042e3}\label{class_reversi_form_1_1_reversi_a6308c8bf2ffc8b1fb4c2bcfba5b042e3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box285}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4e5c410e6af7bce0370e5aff8f11f4e1}\label{class_reversi_form_1_1_reversi_a4e5c410e6af7bce0370e5aff8f11f4e1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box286}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a391c9668ba85274262e9b457bdf3d13e}\label{class_reversi_form_1_1_reversi_a391c9668ba85274262e9b457bdf3d13e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box287}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0c7235b4e3921531d0c8bb0d9b87a525}\label{class_reversi_form_1_1_reversi_a0c7235b4e3921531d0c8bb0d9b87a525}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box288}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af068e9343b271d21e152a6b766070e38}\label{class_reversi_form_1_1_reversi_af068e9343b271d21e152a6b766070e38}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box289}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a321c0df794bb7dc31ef04cc5bd8ff0da}\label{class_reversi_form_1_1_reversi_a321c0df794bb7dc31ef04cc5bd8ff0da}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box290}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aea82e5d8c816e49bdd6797b58ec2bf11}\label{class_reversi_form_1_1_reversi_aea82e5d8c816e49bdd6797b58ec2bf11}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box291}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_abd429145542eb929e981637a63a4d9b4}\label{class_reversi_form_1_1_reversi_abd429145542eb929e981637a63a4d9b4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box292}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae6acbfbf80ed7cfe3b166167313d487d}\label{class_reversi_form_1_1_reversi_ae6acbfbf80ed7cfe3b166167313d487d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box293}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5039a5854e6d1cbaa1c61213e71db8b4}\label{class_reversi_form_1_1_reversi_a5039a5854e6d1cbaa1c61213e71db8b4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box294}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a70773c9368b5bac9952be75c570ce3d9}\label{class_reversi_form_1_1_reversi_a70773c9368b5bac9952be75c570ce3d9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box295}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9182f211b6e2a59a62d25660efc2a72d}\label{class_reversi_form_1_1_reversi_a9182f211b6e2a59a62d25660efc2a72d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box296}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af938f24d4ef565e2abe00502363a149b}\label{class_reversi_form_1_1_reversi_af938f24d4ef565e2abe00502363a149b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box297}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af67d2f91fc32f5793ebc5a857949d990}\label{class_reversi_form_1_1_reversi_af67d2f91fc32f5793ebc5a857949d990}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box298}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa27c749a23a913ee2147f80aa674c853}\label{class_reversi_form_1_1_reversi_aa27c749a23a913ee2147f80aa674c853}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box299}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_afcbc8c3d887fd9918ee02faa8b742e23}\label{class_reversi_form_1_1_reversi_afcbc8c3d887fd9918ee02faa8b742e23}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box300}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a56a1519fdaf8ae3b89c8a575cf2bc86f}\label{class_reversi_form_1_1_reversi_a56a1519fdaf8ae3b89c8a575cf2bc86f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box261}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a68f7e531e00903aff993775f579d2dc0}\label{class_reversi_form_1_1_reversi_a68f7e531e00903aff993775f579d2dc0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box262}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7b32307a1d95fe7415d7162b688a2f2c}\label{class_reversi_form_1_1_reversi_a7b32307a1d95fe7415d7162b688a2f2c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box263}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a19163c241bad62f8888717cd7e6def94}\label{class_reversi_form_1_1_reversi_a19163c241bad62f8888717cd7e6def94}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box264}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7d9316a95394667be921de9b9dab488f}\label{class_reversi_form_1_1_reversi_a7d9316a95394667be921de9b9dab488f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box265}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a460b9119a6884844e8103eb81020a1b4}\label{class_reversi_form_1_1_reversi_a460b9119a6884844e8103eb81020a1b4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box266}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4537c39c6d5f345198ebf9b45ec7a07e}\label{class_reversi_form_1_1_reversi_a4537c39c6d5f345198ebf9b45ec7a07e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box267}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a63abe94b9251fd607e2c6c24dccd8b5a}\label{class_reversi_form_1_1_reversi_a63abe94b9251fd607e2c6c24dccd8b5a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box268}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0463f0292d5332589a4ba2afb6b86e7e}\label{class_reversi_form_1_1_reversi_a0463f0292d5332589a4ba2afb6b86e7e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box269}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaad641bcdfbf3e4a5aec89a3063cafd9}\label{class_reversi_form_1_1_reversi_aaad641bcdfbf3e4a5aec89a3063cafd9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box270}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7415fbe3b1d77f78c85a9f2f011ab135}\label{class_reversi_form_1_1_reversi_a7415fbe3b1d77f78c85a9f2f011ab135}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box271}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4cc5e78418af588f845ea66d308b62c7}\label{class_reversi_form_1_1_reversi_a4cc5e78418af588f845ea66d308b62c7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box272}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2320555e3cbbe02353e3401046233896}\label{class_reversi_form_1_1_reversi_a2320555e3cbbe02353e3401046233896}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box273}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7c0a88ad3b5790db20940a0ad876b2b5}\label{class_reversi_form_1_1_reversi_a7c0a88ad3b5790db20940a0ad876b2b5}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box274}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac27cfe52a20dc14d4200f5c1a56cc977}\label{class_reversi_form_1_1_reversi_ac27cfe52a20dc14d4200f5c1a56cc977}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box275}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a376c210284e9e1fd656a88ae99bd7b49}\label{class_reversi_form_1_1_reversi_a376c210284e9e1fd656a88ae99bd7b49}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box276}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a93dc4329d7f5fb65154f5460ac018d37}\label{class_reversi_form_1_1_reversi_a93dc4329d7f5fb65154f5460ac018d37}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box277}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_abf0bc1296a9e987914befdea40f788f2}\label{class_reversi_form_1_1_reversi_abf0bc1296a9e987914befdea40f788f2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box278}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab776c972d1afed2dd84fde600eb3ed6a}\label{class_reversi_form_1_1_reversi_ab776c972d1afed2dd84fde600eb3ed6a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box279}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae16ca4cf745ad1f08a0387ae098cbf8b}\label{class_reversi_form_1_1_reversi_ae16ca4cf745ad1f08a0387ae098cbf8b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box280}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aba978641af5ae76f06ba81cf94c20fdb}\label{class_reversi_form_1_1_reversi_aba978641af5ae76f06ba81cf94c20fdb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box241}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1492f050338ef3095a191e5697598a0a}\label{class_reversi_form_1_1_reversi_a1492f050338ef3095a191e5697598a0a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box242}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4e4db9b3d9ec75ff4d617bfe4a11bc8a}\label{class_reversi_form_1_1_reversi_a4e4db9b3d9ec75ff4d617bfe4a11bc8a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box243}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0e1e9ba6feedebbfa96584283c4ac464}\label{class_reversi_form_1_1_reversi_a0e1e9ba6feedebbfa96584283c4ac464}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box244}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a444f4fc74946061da102d50b64bfeae9}\label{class_reversi_form_1_1_reversi_a444f4fc74946061da102d50b64bfeae9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box245}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aac01aa43df1ec12ac81a6580c1fe85a4}\label{class_reversi_form_1_1_reversi_aac01aa43df1ec12ac81a6580c1fe85a4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box246}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2a026dfac6cdc563e8b33d46d317d46e}\label{class_reversi_form_1_1_reversi_a2a026dfac6cdc563e8b33d46d317d46e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box247}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a52a364ba63a081716d7adc70756fc639}\label{class_reversi_form_1_1_reversi_a52a364ba63a081716d7adc70756fc639}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box248}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8683d0818b0e12b8ad40e8f8def648f0}\label{class_reversi_form_1_1_reversi_a8683d0818b0e12b8ad40e8f8def648f0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box249}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a175963d2abd8d81446210d64a656906c}\label{class_reversi_form_1_1_reversi_a175963d2abd8d81446210d64a656906c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box250}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac758b9efa944bdc9895d5256b33b650b}\label{class_reversi_form_1_1_reversi_ac758b9efa944bdc9895d5256b33b650b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box251}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a288fa9b58d90b5b729ffbc2ca01e50ea}\label{class_reversi_form_1_1_reversi_a288fa9b58d90b5b729ffbc2ca01e50ea}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box252}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a11a00a9e1c1e21cb57796a79faa2469d}\label{class_reversi_form_1_1_reversi_a11a00a9e1c1e21cb57796a79faa2469d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box253}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaa6ce6b098d520261178fafd1492e9df}\label{class_reversi_form_1_1_reversi_aaa6ce6b098d520261178fafd1492e9df}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box254}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa42fc4d069cfddc5c2477f8e77e923f0}\label{class_reversi_form_1_1_reversi_aa42fc4d069cfddc5c2477f8e77e923f0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box255}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae63a6585694d767c70a99038f8fd81af}\label{class_reversi_form_1_1_reversi_ae63a6585694d767c70a99038f8fd81af}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box256}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a04d1ca95289fac9b96c870c984a33383}\label{class_reversi_form_1_1_reversi_a04d1ca95289fac9b96c870c984a33383}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box257}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_abc09d2dd9f1658183c74e90cb3b81f85}\label{class_reversi_form_1_1_reversi_abc09d2dd9f1658183c74e90cb3b81f85}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box258}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3f0a8e0aba618e82fa3af37d18da764e}\label{class_reversi_form_1_1_reversi_a3f0a8e0aba618e82fa3af37d18da764e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box259}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a78b95f8d72e907a0b2cb15cb1b3f0a07}\label{class_reversi_form_1_1_reversi_a78b95f8d72e907a0b2cb15cb1b3f0a07}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box260}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_adb39ad4563552ef71ff11683776e077e}\label{class_reversi_form_1_1_reversi_adb39ad4563552ef71ff11683776e077e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box221}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_acc751f35d9ef503c470c122926d2f67f}\label{class_reversi_form_1_1_reversi_acc751f35d9ef503c470c122926d2f67f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box222}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4d69947a2c1e61d48dbf897ba7fc97e8}\label{class_reversi_form_1_1_reversi_a4d69947a2c1e61d48dbf897ba7fc97e8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box223}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2f83dfe431d0132407de75fc6e87961f}\label{class_reversi_form_1_1_reversi_a2f83dfe431d0132407de75fc6e87961f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box224}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2bcdf1172c5c7343742e3c3bd8829c38}\label{class_reversi_form_1_1_reversi_a2bcdf1172c5c7343742e3c3bd8829c38}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box225}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab32d87ded56c5b4806db0a3373bd0896}\label{class_reversi_form_1_1_reversi_ab32d87ded56c5b4806db0a3373bd0896}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box226}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa2229f76039868e5b4490b46b437697e}\label{class_reversi_form_1_1_reversi_aa2229f76039868e5b4490b46b437697e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box227}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a166a61f7e7c0567f4712b128fb5b21b4}\label{class_reversi_form_1_1_reversi_a166a61f7e7c0567f4712b128fb5b21b4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box228}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a48a055454f6dfb0ddb44fce8b8f8ba72}\label{class_reversi_form_1_1_reversi_a48a055454f6dfb0ddb44fce8b8f8ba72}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box229}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a414db13c6f452d1d6fbcc6e2fb83b198}\label{class_reversi_form_1_1_reversi_a414db13c6f452d1d6fbcc6e2fb83b198}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box230}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad313702de106fa28292b6a226984f72e}\label{class_reversi_form_1_1_reversi_ad313702de106fa28292b6a226984f72e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box231}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab35ed5764c2c8007cc26b4e266d915c4}\label{class_reversi_form_1_1_reversi_ab35ed5764c2c8007cc26b4e266d915c4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box232}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a714c8910dce0ab74469ab225a0d1adf1}\label{class_reversi_form_1_1_reversi_a714c8910dce0ab74469ab225a0d1adf1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box233}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a41d82da0c3bdc058aa7f9148f44beb59}\label{class_reversi_form_1_1_reversi_a41d82da0c3bdc058aa7f9148f44beb59}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box234}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa2e7ad2f613a39c42c2a50b93f7d91bf}\label{class_reversi_form_1_1_reversi_aa2e7ad2f613a39c42c2a50b93f7d91bf}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box235}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad2c328490b69a17e61380b0282c75b12}\label{class_reversi_form_1_1_reversi_ad2c328490b69a17e61380b0282c75b12}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box236}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a730c15bae49752ac4e1040969da9a428}\label{class_reversi_form_1_1_reversi_a730c15bae49752ac4e1040969da9a428}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box237}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8670749663260939eb0da15412a3fe46}\label{class_reversi_form_1_1_reversi_a8670749663260939eb0da15412a3fe46}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box238}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab21c16550ce9bdc9fecc1e5b4f7f1b54}\label{class_reversi_form_1_1_reversi_ab21c16550ce9bdc9fecc1e5b4f7f1b54}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box239}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1780bd7cc9b99a753d010cf1a0eaccc4}\label{class_reversi_form_1_1_reversi_a1780bd7cc9b99a753d010cf1a0eaccc4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box240}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1b713cba2912a821ea703a8fce634410}\label{class_reversi_form_1_1_reversi_a1b713cba2912a821ea703a8fce634410}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box201}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aeb5ec7e15426063279be6a175458ad88}\label{class_reversi_form_1_1_reversi_aeb5ec7e15426063279be6a175458ad88}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box202}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae46cab41bf1691dc75e5834c70b400a7}\label{class_reversi_form_1_1_reversi_ae46cab41bf1691dc75e5834c70b400a7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box203}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af57c57f8cd53ccffa7588976b0a892ee}\label{class_reversi_form_1_1_reversi_af57c57f8cd53ccffa7588976b0a892ee}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box204}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a28205388601a430a02a637234a5e88f0}\label{class_reversi_form_1_1_reversi_a28205388601a430a02a637234a5e88f0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box205}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a869cde47c7b9072f26e128e8363c6d7d}\label{class_reversi_form_1_1_reversi_a869cde47c7b9072f26e128e8363c6d7d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box206}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a00c02cc28dc315a1da72c9f6141391ab}\label{class_reversi_form_1_1_reversi_a00c02cc28dc315a1da72c9f6141391ab}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box207}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a10ff86cbfdc710303fbf4f22b04e0e98}\label{class_reversi_form_1_1_reversi_a10ff86cbfdc710303fbf4f22b04e0e98}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box208}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a42e5569dc01fbf49a3f36be0a0bef205}\label{class_reversi_form_1_1_reversi_a42e5569dc01fbf49a3f36be0a0bef205}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box209}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aff653d396caf62ac9625878734300845}\label{class_reversi_form_1_1_reversi_aff653d396caf62ac9625878734300845}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box210}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a12617d8e3f05accf4abb802a0700adfd}\label{class_reversi_form_1_1_reversi_a12617d8e3f05accf4abb802a0700adfd}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box211}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a68d5f7ab13e48537775a81ea29584c27}\label{class_reversi_form_1_1_reversi_a68d5f7ab13e48537775a81ea29584c27}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box212}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a960e2c52104337273cc14f2ea6f88fe3}\label{class_reversi_form_1_1_reversi_a960e2c52104337273cc14f2ea6f88fe3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box213}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a01ee44bf745ef1249b48b64f193756bb}\label{class_reversi_form_1_1_reversi_a01ee44bf745ef1249b48b64f193756bb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box214}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7494268fe805d600822a7829a18b4453}\label{class_reversi_form_1_1_reversi_a7494268fe805d600822a7829a18b4453}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box215}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6d3cd5e2802ee431f41091e3fea23ee4}\label{class_reversi_form_1_1_reversi_a6d3cd5e2802ee431f41091e3fea23ee4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box216}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a852831487a190525feeae7c570f9a2fc}\label{class_reversi_form_1_1_reversi_a852831487a190525feeae7c570f9a2fc}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box217}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a106bfb68f51701b7a70727b80a7729af}\label{class_reversi_form_1_1_reversi_a106bfb68f51701b7a70727b80a7729af}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box218}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a12f05ef859f71e22622c2a94fbb7b8db}\label{class_reversi_form_1_1_reversi_a12f05ef859f71e22622c2a94fbb7b8db}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box219}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac3c8427f35e8c613675959a9ff07bbf1}\label{class_reversi_form_1_1_reversi_ac3c8427f35e8c613675959a9ff07bbf1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box220}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad4231697311641af7c157b0023a8f012}\label{class_reversi_form_1_1_reversi_ad4231697311641af7c157b0023a8f012}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box181}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad2da396c921481a04266a7a962ada0c3}\label{class_reversi_form_1_1_reversi_ad2da396c921481a04266a7a962ada0c3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box182}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a560195387e6461f7c68bf08166fe61d3}\label{class_reversi_form_1_1_reversi_a560195387e6461f7c68bf08166fe61d3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box183}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6e737568970705e1ec4554d067e2e42a}\label{class_reversi_form_1_1_reversi_a6e737568970705e1ec4554d067e2e42a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box184}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa1336fe31daccd95aa69333e77d86e09}\label{class_reversi_form_1_1_reversi_aa1336fe31daccd95aa69333e77d86e09}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box185}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6c4dfe1a2508a2f04ebd690ad88f0899}\label{class_reversi_form_1_1_reversi_a6c4dfe1a2508a2f04ebd690ad88f0899}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box186}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa9636421188955dcfefd5cc3879ebcd0}\label{class_reversi_form_1_1_reversi_aa9636421188955dcfefd5cc3879ebcd0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box187}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6a482e05b8bc5fae26a5f98923b38b31}\label{class_reversi_form_1_1_reversi_a6a482e05b8bc5fae26a5f98923b38b31}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box188}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a55330aac6745ba1bd0dbac4bd3b58031}\label{class_reversi_form_1_1_reversi_a55330aac6745ba1bd0dbac4bd3b58031}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box189}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3cff9e9b48ddb674a14abc3c8ebecdec}\label{class_reversi_form_1_1_reversi_a3cff9e9b48ddb674a14abc3c8ebecdec}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box190}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6aeeb6c12942f5242257af8b82cef953}\label{class_reversi_form_1_1_reversi_a6aeeb6c12942f5242257af8b82cef953}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box191}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a74540231928c44b730f12c6ca1b43964}\label{class_reversi_form_1_1_reversi_a74540231928c44b730f12c6ca1b43964}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box192}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_acb7a9d6eef6226beb57920385ec0e640}\label{class_reversi_form_1_1_reversi_acb7a9d6eef6226beb57920385ec0e640}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box193}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a78b4c65b6b0e56b19d01339163c0c05b}\label{class_reversi_form_1_1_reversi_a78b4c65b6b0e56b19d01339163c0c05b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box194}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a49d61a15bc3411c20c6ab3f2978b0284}\label{class_reversi_form_1_1_reversi_a49d61a15bc3411c20c6ab3f2978b0284}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box195}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a35ab7b0bdd9788251035e34f0dbfb5c8}\label{class_reversi_form_1_1_reversi_a35ab7b0bdd9788251035e34f0dbfb5c8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box196}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaf7528fe008c15bd2e85105c10dbde83}\label{class_reversi_form_1_1_reversi_aaf7528fe008c15bd2e85105c10dbde83}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box197}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac0eee2bd264865fa24dc07ea245fadc3}\label{class_reversi_form_1_1_reversi_ac0eee2bd264865fa24dc07ea245fadc3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box198}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3b4112dc862aac2dc1d1dc9aae968975}\label{class_reversi_form_1_1_reversi_a3b4112dc862aac2dc1d1dc9aae968975}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box199}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a96931c9713b0abe0f2aae5e88c9d1835}\label{class_reversi_form_1_1_reversi_a96931c9713b0abe0f2aae5e88c9d1835}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box200}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af9ca78c82d3e12daa9c08bd6d805ab9b}\label{class_reversi_form_1_1_reversi_af9ca78c82d3e12daa9c08bd6d805ab9b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box161}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4cc247a05f4db80661222a6ab8947035}\label{class_reversi_form_1_1_reversi_a4cc247a05f4db80661222a6ab8947035}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box162}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0b173430c26c681cc7ee331e6ded8461}\label{class_reversi_form_1_1_reversi_a0b173430c26c681cc7ee331e6ded8461}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box163}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a410daa1ce28aa15c78f928882b88961e}\label{class_reversi_form_1_1_reversi_a410daa1ce28aa15c78f928882b88961e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box164}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7042203aa8b9524775b2575aed4e9e54}\label{class_reversi_form_1_1_reversi_a7042203aa8b9524775b2575aed4e9e54}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box165}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6b27b0e90aef221e29b46b909af3544b}\label{class_reversi_form_1_1_reversi_a6b27b0e90aef221e29b46b909af3544b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box166}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad5e2a9b02133a0c62f82e7312138cc12}\label{class_reversi_form_1_1_reversi_ad5e2a9b02133a0c62f82e7312138cc12}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box167}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab0abab75ea14ede39f8bb9d48460b855}\label{class_reversi_form_1_1_reversi_ab0abab75ea14ede39f8bb9d48460b855}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box168}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3af33daf0e8ebae25240bc772c6a2600}\label{class_reversi_form_1_1_reversi_a3af33daf0e8ebae25240bc772c6a2600}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box169}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a80308564e988ef666ebe7ada40ab0533}\label{class_reversi_form_1_1_reversi_a80308564e988ef666ebe7ada40ab0533}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box170}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5b4b6040ac2c3dc405c7f0c56c5c9efb}\label{class_reversi_form_1_1_reversi_a5b4b6040ac2c3dc405c7f0c56c5c9efb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box171}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad796e85995809a09ae677e4d4ad70b7e}\label{class_reversi_form_1_1_reversi_ad796e85995809a09ae677e4d4ad70b7e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box172}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a45b8ed59228d3c6e739abd1d1a0d3ea2}\label{class_reversi_form_1_1_reversi_a45b8ed59228d3c6e739abd1d1a0d3ea2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box173}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a173f9818caf8bb28ec858d58ddce54e6}\label{class_reversi_form_1_1_reversi_a173f9818caf8bb28ec858d58ddce54e6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box174}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af32e1027a03fba5462de2da4ebed4bab}\label{class_reversi_form_1_1_reversi_af32e1027a03fba5462de2da4ebed4bab}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box175}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8f2379694db8e6089b1fb1212e75cc0d}\label{class_reversi_form_1_1_reversi_a8f2379694db8e6089b1fb1212e75cc0d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box176}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5e2117344bab53260075ecea202e24dd}\label{class_reversi_form_1_1_reversi_a5e2117344bab53260075ecea202e24dd}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box177}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a58de403904c0fa888485e73890c53799}\label{class_reversi_form_1_1_reversi_a58de403904c0fa888485e73890c53799}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box178}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2b9998bf3e5ac74b49255c169c41a42a}\label{class_reversi_form_1_1_reversi_a2b9998bf3e5ac74b49255c169c41a42a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box179}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a71c9b821da9efb2cc4e266cdf2694325}\label{class_reversi_form_1_1_reversi_a71c9b821da9efb2cc4e266cdf2694325}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box180}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af8e3e3de6969e18b8b969b8e8414d8ae}\label{class_reversi_form_1_1_reversi_af8e3e3de6969e18b8b969b8e8414d8ae}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box141}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad840874b47bdd6631d450911dae905da}\label{class_reversi_form_1_1_reversi_ad840874b47bdd6631d450911dae905da}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box142}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a19c3731a7846c46e3ffb108ab93b4300}\label{class_reversi_form_1_1_reversi_a19c3731a7846c46e3ffb108ab93b4300}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box143}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a804b508c5588cdd6be2166502f5be388}\label{class_reversi_form_1_1_reversi_a804b508c5588cdd6be2166502f5be388}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box144}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa0005637dfd5ebae70df3a61a40763b4}\label{class_reversi_form_1_1_reversi_aa0005637dfd5ebae70df3a61a40763b4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box145}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab5b750e852d6c2740e8b088de91eba4c}\label{class_reversi_form_1_1_reversi_ab5b750e852d6c2740e8b088de91eba4c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box146}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a61eb843350c937fc857ea6dbb18ec007}\label{class_reversi_form_1_1_reversi_a61eb843350c937fc857ea6dbb18ec007}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box147}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3db36e5f14d89c58d3578b20c83cc04e}\label{class_reversi_form_1_1_reversi_a3db36e5f14d89c58d3578b20c83cc04e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box148}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad5d100ec9f62806ee76f9f357a9de3f3}\label{class_reversi_form_1_1_reversi_ad5d100ec9f62806ee76f9f357a9de3f3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box149}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a21d523330c4ddbdf63fbc61c9a61435b}\label{class_reversi_form_1_1_reversi_a21d523330c4ddbdf63fbc61c9a61435b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box150}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9ba6260278083cf5596f8bcc921bc9c8}\label{class_reversi_form_1_1_reversi_a9ba6260278083cf5596f8bcc921bc9c8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box151}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5d5e3d1c00496c4eeba4de75a14405b6}\label{class_reversi_form_1_1_reversi_a5d5e3d1c00496c4eeba4de75a14405b6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box152}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac33e3a497a6868c59b2abed0572bacaa}\label{class_reversi_form_1_1_reversi_ac33e3a497a6868c59b2abed0572bacaa}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box153}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad1972727896f937a3dd73f60440c24a1}\label{class_reversi_form_1_1_reversi_ad1972727896f937a3dd73f60440c24a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box154}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7be5b75b0743972265f5458e306fd925}\label{class_reversi_form_1_1_reversi_a7be5b75b0743972265f5458e306fd925}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box155}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6a1e788ab76e8365c2966a5556ad06b5}\label{class_reversi_form_1_1_reversi_a6a1e788ab76e8365c2966a5556ad06b5}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box156}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_adc865e48bc10ef61b03a53afe33430e0}\label{class_reversi_form_1_1_reversi_adc865e48bc10ef61b03a53afe33430e0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box157}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a14c964ca6c4b04dc1d26cdf91fbd8131}\label{class_reversi_form_1_1_reversi_a14c964ca6c4b04dc1d26cdf91fbd8131}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box158}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab292605108732f2ca33857677e6360a1}\label{class_reversi_form_1_1_reversi_ab292605108732f2ca33857677e6360a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box159}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa4ed858c3fe64de30c201bf389f54cfe}\label{class_reversi_form_1_1_reversi_aa4ed858c3fe64de30c201bf389f54cfe}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box160}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad4fe168ce96e348eec1109f4067d7935}\label{class_reversi_form_1_1_reversi_ad4fe168ce96e348eec1109f4067d7935}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box121}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6add9270533dd9578074f528bb0b7898}\label{class_reversi_form_1_1_reversi_a6add9270533dd9578074f528bb0b7898}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box122}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9430ed9f917e5f69dda3214e4be4a6d8}\label{class_reversi_form_1_1_reversi_a9430ed9f917e5f69dda3214e4be4a6d8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box123}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad521709f78e6e26cbec5e430bae997ba}\label{class_reversi_form_1_1_reversi_ad521709f78e6e26cbec5e430bae997ba}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box124}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a87b764d6e884cea8888c06d2400ddfe8}\label{class_reversi_form_1_1_reversi_a87b764d6e884cea8888c06d2400ddfe8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box125}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a28f6f926a5af59d6a03770a503ffa238}\label{class_reversi_form_1_1_reversi_a28f6f926a5af59d6a03770a503ffa238}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box126}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad591df87b00f86c37e11aaedd908b35d}\label{class_reversi_form_1_1_reversi_ad591df87b00f86c37e11aaedd908b35d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box127}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af70d4d86372e3e9b78e93f2c34f8fbe8}\label{class_reversi_form_1_1_reversi_af70d4d86372e3e9b78e93f2c34f8fbe8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box128}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae56497bce6b3cd2cd943a4d4b119c9a4}\label{class_reversi_form_1_1_reversi_ae56497bce6b3cd2cd943a4d4b119c9a4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box129}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9b33d45cb52582743de227473cb85fca}\label{class_reversi_form_1_1_reversi_a9b33d45cb52582743de227473cb85fca}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box130}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1d1d011f5edaf7515518b0d1d4221a91}\label{class_reversi_form_1_1_reversi_a1d1d011f5edaf7515518b0d1d4221a91}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box131}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0065f96144d9c5208f6817141e1a7948}\label{class_reversi_form_1_1_reversi_a0065f96144d9c5208f6817141e1a7948}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box132}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaa41ccac56c62ba889d976c7c6e4aad6}\label{class_reversi_form_1_1_reversi_aaa41ccac56c62ba889d976c7c6e4aad6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box133}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a39fbd8d720c91e1d81b179419db10f13}\label{class_reversi_form_1_1_reversi_a39fbd8d720c91e1d81b179419db10f13}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box134}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5f51911372fa670ecf613426c4e6b299}\label{class_reversi_form_1_1_reversi_a5f51911372fa670ecf613426c4e6b299}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box135}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0b70d92ace21f4d53050f0df85420299}\label{class_reversi_form_1_1_reversi_a0b70d92ace21f4d53050f0df85420299}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box136}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a59e89ff2b8f44e933d547b6b319819a7}\label{class_reversi_form_1_1_reversi_a59e89ff2b8f44e933d547b6b319819a7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box137}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae535f7dd86b6f616f6757023616f5dd6}\label{class_reversi_form_1_1_reversi_ae535f7dd86b6f616f6757023616f5dd6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box138}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a137675fe19302033b7850dbfa67ade5c}\label{class_reversi_form_1_1_reversi_a137675fe19302033b7850dbfa67ade5c}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box139}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac2601661f60dd3756e40e4412f945d49}\label{class_reversi_form_1_1_reversi_ac2601661f60dd3756e40e4412f945d49}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box140}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4b4953cd5fe8411d9a7172474dff5725}\label{class_reversi_form_1_1_reversi_a4b4953cd5fe8411d9a7172474dff5725}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box101}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a01b82f6e981508d93b8348b6beb90f1a}\label{class_reversi_form_1_1_reversi_a01b82f6e981508d93b8348b6beb90f1a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box102}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a05da723fcadeafd3578b8a0732c352b4}\label{class_reversi_form_1_1_reversi_a05da723fcadeafd3578b8a0732c352b4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box103}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab50c6c8290a02c5a37494132f38fe678}\label{class_reversi_form_1_1_reversi_ab50c6c8290a02c5a37494132f38fe678}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box104}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaa65fce64f5e88d8542b89effdbbc972}\label{class_reversi_form_1_1_reversi_aaa65fce64f5e88d8542b89effdbbc972}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box105}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aff26a2c101bb18994d831db0345073f6}\label{class_reversi_form_1_1_reversi_aff26a2c101bb18994d831db0345073f6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box106}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_acb3defa79adf9cfdee92f13068e9ace4}\label{class_reversi_form_1_1_reversi_acb3defa79adf9cfdee92f13068e9ace4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box107}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a29f31c81d19c95b9b552d4146cb2449d}\label{class_reversi_form_1_1_reversi_a29f31c81d19c95b9b552d4146cb2449d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box108}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad1acac02b20d72acbdd17663f455c1a6}\label{class_reversi_form_1_1_reversi_ad1acac02b20d72acbdd17663f455c1a6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box109}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad7727edf5112a3db3511a026ff4a9440}\label{class_reversi_form_1_1_reversi_ad7727edf5112a3db3511a026ff4a9440}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box110}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9cd5101df919cfcede3393f52cdbd0ee}\label{class_reversi_form_1_1_reversi_a9cd5101df919cfcede3393f52cdbd0ee}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box111}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_afef03571f38608e2a3d95289749f8d8e}\label{class_reversi_form_1_1_reversi_afef03571f38608e2a3d95289749f8d8e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box112}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1499aa20647a6aed9347fa7729e41c81}\label{class_reversi_form_1_1_reversi_a1499aa20647a6aed9347fa7729e41c81}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box113}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aabe1240ac39c3b18da56f4b6cda6e28f}\label{class_reversi_form_1_1_reversi_aabe1240ac39c3b18da56f4b6cda6e28f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box114}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1b2b770b89b9c44eeecf05505382863a}\label{class_reversi_form_1_1_reversi_a1b2b770b89b9c44eeecf05505382863a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box115}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4b79bb7ea92ab2c5fbd1734fc700d949}\label{class_reversi_form_1_1_reversi_a4b79bb7ea92ab2c5fbd1734fc700d949}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box116}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4d021f3548271af04548338e9e862482}\label{class_reversi_form_1_1_reversi_a4d021f3548271af04548338e9e862482}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box117}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_addb5902967a87dfd99392d9189e0a570}\label{class_reversi_form_1_1_reversi_addb5902967a87dfd99392d9189e0a570}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box118}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a53c504974139d0b875c06bee50dc9b2b}\label{class_reversi_form_1_1_reversi_a53c504974139d0b875c06bee50dc9b2b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box119}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0aaf6c0da02c26419de4e0fcd034ecbf}\label{class_reversi_form_1_1_reversi_a0aaf6c0da02c26419de4e0fcd034ecbf}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box120}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae5f90cb38fcd072c66922994da7febb0}\label{class_reversi_form_1_1_reversi_ae5f90cb38fcd072c66922994da7febb0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box81}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aade7697b241c982ae0946a66bb1114fc}\label{class_reversi_form_1_1_reversi_aade7697b241c982ae0946a66bb1114fc}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box82}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aea84198e44f13b5a9e024936bab68505}\label{class_reversi_form_1_1_reversi_aea84198e44f13b5a9e024936bab68505}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box83}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac6196a02dad771810bb2fc7b0436b4d3}\label{class_reversi_form_1_1_reversi_ac6196a02dad771810bb2fc7b0436b4d3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box84}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a205e0b8c8acea855c0edd11f20eb2d2b}\label{class_reversi_form_1_1_reversi_a205e0b8c8acea855c0edd11f20eb2d2b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box85}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_adb70d32b3109e92cf019fab80855383e}\label{class_reversi_form_1_1_reversi_adb70d32b3109e92cf019fab80855383e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box86}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a263f10dc74c08da29dc92a4407edcfbd}\label{class_reversi_form_1_1_reversi_a263f10dc74c08da29dc92a4407edcfbd}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box87}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab290176c8ce951f447737b1047f04e88}\label{class_reversi_form_1_1_reversi_ab290176c8ce951f447737b1047f04e88}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box88}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9bfda6d1ef87869e517551153f1aebd0}\label{class_reversi_form_1_1_reversi_a9bfda6d1ef87869e517551153f1aebd0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box89}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af86b7e86a78b58dadab0c881e4a25cb9}\label{class_reversi_form_1_1_reversi_af86b7e86a78b58dadab0c881e4a25cb9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box90}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af6cbb8b829ff0061f9e2bcf56e022047}\label{class_reversi_form_1_1_reversi_af6cbb8b829ff0061f9e2bcf56e022047}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box91}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a454fb52983712121050a5bdc16479fb2}\label{class_reversi_form_1_1_reversi_a454fb52983712121050a5bdc16479fb2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box92}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7d8b59d6b2bfb35f94630986e051064e}\label{class_reversi_form_1_1_reversi_a7d8b59d6b2bfb35f94630986e051064e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box93}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a193e4418e9ed765741bc71e02deb7217}\label{class_reversi_form_1_1_reversi_a193e4418e9ed765741bc71e02deb7217}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box94}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a382569f240754e34dda492d21c8bc3ab}\label{class_reversi_form_1_1_reversi_a382569f240754e34dda492d21c8bc3ab}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box95}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af317aaf2247e582af66c5cf9bf46f9f7}\label{class_reversi_form_1_1_reversi_af317aaf2247e582af66c5cf9bf46f9f7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box96}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae46f592fb1b9be7e637ff18969584c87}\label{class_reversi_form_1_1_reversi_ae46f592fb1b9be7e637ff18969584c87}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box97}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8880914418496c600492b05b27f07645}\label{class_reversi_form_1_1_reversi_a8880914418496c600492b05b27f07645}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box98}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a10e3ffe6cb4209b1db16b3250656419d}\label{class_reversi_form_1_1_reversi_a10e3ffe6cb4209b1db16b3250656419d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box99}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1725478488944b0dfe47447d003c1350}\label{class_reversi_form_1_1_reversi_a1725478488944b0dfe47447d003c1350}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box100}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab519f25cb5c72473962fbef7700393d8}\label{class_reversi_form_1_1_reversi_ab519f25cb5c72473962fbef7700393d8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box61}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac8d6c6087fe8171f958a2d05a990fd58}\label{class_reversi_form_1_1_reversi_ac8d6c6087fe8171f958a2d05a990fd58}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box62}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a300f34f693aa27ec90a898447048c1f3}\label{class_reversi_form_1_1_reversi_a300f34f693aa27ec90a898447048c1f3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box63}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9b9cd41c75662433d814e0dd04cedb38}\label{class_reversi_form_1_1_reversi_a9b9cd41c75662433d814e0dd04cedb38}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box64}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a142be7bccb650e7be91e0d5d89377714}\label{class_reversi_form_1_1_reversi_a142be7bccb650e7be91e0d5d89377714}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box65}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af833dac7dfc3f3e87f7e0af0ba5a88df}\label{class_reversi_form_1_1_reversi_af833dac7dfc3f3e87f7e0af0ba5a88df}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box66}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9896efada2d1060dfbfce4d92a39e5a1}\label{class_reversi_form_1_1_reversi_a9896efada2d1060dfbfce4d92a39e5a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box67}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af3519ca9dfdd537cc1f5e987663e3c40}\label{class_reversi_form_1_1_reversi_af3519ca9dfdd537cc1f5e987663e3c40}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box68}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aeaec4166db375013418036d5e9635508}\label{class_reversi_form_1_1_reversi_aeaec4166db375013418036d5e9635508}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box69}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1b6e77c829d32555a4de1d9086398fe3}\label{class_reversi_form_1_1_reversi_a1b6e77c829d32555a4de1d9086398fe3}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box70}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a70bbc0f9dab56e9b8a322fb26c44bcb0}\label{class_reversi_form_1_1_reversi_a70bbc0f9dab56e9b8a322fb26c44bcb0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box71}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a31716eb9d2b9cb79ccfbe932fac3d062}\label{class_reversi_form_1_1_reversi_a31716eb9d2b9cb79ccfbe932fac3d062}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box72}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab19aea3b1f3508a867ec82fe4f935c59}\label{class_reversi_form_1_1_reversi_ab19aea3b1f3508a867ec82fe4f935c59}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box73}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1409ceebc85e294b136e59e50b596f4d}\label{class_reversi_form_1_1_reversi_a1409ceebc85e294b136e59e50b596f4d}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box74}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a40bdbe28f47734e8f2ae8ccb0d7da533}\label{class_reversi_form_1_1_reversi_a40bdbe28f47734e8f2ae8ccb0d7da533}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box75}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7cb571b2a7467669030bf1838f41f9d4}\label{class_reversi_form_1_1_reversi_a7cb571b2a7467669030bf1838f41f9d4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box76}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a742c645e50484ec5111f6a7950dbd2b1}\label{class_reversi_form_1_1_reversi_a742c645e50484ec5111f6a7950dbd2b1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box77}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a589c3a2749036f7c8f44779e15f06a7e}\label{class_reversi_form_1_1_reversi_a589c3a2749036f7c8f44779e15f06a7e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box78}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5e9294c1a929aca3245e99b453a4d100}\label{class_reversi_form_1_1_reversi_a5e9294c1a929aca3245e99b453a4d100}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box79}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aea66ab159b9738f9ae4f5c92464880c6}\label{class_reversi_form_1_1_reversi_aea66ab159b9738f9ae4f5c92464880c6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box80}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4c3ac5a96c41e28f3ee1b423964ff83f}\label{class_reversi_form_1_1_reversi_a4c3ac5a96c41e28f3ee1b423964ff83f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box41}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a3debf1706d493a9d2f6731c491f44ce4}\label{class_reversi_form_1_1_reversi_a3debf1706d493a9d2f6731c491f44ce4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box42}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a303fad7f0eaf24343443765f52ec03aa}\label{class_reversi_form_1_1_reversi_a303fad7f0eaf24343443765f52ec03aa}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box43}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a11892930ebbb24a2047e207ab87fcbce}\label{class_reversi_form_1_1_reversi_a11892930ebbb24a2047e207ab87fcbce}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box44}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa6d04dd75f6e2617dcca93ff8360bbaf}\label{class_reversi_form_1_1_reversi_aa6d04dd75f6e2617dcca93ff8360bbaf}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box45}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0b6b46f3f2d9f793c4778c055fc92c30}\label{class_reversi_form_1_1_reversi_a0b6b46f3f2d9f793c4778c055fc92c30}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box46}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae7a775939e95b19340e6361b8715a24a}\label{class_reversi_form_1_1_reversi_ae7a775939e95b19340e6361b8715a24a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box47}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a679ec05170c0e846a8b7584e377f9f0e}\label{class_reversi_form_1_1_reversi_a679ec05170c0e846a8b7584e377f9f0e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box48}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a79f67cc1c0247cc46e23abcb7d4cf9ef}\label{class_reversi_form_1_1_reversi_a79f67cc1c0247cc46e23abcb7d4cf9ef}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box49}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af078240bc60671a0472d5e332f39b4aa}\label{class_reversi_form_1_1_reversi_af078240bc60671a0472d5e332f39b4aa}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box50}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a421b4c339be53199da0ecfec25afeafe}\label{class_reversi_form_1_1_reversi_a421b4c339be53199da0ecfec25afeafe}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box51}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a141ac5ca3bdce685034c7a2128a40836}\label{class_reversi_form_1_1_reversi_a141ac5ca3bdce685034c7a2128a40836}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box52}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a70538327823c4ca1adc36b98bc192297}\label{class_reversi_form_1_1_reversi_a70538327823c4ca1adc36b98bc192297}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box53}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7371464b9ae82b082c772a2149325adb}\label{class_reversi_form_1_1_reversi_a7371464b9ae82b082c772a2149325adb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box54}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2941d288105d25734da07946547518a1}\label{class_reversi_form_1_1_reversi_a2941d288105d25734da07946547518a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box55}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9de57889aa77fe9d619f2de1e6271a63}\label{class_reversi_form_1_1_reversi_a9de57889aa77fe9d619f2de1e6271a63}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box56}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a29e90512815b349771e2bd961806a52e}\label{class_reversi_form_1_1_reversi_a29e90512815b349771e2bd961806a52e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box57}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a07cc6a8a600dbaddc7402bdbdbf86aeb}\label{class_reversi_form_1_1_reversi_a07cc6a8a600dbaddc7402bdbdbf86aeb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box58}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_abeab58a8b837d6a4b02d9a3ee5d7a364}\label{class_reversi_form_1_1_reversi_abeab58a8b837d6a4b02d9a3ee5d7a364}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box59}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a552e4eb0fa31df0ab6d671f49eb30d7e}\label{class_reversi_form_1_1_reversi_a552e4eb0fa31df0ab6d671f49eb30d7e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box60}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0394cb17388df641a64de04937c81020}\label{class_reversi_form_1_1_reversi_a0394cb17388df641a64de04937c81020}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box21}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a478ece8326cfb6b6abbe0459cad4cb5a}\label{class_reversi_form_1_1_reversi_a478ece8326cfb6b6abbe0459cad4cb5a}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box22}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae8a7f07502a1c0f930acb5ccdab1e5c9}\label{class_reversi_form_1_1_reversi_ae8a7f07502a1c0f930acb5ccdab1e5c9}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box23}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a75cbe85ed079a8b87f185362d8bc094f}\label{class_reversi_form_1_1_reversi_a75cbe85ed079a8b87f185362d8bc094f}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box24}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_afd7ea1b51e7596b7a2e0eb720a010c71}\label{class_reversi_form_1_1_reversi_afd7ea1b51e7596b7a2e0eb720a010c71}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box25}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4101c8ad5672f6d6c571eea7278880f7}\label{class_reversi_form_1_1_reversi_a4101c8ad5672f6d6c571eea7278880f7}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box26}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a6804a37d957681c5cd10aa62a680c281}\label{class_reversi_form_1_1_reversi_a6804a37d957681c5cd10aa62a680c281}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box27}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a1e790ea06f7fda6ba2e988ac755baa37}\label{class_reversi_form_1_1_reversi_a1e790ea06f7fda6ba2e988ac755baa37}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box28}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac7414d1df0e0fb60d1f6358d815abaa0}\label{class_reversi_form_1_1_reversi_ac7414d1df0e0fb60d1f6358d815abaa0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box29}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2b3241e60898481ffd23abf0d1016768}\label{class_reversi_form_1_1_reversi_a2b3241e60898481ffd23abf0d1016768}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box30}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0830f719e167a675f3bb6b1d913f3919}\label{class_reversi_form_1_1_reversi_a0830f719e167a675f3bb6b1d913f3919}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box31}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a62629996306925486be7dde86aad1901}\label{class_reversi_form_1_1_reversi_a62629996306925486be7dde86aad1901}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box32}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7f9e2d9e3446a612d52b1740e7665bc4}\label{class_reversi_form_1_1_reversi_a7f9e2d9e3446a612d52b1740e7665bc4}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box33}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aea6d9fbe9c20a9174a13eb5c37216036}\label{class_reversi_form_1_1_reversi_aea6d9fbe9c20a9174a13eb5c37216036}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box34}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab95220665374a35eaf27408c42f362a1}\label{class_reversi_form_1_1_reversi_ab95220665374a35eaf27408c42f362a1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box35}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a56b289c58a7dadadd31d5d6a7fa0c18b}\label{class_reversi_form_1_1_reversi_a56b289c58a7dadadd31d5d6a7fa0c18b}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box36}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae5f464d44a1e78d3617549624a44c516}\label{class_reversi_form_1_1_reversi_ae5f464d44a1e78d3617549624a44c516}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box37}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a2318dc62c07451e2a27e0c185479a404}\label{class_reversi_form_1_1_reversi_a2318dc62c07451e2a27e0c185479a404}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box38}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad8fa7ce560e93727ae32970cdc5dcad2}\label{class_reversi_form_1_1_reversi_ad8fa7ce560e93727ae32970cdc5dcad2}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box39}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7fa4a6776735e7df17c5439ff3c2a7c8}\label{class_reversi_form_1_1_reversi_a7fa4a6776735e7df17c5439ff3c2a7c8}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box40}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab3c763c5cf68cc99dc4a0b440b6e8b55}\label{class_reversi_form_1_1_reversi_ab3c763c5cf68cc99dc4a0b440b6e8b55}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box20}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae08e50802c78d4506082a1824d4a6358}\label{class_reversi_form_1_1_reversi_ae08e50802c78d4506082a1824d4a6358}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box19}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_acead4d6e95988d2c7e004d84b709afb6}\label{class_reversi_form_1_1_reversi_acead4d6e95988d2c7e004d84b709afb6}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box18}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4ddf973ef722ff42dc072daef751fb9e}\label{class_reversi_form_1_1_reversi_a4ddf973ef722ff42dc072daef751fb9e}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box17}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a9ac4f2f153d03ce8764865dbd9859032}\label{class_reversi_form_1_1_reversi_a9ac4f2f153d03ce8764865dbd9859032}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box16}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a682ef22c3d263cb36b78c8860008af95}\label{class_reversi_form_1_1_reversi_a682ef22c3d263cb36b78c8860008af95}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box15}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a669d36a6730d91f82dabc88e50a6c564}\label{class_reversi_form_1_1_reversi_a669d36a6730d91f82dabc88e50a6c564}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box14}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad88fb83df03285644776dc8bd5ad2da1}\label{class_reversi_form_1_1_reversi_ad88fb83df03285644776dc8bd5ad2da1}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box13}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab0e524223fe8e362ec156015c88c2ccb}\label{class_reversi_form_1_1_reversi_ab0e524223fe8e362ec156015c88c2ccb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box12}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a86ecea911137340fff92d5ea819df302}\label{class_reversi_form_1_1_reversi_a86ecea911137340fff92d5ea819df302}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box11}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae4422d645acd91782f24c3d3459e8505}\label{class_reversi_form_1_1_reversi_ae4422d645acd91782f24c3d3459e8505}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box10}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a29e3629d25a0026aba6a576b8cd051cb}\label{class_reversi_form_1_1_reversi_a29e3629d25a0026aba6a576b8cd051cb}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box9}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0b13947d7be636302bca9d126b3cd503}\label{class_reversi_form_1_1_reversi_a0b13947d7be636302bca9d126b3cd503}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box8}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac6bfe42ee1ec4fac280a78d348fee0a0}\label{class_reversi_form_1_1_reversi_ac6bfe42ee1ec4fac280a78d348fee0a0}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box7}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ab9d9256e9824f22eb1fd1c9da2e79e54}\label{class_reversi_form_1_1_reversi_ab9d9256e9824f22eb1fd1c9da2e79e54}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box6}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a49fe5a07a4ec278ffd1afa4907fee256}\label{class_reversi_form_1_1_reversi_a49fe5a07a4ec278ffd1afa4907fee256}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box5}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a548dc51670b1e16907c9a97484778c28}\label{class_reversi_form_1_1_reversi_a548dc51670b1e16907c9a97484778c28}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box4}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac2558d1189c9afe64b967b1595fa79ad}\label{class_reversi_form_1_1_reversi_ac2558d1189c9afe64b967b1595fa79ad}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box3}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae4b3742d14a3e079e9fa25d038965810}\label{class_reversi_form_1_1_reversi_ae4b3742d14a3e079e9fa25d038965810}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box2}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a8effd3cbb4f024401db4ce7ada1210bd}\label{class_reversi_form_1_1_reversi_a8effd3cbb4f024401db4ce7ada1210bd}} 
+System.\+Windows.\+Forms.\+Picture\+Box {\bfseries picture\+Box1}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a4b57eccbd52039bb8edb0a99c60aa411}\label{class_reversi_form_1_1_reversi_a4b57eccbd52039bb8edb0a99c60aa411}} 
+System.\+Windows.\+Forms.\+Label {\bfseries label1}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ae080c103020a6c5b630712faa963e10a}\label{class_reversi_form_1_1_reversi_ae080c103020a6c5b630712faa963e10a}} 
+System.\+Windows.\+Forms.\+Table\+Layout\+Panel {\bfseries table\+Layout\+Panel2}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac6e6cfc960caa4b9333b2915bd809a64}\label{class_reversi_form_1_1_reversi_ac6e6cfc960caa4b9333b2915bd809a64}} 
+System.\+Windows.\+Forms.\+Button {\bfseries button2}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a40b173fb63f3b07a39f94612e1d80382}\label{class_reversi_form_1_1_reversi_a40b173fb63f3b07a39f94612e1d80382}} 
+System.\+Windows.\+Forms.\+Button {\bfseries button1}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af13abe1d3f2b346aeb1343db16391a6b}\label{class_reversi_form_1_1_reversi_af13abe1d3f2b346aeb1343db16391a6b}} 
+System.\+Windows.\+Forms.\+Label {\bfseries label2}
+\end{DoxyCompactItemize}
+\subsection*{Static Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad0c066a95e298cbe146aed56e2ca8545}\label{class_reversi_form_1_1_reversi_ad0c066a95e298cbe146aed56e2ca8545}} 
+static System.\+Timers.\+Timer \hyperlink{class_reversi_form_1_1_reversi_ad0c066a95e298cbe146aed56e2ca8545}{a\+Timer}
+\begin{DoxyCompactList}\small\item\em タイマー \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 
 
-Definition at line 13 of file Form\+Main.\+cs.
+Definition at line 40 of file Form\+Main.\+cs.
 
 
 
 \subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aab2e35051cbff2f184ee7e76ae60846d}\label{class_reversi_form_1_1_reversi_aab2e35051cbff2f184ee7e76ae60846d}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!app\+Init@{app\+Init}}
+\index{app\+Init@{app\+Init}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{app\+Init()}{appInit()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+app\+Init (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+アプリ初期化 
+
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 169 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+button1\+\_\+\+Click(), Reversi\+Form.\+Reversi.\+button2\+\_\+\+Click(), and Reversi\+Form.\+Reversi.\+Reversi\+\_\+\+Resize().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_aab2e35051cbff2f184ee7e76ae60846d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a832e3ee4b606141b3feefb47742b3849}\label{class_reversi_form_1_1_reversi_a832e3ee4b606141b3feefb47742b3849}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!button1\+\_\+\+Click@{button1\+\_\+\+Click}}
+\index{button1\+\_\+\+Click@{button1\+\_\+\+Click}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{button1\+\_\+\+Click()}{button1\_Click()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+button1\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+リセットクリック 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em object} & sender \\
+\hline
+\mbox{\tt in}  & {\em Event\+Args} & e \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 484 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Initialize\+Component().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a832e3ee4b606141b3feefb47742b3849_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a832e3ee4b606141b3feefb47742b3849_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aa908556d4f216f8b407c1458e392dfc5}\label{class_reversi_form_1_1_reversi_aa908556d4f216f8b407c1458e392dfc5}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!button2\+\_\+\+Click@{button2\+\_\+\+Click}}
+\index{button2\+\_\+\+Click@{button2\+\_\+\+Click}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{button2\+\_\+\+Click()}{button2\_Click()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+button2\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+セッティングクリック 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em object} & sender \\
+\hline
+\mbox{\tt in}  & {\em Event\+Args} & e \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 501 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Initialize\+Component().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_aa908556d4f216f8b407c1458e392dfc5_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_aa908556d4f216f8b407c1458e392dfc5_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ad09577aef8bf515ee495c82a981dfd7d}\label{class_reversi_form_1_1_reversi_ad09577aef8bf515ee495c82a981dfd7d}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Cur\+Col\+Msg@{Cur\+Col\+Msg}}
+\index{Cur\+Col\+Msg@{Cur\+Col\+Msg}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Cur\+Col\+Msg()}{CurColMsg()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Cur\+Col\+Msg (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+現在の色メッセージ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & text テキスト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 407 of file Form\+Main.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_ad09577aef8bf515ee495c82a981dfd7d_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a0d919be21fe5961a177e26b5752320b9}\label{class_reversi_form_1_1_reversi_a0d919be21fe5961a177e26b5752320b9}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Cur\+Col\+Msg\+Local@{Cur\+Col\+Msg\+Local}}
+\index{Cur\+Col\+Msg\+Local@{Cur\+Col\+Msg\+Local}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Cur\+Col\+Msg\+Local()}{CurColMsgLocal()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Cur\+Col\+Msg\+Local (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+現在の色メッセージ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & text テキスト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 421 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Cur\+Col\+Msg().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a0d919be21fe5961a177e26b5752320b9_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af5009aa7b1b255b9dec7028d8a7c53f7}\label{class_reversi_form_1_1_reversi_af5009aa7b1b255b9dec7028d8a7c53f7}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Cur\+Sts\+Msg@{Cur\+Sts\+Msg}}
+\index{Cur\+Sts\+Msg@{Cur\+Sts\+Msg}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Cur\+Sts\+Msg()}{CurStsMsg()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Cur\+Sts\+Msg (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+現在のステータスメッセージ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & text テキスト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 435 of file Form\+Main.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_af5009aa7b1b255b9dec7028d8a7c53f7_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a934897d68f7709c32b6fd126351c5f05}\label{class_reversi_form_1_1_reversi_a934897d68f7709c32b6fd126351c5f05}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Cur\+Sts\+Msg\+Local@{Cur\+Sts\+Msg\+Local}}
+\index{Cur\+Sts\+Msg\+Local@{Cur\+Sts\+Msg\+Local}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Cur\+Sts\+Msg\+Local()}{CurStsMsgLocal()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Cur\+Sts\+Msg\+Local (\begin{DoxyParamCaption}\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+現在のステータスメッセージ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & text テキスト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 449 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Cur\+Sts\+Msg().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a934897d68f7709c32b6fd126351c5f05_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac021c14c28e588c11445e460ec7e87d1}\label{class_reversi_form_1_1_reversi_ac021c14c28e588c11445e460ec7e87d1}} 
 \index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Dispose@{Dispose}}
 \index{Dispose@{Dispose}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
@@ -64,6 +1640,106 @@ Definition at line 13 of file Form\+Main.\+cs.
 
 Definition at line 14 of file Form\+Main.\+Designer.\+cs.
 
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a21483fbe8309e9f6fa5d828fac98a96e}\label{class_reversi_form_1_1_reversi_a21483fbe8309e9f6fa5d828fac98a96e}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Draw\+Single@{Draw\+Single}}
+\index{Draw\+Single@{Draw\+Single}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Draw\+Single()}{DrawSingle()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Draw\+Single (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x,  }\item[{int}]{sts,  }\item[{int}]{bk,  }\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+1マス描画 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & y Y座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & x X座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & sts ステータス \\
+\hline
+\mbox{\tt in}  & {\em int} & bk 背景 \\
+\hline
+\mbox{\tt in}  & {\em string} & text テキスト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 280 of file Form\+Main.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a21483fbe8309e9f6fa5d828fac98a96e_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_aaa7228857f9476b7950b0af1524abf44}\label{class_reversi_form_1_1_reversi_aaa7228857f9476b7950b0af1524abf44}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Draw\+Single\+Local@{Draw\+Single\+Local}}
+\index{Draw\+Single\+Local@{Draw\+Single\+Local}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Draw\+Single\+Local()}{DrawSingleLocal()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Draw\+Single\+Local (\begin{DoxyParamCaption}\item[{int}]{y,  }\item[{int}]{x,  }\item[{int}]{sts,  }\item[{int}]{bk,  }\item[{string}]{text }\end{DoxyParamCaption})}
+
+
+
+1マス描画 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em int} & y Y座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & x X座標 \\
+\hline
+\mbox{\tt in}  & {\em int} & sts ステータス \\
+\hline
+\mbox{\tt in}  & {\em int} & bk 背景 \\
+\hline
+\mbox{\tt in}  & {\em string} & text テキスト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 298 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Draw\+Single().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_aaa7228857f9476b7950b0af1524abf44_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_aaa7228857f9476b7950b0af1524abf44_icgraph}
+\end{center}
+\end{figure}
 \mbox{\Hypertarget{class_reversi_form_1_1_reversi_abec0816dd006d05b512d86b45a20af68}\label{class_reversi_form_1_1_reversi_abec0816dd006d05b512d86b45a20af68}} 
 \index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Initialize\+Component@{Initialize\+Component}}
 \index{Initialize\+Component@{Initialize\+Component}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
@@ -78,6 +1754,308 @@ Definition at line 14 of file Form\+Main.\+Designer.\+cs.
 
 Definition at line 29 of file Form\+Main.\+Designer.\+cs.
 
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_abec0816dd006d05b512d86b45a20af68_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_afbe64672e4a4c9e6f6404a3bbf2b5e1d}\label{class_reversi_form_1_1_reversi_afbe64672e4a4c9e6f6404a3bbf2b5e1d}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Load\+Setting\+Xml@{Load\+Setting\+Xml}}
+\index{Load\+Setting\+Xml@{Load\+Setting\+Xml}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Load\+Setting\+Xml()}{LoadSettingXml()}}
+{\footnotesize\ttfamily \hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting} Reversi\+Form.\+Reversi.\+Load\+Setting\+Xml (\begin{DoxyParamCaption}\item[{string}]{path }\end{DoxyParamCaption})}
+
+
+
+設定\+X\+M\+Lファイルロード 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & path 設定\+X\+M\+Lファイルパス \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Reversi\+Settingオブジェクトインスタンス 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 103 of file Form\+Main.\+cs.
+
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a7c9ef5ff17c4b888f5c891e3ed5dafc2}\label{class_reversi_form_1_1_reversi_a7c9ef5ff17c4b888f5c891e3ed5dafc2}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!On\+Timed\+Event@{On\+Timed\+Event}}
+\index{On\+Timed\+Event@{On\+Timed\+Event}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{On\+Timed\+Event()}{OnTimedEvent()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+On\+Timed\+Event (\begin{DoxyParamCaption}\item[{object}]{source,  }\item[{Elapsed\+Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+タイマーイベント 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em object} & source \\
+\hline
+\mbox{\tt in}  & {\em Elapsed\+Event\+Args} & e \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 589 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Reversi\+\_\+\+Resize().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a7c9ef5ff17c4b888f5c891e3ed5dafc2_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_afaa2a98428f4d9eab723fb71f8cb3e29}\label{class_reversi_form_1_1_reversi_afaa2a98428f4d9eab723fb71f8cb3e29}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!picture\+Box\+\_\+\+Click@{picture\+Box\+\_\+\+Click}}
+\index{picture\+Box\+\_\+\+Click@{picture\+Box\+\_\+\+Click}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{picture\+Box\+\_\+\+Click()}{pictureBox\_Click()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+picture\+Box\+\_\+\+Click (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+マスクリック 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em object} & sender \\
+\hline
+\mbox{\tt in}  & {\em Event\+Args} & e \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 464 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Initialize\+Component().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_afaa2a98428f4d9eab723fb71f8cb3e29_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_afaa2a98428f4d9eab723fb71f8cb3e29_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac4868f12e6f15387f8f39f5f1934e610}\label{class_reversi_form_1_1_reversi_ac4868f12e6f15387f8f39f5f1934e610}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Reversi\+\_\+\+Resize@{Reversi\+\_\+\+Resize}}
+\index{Reversi\+\_\+\+Resize@{Reversi\+\_\+\+Resize}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Reversi\+\_\+\+Resize()}{Reversi\_Resize()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+Reversi\+\_\+\+Resize (\begin{DoxyParamCaption}\item[{object}]{sender,  }\item[{Event\+Args}]{e }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+リサイズイベント 
+
+リサイズ終了イベント
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em object} & sender \\
+\hline
+\mbox{\tt in}  & {\em Event\+Args} & e \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 531 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+Initialize\+Component().
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_ac4868f12e6f15387f8f39f5f1934e610_cgraph}
+\end{center}
+\end{figure}
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_ac4868f12e6f15387f8f39f5f1934e610_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_ac2c2df740914f062761a66f0bbde3f41}\label{class_reversi_form_1_1_reversi_ac2c2df740914f062761a66f0bbde3f41}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!Save\+Setting\+Xml@{Save\+Setting\+Xml}}
+\index{Save\+Setting\+Xml@{Save\+Setting\+Xml}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{Save\+Setting\+Xml()}{SaveSettingXml()}}
+{\footnotesize\ttfamily int Reversi\+Form.\+Reversi.\+Save\+Setting\+Xml (\begin{DoxyParamCaption}\item[{string}]{path,  }\item[{ref \hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting}}]{app\+Set }\end{DoxyParamCaption})}
+
+
+
+設定\+X\+M\+Lファイルセーブ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & path 設定\+X\+M\+Lファイルパス \\
+\hline
+\mbox{\tt out}  & {\em \hyperlink{class_reversi_form_1_1_reversi_setting}{Reversi\+Setting}} & app\+Set 設定\+X\+M\+Lファイルオブジェクト \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+0 \+: 成功 それ以外 \+: 失敗 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 137 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+button2\+\_\+\+Click().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_ac2c2df740914f062761a66f0bbde3f41_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_af4efb5992bb28d48c4f585a7f6c7906f}\label{class_reversi_form_1_1_reversi_af4efb5992bb28d48c4f585a7f6c7906f}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!View\+Msg\+Dlg@{View\+Msg\+Dlg}}
+\index{View\+Msg\+Dlg@{View\+Msg\+Dlg}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{View\+Msg\+Dlg()}{ViewMsgDlg()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+View\+Msg\+Dlg (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{string}]{msg }\end{DoxyParamCaption})}
+
+
+
+メッセージダイアログ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & title タイトル \\
+\hline
+\mbox{\tt in}  & {\em string} & msg メッセージ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 247 of file Form\+Main.\+cs.
+
+Here is the call graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_af4efb5992bb28d48c4f585a7f6c7906f_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{class_reversi_form_1_1_reversi_a5b1fd8f327358b4d0551af981b2a7f0c}\label{class_reversi_form_1_1_reversi_a5b1fd8f327358b4d0551af981b2a7f0c}} 
+\index{Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}!View\+Msg\+Dlg\+Local@{View\+Msg\+Dlg\+Local}}
+\index{View\+Msg\+Dlg\+Local@{View\+Msg\+Dlg\+Local}!Reversi\+Form\+::\+Reversi@{Reversi\+Form\+::\+Reversi}}
+\subsubsection{\texorpdfstring{View\+Msg\+Dlg\+Local()}{ViewMsgDlgLocal()}}
+{\footnotesize\ttfamily void Reversi\+Form.\+Reversi.\+View\+Msg\+Dlg\+Local (\begin{DoxyParamCaption}\item[{string}]{title,  }\item[{string}]{msg }\end{DoxyParamCaption})}
+
+
+
+メッセージダイアログ 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\tt in}  & {\em string} & title タイトル \\
+\hline
+\mbox{\tt in}  & {\em string} & msg メッセージ \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+ありません 
+\end{DoxyReturn}
+\begin{DoxyAuthor}{Author}
+Yuta Yoshinaga 
+\end{DoxyAuthor}
+\begin{DoxyDate}{Date}
+2017.\+10.\+20 
+\end{DoxyDate}
+
+
+Definition at line 262 of file Form\+Main.\+cs.
+
+
+
+Referenced by Reversi\+Form.\+Reversi.\+View\+Msg\+Dlg().
+
+Here is the caller graph for this function\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{class_reversi_form_1_1_reversi_a5b1fd8f327358b4d0551af981b2a7f0c_icgraph}
+\end{center}
+\end{figure}
 
 
 \subsection{Member Data Documentation}
@@ -103,5 +2081,5 @@ Referenced by Reversi\+Form.\+Reversi.\+Dispose().
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/\+Users/yoshi/\+One\+Drive/\+Documents/\+Visual Studio 2017/\+Projects/\+Reversi\+Form/\+Reversi\+Form/Form\+Main.\+cs\item 
-C\+:/\+Users/yoshi/\+One\+Drive/\+Documents/\+Visual Studio 2017/\+Projects/\+Reversi\+Form/\+Reversi\+Form/Form\+Main.\+Designer.\+cs\end{DoxyCompactItemize}
+\hyperlink{_form_main_8cs}{Form\+Main.\+cs}\item 
+Form\+Main.\+Designer.\+cs\end{DoxyCompactItemize}

@@ -1,11 +1,14 @@
 <map id="ReversiForm.ReversiAnz.reset" name="ReversiForm.ReversiAnz.reset">
-<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#afc9513cbba4f973c7d1ee92e0a0f3288" title="解析を行う " alt="" coords="249,69,461,110"/>
-<area shape="rect" id="node8" href="$class_reversi_form_1_1_my_reversi.html#aa8d8e839466c63462954080353cd4a9e" title="リセット " alt="" coords="260,186,451,212"/>
-<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="768,156,967,183"/>
-<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="1019,18,1252,44"/>
-<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="509,40,716,81"/>
-<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi_play.html#aeb78112f8fb7fd2c75b8e0f088939867" title="コンストラクタ " alt="" coords="1050,149,1221,190"/>
-<area shape="rect" id="node7" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="764,40,971,81"/>
-<area shape="rect" id="node9" href="$class_reversi_form_1_1_my_reversi.html#ab8c7a345a2e1d0978afd640d052f3827" title="コンストラクタ " alt="" coords="523,208,703,249"/>
-<area shape="rect" id="node10" href="$class_reversi_form_1_1_my_reversi.html#af9573f1da0d89180a4dbbd98d41a05fb" title="マスの数変更 " alt="" coords="523,273,703,314"/>
+<area shape="rect" id="node2" href="$class_reversi_form_1_1_my_reversi.html#afc9513cbba4f973c7d1ee92e0a0f3288" title="解析を行う " alt="" coords="249,66,461,108"/>
+<area shape="rect" id="node11" href="$class_reversi_form_1_1_my_reversi.html#aa8d8e839466c63462954080353cd4a9e" title="リセット " alt="" coords="260,183,451,210"/>
+<area shape="rect" id="node3" href="$class_reversi_form_1_1_reversi_play.html#a03997d634aa21a84e660e7f98aa27064" title="リセット処理 " alt="" coords="768,154,967,180"/>
+<area shape="rect" id="node7" href="$class_reversi_form_1_1_reversi_play.html#a7f3822227e59fac0f998927a6566006e" title="リバーシプレイ " alt="" coords="1019,36,1252,63"/>
+<area shape="rect" id="node9" href="$class_reversi_form_1_1_reversi_play.html#abec0ea86adfc0d2f960af71235eea016" title="リバーシプレイコンピューター " alt="" coords="509,37,716,78"/>
+<area shape="rect" id="node4" href="$class_reversi_form_1_1_reversi.html#a832e3ee4b606141b3feefb47742b3849" title="リセットクリック " alt="" coords="1300,94,1487,136"/>
+<area shape="rect" id="node6" href="$class_reversi_form_1_1_reversi.html#aa908556d4f216f8b407c1458e392dfc5" title="セッティングクリック " alt="" coords="1042,153,1229,194"/>
+<area shape="rect" id="node5" href="$class_reversi_form_1_1_reversi.html#abec0816dd006d05b512d86b45a20af68" title="デザイナー サポートに必要なメソッドです。このメソッドの内容を コード エディターで変更しないでください..." alt="" coords="1535,94,1725,136"/>
+<area shape="rect" id="node8" href="$class_reversi_form_1_1_reversi.html#afaa2a98428f4d9eab723fb71f8cb3e29" title="マスクリック " alt="" coords="1302,29,1485,70"/>
+<area shape="rect" id="node10" href="$class_reversi_form_1_1_reversi_play.html#a4fe42268a8d957c555db025f8b35d34e" title="リバーシプレイサブ " alt="" coords="764,37,971,78"/>
+<area shape="rect" id="node12" href="$class_reversi_form_1_1_my_reversi.html#ab8c7a345a2e1d0978afd640d052f3827" title="コンストラクタ " alt="" coords="523,205,703,246"/>
+<area shape="rect" id="node13" href="$class_reversi_form_1_1_my_reversi.html#af9573f1da0d89180a4dbbd98d41a05fb" title="マスの数変更 " alt="" coords="523,270,703,312"/>
 </map>

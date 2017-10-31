@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['initializecomponent',['InitializeComponent',['../class_reversi_form_1_1_reversi.html#abec0816dd006d05b512d86b45a20af68',1,'ReversiForm::Reversi']]]
+  ['fromrgb',['FromRgb',['../class_reversi_form_1_1_hsl_color.html#a1ef52b0701860ca2021e74e8ee369789',1,'ReversiForm::HslColor']]]
 ];
