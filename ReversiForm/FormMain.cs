@@ -64,8 +64,8 @@ namespace ReversiForm
 			oldSize.Width = 0;
 			oldSize.Height = 0;
 
-			Assembly myAssembly = Assembly.GetEntryAssembly();
-			string setPath = System.IO.Path.GetDirectoryName(myAssembly.Location) + "\\" + "AppSetting.xml";
+			System.IO.Directory.CreateDirectory(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\Y.Y Magic\\ReversiForm");
+			string setPath = System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\Y.Y Magic\\ReversiForm\\" + "AppSetting.xml";
 			try
 			{
 				this.m_AppSettings = this.LoadSettingXml(setPath);
@@ -179,19 +179,22 @@ namespace ReversiForm
 			formSize.Width  -= startY << 1;
 			int refSize = formSize.Height;
 			if (formSize.Width < refSize) refSize = formSize.Width;
+			double tmpD = (double)refSize / this.m_AppSettings.mMasuCnt;
+			refSize = (int)Math.Ceiling(tmpD);
+			refSize *= this.m_AppSettings.mMasuCnt;
+
 			this.tableLayoutPanel1.Top = startX;
 			this.tableLayoutPanel1.Left = ( ( formSize.Width + ( startY << 1 ) ) - refSize ) >> 1;
 			tblSize.Height = refSize;
 			tblSize.Width = refSize;
-			this.tableLayoutPanel1.Size = tblSize;
+			this.tableLayoutPanel1.Height = refSize;
+			this.tableLayoutPanel1.Width = refSize;
 
 			Size curSize = tblSize;
-			int cellSizeAll = curSize.Height;
-			if (curSize.Width < cellSizeAll) cellSizeAll = curSize.Width;
-			curSize.Height = cellSizeAll;
-			curSize.Width = cellSizeAll;
-			int cellSize = cellSizeAll / this.m_AppSettings.mMasuCnt;
-			float per = (float)cellSize / cellSizeAll * 100;
+			float cellSizeAll = (float)curSize.Height;
+			if (curSize.Width < cellSizeAll) cellSizeAll = (float)curSize.Width;
+			float cellSize = cellSizeAll / (float)this.m_AppSettings.mMasuCnt;
+			float per = cellSize / cellSizeAll * 100F;
 			this.tableLayoutPanel1.Visible = false;
 			for (int i = 0; i < ReversiConst.DEF_MASU_CNT_MAX_VAL;i++)
 			{
@@ -214,21 +217,21 @@ namespace ReversiForm
 					// *** テーブルの列サイズを調整 *** //
 					if(j < this.m_AppSettings.mMasuCnt)
 					{
-						this.tableLayoutPanel1.ColumnStyles[j] = new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, per);
+						this.tableLayoutPanel1.ColumnStyles[j] = new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, cellSize);
 					}
 					else
 					{
-						this.tableLayoutPanel1.ColumnStyles[j] = new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 0F);
+						this.tableLayoutPanel1.ColumnStyles[j] = new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 0F);
 					}
 				}
 				// *** テーブルの行サイズを調整 *** //
 				if(i < this.m_AppSettings.mMasuCnt)
 				{
-					this.tableLayoutPanel1.RowStyles[i] = new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, per);
+					this.tableLayoutPanel1.RowStyles[i] = new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, cellSize);
 				}
 				else
 				{
-					this.tableLayoutPanel1.RowStyles[i] = new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 0F);
+					this.tableLayoutPanel1.RowStyles[i] = new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 0F);
 				}
 			}
 			this.tableLayoutPanel1.Visible = true;
@@ -500,8 +503,8 @@ namespace ReversiForm
 		////////////////////////////////////////////////////////////////////////////////
 		private void button2_Click(object sender, EventArgs e)
 		{
-			Assembly myAssembly = Assembly.GetEntryAssembly();
-			string setPath = System.IO.Path.GetDirectoryName(myAssembly.Location) + "\\" + "AppSetting.xml";
+			System.IO.Directory.CreateDirectory(System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\Y.Y Magic\\ReversiForm");
+			string setPath = System.Environment.GetFolderPath(Environment.SpecialFolder.CommonApplicationData) + "\\Y.Y Magic\\ReversiForm\\" + "AppSetting.xml";
 
 			SettingForm form = new SettingForm(this.m_AppSettings);
 			// *** オーナーウィンドウにthisを指定する *** //
